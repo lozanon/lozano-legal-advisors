@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Norris Lozano — Lozano Legal Advisors, PLLC</title>
+<meta name="description" content="Norris Lozano — Founding Attorney, Lozano Legal Advisors, PLLC. Texas attorney 30+ years. Admitted U.S. Tax Court and U.S. District Court N.D. Texas. Former CEO Portland Family of Funds — $180M in New Markets Tax Credits secured from the U.S. Treasury, $1.1B+ in tax credit transactions. Harvard Innovations semifinalist. Urban Land Institute Award for Excellence, The Americas 2007.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Source+Sans+3:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --green: #1A4731; --green-deep: #0F2E1E;
+    --cream: #EAE6E1; --cream-deep: #D8D3CA;
+    --paper: #F7F5F0; --ink: #1A1A1A;
+    --ink-soft: #4A4A4A; --ink-mute: #6E6E6E;
+    --rule: #D8D3CA; --amber: #F5D382;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Source Sans 3', -apple-system, sans-serif;
+    font-weight: 400; font-size: 17px; line-height: 1.6;
+    color: var(--ink); background: var(--paper);
+    -webkit-font-smoothing: antialiased;
+  }
+  .eyebrow {
+    font-size: 12px; font-weight: 500; letter-spacing: 0.18em;
+    text-transform: uppercase; color: var(--green);
+  }
+  nav.top {
+    background: var(--green); color: var(--cream);
+    padding: 18px 0; border-bottom: 3px solid var(--cream);
+    position: sticky; top: 0; z-index: 100;
+  }
+  nav.top .wrap {
+    max-width: 1320px; margin: 0 auto; padding: 0 40px;
+    display: flex; align-items: center; justify-content: space-between; gap: 24px;
+  }
+  nav.top .mark {
+    font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 500;
+    color: var(--cream); text-decoration: none; white-space: nowrap;
+  }
+  nav.top ul { list-style: none; display: flex; gap: 24px; align-items: center; }
+  nav.top ul a {
+    color: var(--cream); text-decoration: none; font-size: 14px;
+    padding: 6px 0; border-bottom: 1px solid transparent; transition: border-color 0.2s;
+  }
+  nav.top ul a:hover { border-bottom-color: var(--cream); }
+  nav.top ul a.active { border-bottom-color: var(--cream); }
+  nav.top .cta {
+    border: 1px solid var(--cream); padding: 10px 18px; border-radius: 24px;
+    font-size: 13px; letter-spacing: 0.03em; white-space: nowrap;
+    transition: background 0.2s, color 0.2s;
+  }
+  nav.top .cta:hover { background: var(--cream); color: var(--green); border-bottom-color: var(--cream); }
+
+  .page-hero {
+    max-width: 1280px; margin: 0 auto; padding: 90px 40px 40px;
+    display: grid; grid-template-columns: 1.3fr 1fr; gap: 60px; align-items: center;
+  }
+  .page-hero .text .eyebrow { margin-bottom: 24px; }
+  .page-hero h1 {
+    font-family: 'Cormorant Garamond', serif; font-weight: 400;
+    font-size: clamp(44px, 6vw, 72px); line-height: 1.04;
+    letter-spacing: -0.02em; color: var(--ink); margin-bottom: 22px;
+  }
+  .page-hero h1 em { font-style: italic; color: var(--green); }
+  .page-hero .title {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: 22px; color: var(--green); margin-bottom: 28px;
+  }
+  .page-hero .lede {
+    font-size: 19px; line-height: 1.55; color: var(--ink-soft); font-weight: 300;
+  }
+
+  .portrait-frame {
+    aspect-ratio: 4 / 5; background: var(--cream); border: 1px solid var(--rule);
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    padding: 40px; text-align: center; position: relative;
+  }
+  .portrait-frame::before {
+    content: ''; position: absolute; top: 18px; left: 18px; right: 18px; bottom: 18px;
+    border: 1px solid var(--cream-deep); pointer-events: none;
+  }
+  .portrait-frame .caption-label {
+    font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--green); margin-bottom: 14px; font-weight: 500;
+  }
+  .portrait-frame .caption-text {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: 17px; color: var(--ink-mute); line-height: 1.4;
+  }
+
+  .image-slot {
+    width: 100%; aspect-ratio: 16 / 9; background: var(--cream);
+    border: 1px solid var(--rule); margin: 40px 0;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    padding: 32px; text-align: center; position: relative;
+  }
+  .image-slot::before {
+    content: ''; position: absolute; top: 12px; left: 12px; right: 12px; bottom: 12px;
+    border: 1px solid var(--cream-deep); pointer-events: none;
+  }
+  .image-slot .slot-label {
+    font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--green); margin-bottom: 10px; font-weight: 500;
+  }
+  .image-slot .slot-text {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: 16px; color: var(--ink-mute);
+  }
+
+  section.content {
+    max-width: 960px; margin: 0 auto; padding: 40px 40px 60px;
+  }
+  section.content h2 {
+    font-family: 'Cormorant Garamond', serif; font-weight: 400;
+    font-size: clamp(30px, 3.6vw, 44px); line-height: 1.1;
+    letter-spacing: -0.01em; margin-bottom: 24px; color: var(--ink);
+  }
+  section.content h2 em { font-style: italic; color: var(--green); }
+  section.content p {
+    font-size: 17px; line-height: 1.75; color: var(--ink-soft);
+    margin-bottom: 18px; max-width: 760px;
+  }
+  section.content p strong { color: var(--ink); font-weight: 500; }
+  section.content .section-label {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: 14px; color: var(--green); letter-spacing: 0.04em;
+    text-transform: uppercase; font-weight: 500; margin-bottom: 10px;
+    display: block;
+  }
+
+  .pullquote {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: clamp(24px, 2.6vw, 30px); line-height: 1.3;
+    color: var(--ink); font-weight: 400;
+    margin: 40px auto; padding: 32px 36px; border-left: 3px solid var(--green);
+    max-width: 780px; background: var(--cream);
+  }
+
+  .credentials {
+    background: #fff; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule);
+    padding: 80px 40px;
+  }
+  .credentials .inner {
+    max-width: 1080px; margin: 0 auto;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 64px;
+  }
+  .credentials .section-head {
+    font-family: 'Cormorant Garamond', serif; font-weight: 500;
+    font-size: 13px; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--green); margin-bottom: 24px; padding-bottom: 12px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .credentials .cred-group { margin-bottom: 28px; }
+  .credentials .cred-group:last-child { margin-bottom: 0; }
+  .credentials .cred-label {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: 14px; color: var(--ink-mute); margin-bottom: 6px;
+  }
+  .credentials .cred-line {
+    font-size: 16px; line-height: 1.55; color: var(--ink); margin-bottom: 4px;
+  }
+  .credentials .cred-line .year {
+    color: var(--ink-mute); font-size: 14px; margin-left: 6px;
+  }
+  .credentials .cred-line .bar-no {
+    color: var(--ink-mute); font-size: 14px;
+  }
+
+  .awards {
+    max-width: 1080px; margin: 0 auto; padding: 80px 40px;
+  }
+  .awards h2 {
+    font-family: 'Cormorant Garamond', serif; font-weight: 400;
+    font-size: clamp(32px, 4vw, 44px); line-height: 1.08;
+    margin-bottom: 40px; color: var(--ink);
+  }
+  .awards h2 em { font-style: italic; color: var(--green); }
+  .award-item {
+    display: grid; grid-template-columns: 1fr 3fr; gap: 32px;
+    padding: 24px 0; border-top: 1px solid var(--rule);
+  }
+  .award-item:last-of-type { border-bottom: 1px solid var(--rule); }
+  .award-item .year {
+    font-family: 'Cormorant Garamond', serif; font-size: 22px;
+    color: var(--green); font-weight: 500;
+  }
+  .award-item .body strong {
+    display: block; color: var(--ink); font-weight: 500;
+    font-size: 17px; margin-bottom: 4px;
+  }
+  .award-item .body p {
+    font-size: 15px; color: var(--ink-soft); line-height: 1.55; margin: 0;
+  }
+
+  .boards { background: var(--cream); padding: 80px 40px; }
+  .boards .inner { max-width: 1080px; margin: 0 auto; }
+  .boards h2 {
+    font-family: 'Cormorant Garamond', serif; font-weight: 400;
+    font-size: clamp(32px, 4vw, 44px); line-height: 1.08;
+    margin-bottom: 40px; color: var(--ink);
+  }
+  .boards h2 em { font-style: italic; color: var(--green); }
+  .board-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 28px;
+  }
+  .board-item { padding: 20px 0; border-top: 1px solid var(--cream-deep); }
+  .board-item strong {
+    display: block; font-family: 'Cormorant Garamond', serif;
+    font-size: 18px; font-weight: 500; color: var(--ink); margin-bottom: 4px;
+  }
+  .board-item span { font-size: 14px; color: var(--ink-mute); }
+
+  .band { background: var(--green); color: var(--cream); padding: 96px 40px; }
+  .band .wrap { max-width: 900px; margin: 0 auto; text-align: center; }
+  .band .eyebrow { color: rgba(234,230,225,0.6); margin-bottom: 24px; }
+  .band h2 {
+    font-family: 'Cormorant Garamond', serif; font-size: clamp(40px, 5.5vw, 64px);
+    line-height: 1.08; font-weight: 400; color: var(--cream); margin-bottom: 24px;
+  }
+  .band h2 em { font-style: italic; color: var(--amber); }
+  .band p {
+    font-size: 19px; line-height: 1.6; color: rgba(234,230,225,0.92);
+    max-width: 720px; margin: 0 auto 16px; font-weight: 300;
+  }
+  .band .btn {
+    display: inline-block; background: var(--cream); color: var(--green);
+    padding: 16px 32px; border-radius: 28px; font-size: 15px;
+    font-weight: 500; letter-spacing: 0.03em; text-decoration: none;
+    transition: background 0.2s; margin-top: 20px;
+  }
+  .band .btn:hover { background: #fff; }
+  .band.paper { background: var(--paper); color: var(--ink); padding: 80px 40px; }
+  .band.paper h2 { color: var(--ink); }
+  .band.paper h2 em { color: var(--green); }
+  .band.paper p { color: var(--ink-soft); }
+  .band.paper .eyebrow { color: var(--green); }
+  .band.paper .btn { background: var(--green); color: var(--cream); }
+  .band.paper .btn:hover { background: var(--green-deep); }
+
+  footer { background: var(--green); color: var(--cream); padding: 80px 40px 36px; }
+  .foot-inner { max-width: 1280px; margin: 0 auto; }
+  .foot-top {
+    display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 48px; margin-bottom: 60px; padding-bottom: 48px;
+    border-bottom: 1px solid rgba(234,230,225,0.25);
+  }
+  .foot-top h3 {
+    font-family: 'Cormorant Garamond', serif; font-size: 28px;
+    font-weight: 500; letter-spacing: -0.01em; line-height: 1.1; margin-bottom: 10px;
+  }
+  .foot-top .tagline {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: 17px; opacity: 0.85; margin-top: 6px;
+  }
+  .foot-col h4 {
+    font-family: 'Cormorant Garamond', serif; font-size: 20px;
+    font-weight: 500; margin-bottom: 14px;
+  }
+  .foot-col p, .foot-col a {
+    font-size: 14px; line-height: 1.65; opacity: 0.88; color: var(--cream);
+    text-decoration: none; display: block;
+  }
+  .foot-col a:hover { opacity: 1; text-decoration: underline; }
+  .foot-col .email { font-size: 13px; }
+  .foot-bottom {
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 12px; opacity: 0.65; letter-spacing: 0.04em; flex-wrap: wrap; gap: 12px;
+  }
+  .foot-bottom nav a { color: var(--cream); text-decoration: none; margin-left: 24px; }
+  .foot-bottom nav a:hover { text-decoration: underline; }
+  .foot-disclaimer {
+    margin-top: 40px; padding-top: 32px; border-top: 1px solid rgba(234,230,225,0.15);
+    font-size: 11px; opacity: 0.5; line-height: 1.65; max-width: 960px;
+  }
+
+  @media (max-width: 960px) {
+    nav.top ul { display: none; }
+    .page-hero { grid-template-columns: 1fr; padding: 50px 24px 30px; gap: 40px; }
+    .page-hero h1 { font-size: 40px; }
+    section.content { padding: 24px 24px 40px; }
+    section.content h2 { font-size: 28px; }
+    .credentials .inner { grid-template-columns: 1fr; gap: 40px; }
+    .credentials { padding: 56px 24px; }
+    .awards { padding: 56px 24px; }
+    .award-item { grid-template-columns: 1fr; gap: 8px; }
+    .boards { padding: 56px 24px; }
+    .band { padding: 64px 24px; }
+    .foot-top { grid-template-columns: 1fr; gap: 32px; }
+    .foot-bottom { flex-direction: column; }
+    .foot-bottom nav a { margin: 0 12px; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="top">
+  <div class="wrap">
+    <a href="/" class="mark">Lozano Legal Advisors, PLLC</a>
+    <ul>
+      <li><a href="/tax-resolution.html">Tax Resolution</a></li>
+      <li><a href="/estate-planning.html">Estate Planning</a></li>
+      <li><a href="/real-estate.html">Real Estate</a></li>
+      <li><a href="/business-entities.html">Business Entities</a></li>
+      <li><a href="/corporate-partnership.html">Corporate</a></li>
+      <li><a href="/tax-credits.html">Tax Credits</a></li>
+      <li><a href="/about.html" class="active">About</a></li>
+      <li><a href="/contact.html" class="cta">$105 Transcript Analysis</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="text">
+    <div class="eyebrow">About</div>
+    <h1>Norris Lozano,<br><em>Founding Attorney.</em></h1>
+    <div class="title">Lozano Legal Advisors, PLLC — Dallas, Texas.</div>
+    <p class="lede">A 30+ year Texas attorney whose practice moves across commercial finance, federal tax credit finance, tax resolution, and estate planning — and who builds the infrastructure his firm runs on himself.</p>
+  </div>
+  <div class="portrait-frame">
+    <div class="caption-label">Portrait forthcoming</div>
+    <div class="caption-text">An editorial portrait by a Dallas photographer is in production for this page.</div>
+  </div>
+</section>
+
+<section class="content">
+  <p>Norris Lozano founded Lozano Legal Advisors, PLLC in 2026 after more than three decades in commercial law, fund management, federal tax credit finance, tax resolution, and estate planning. He is admitted to the State Bar of Texas (Bar No. 12647700), the United States Tax Court, and the United States District Court for the Northern District of Texas, and is a member of the American Bar Association, Tax Division.</p>
+
+  <p>The practice focuses on six areas: tax resolution, tax credits, estate planning, real estate, business entities, and general corporate and partnership work. Each of those practice areas is informed by specific chapters of a career that began in institutional private practice in Dallas in the early 1980s.</p>
+</section>
+
+<section class="content">
+  <span class="section-label">Institutional practice</span>
+  <h2>Eighteen years representing <em>the largest financial institutions in Texas.</em></h2>
+  <p>Norris began his career in Dallas commercial private practice, where he spent eighteen years as a partner handling syndications, commercial finance, commercial real estate, title, tax, savings and loan, banking, mortgage lending, and regulatory work. That era of his practice represented many of the largest financial institutions in the state — the kind of file work that trains an attorney to operate across several domains at once rather than inside a single specialty.</p>
+
+  <div class="image-slot">
+    <div class="slot-label">Image forthcoming</div>
+    <div class="slot-text">Dallas institutional architecture — photography to be commissioned.</div>
+  </div>
+</section>
+
+<section class="content">
+  <span class="section-label">Federal tax credit finance</span>
+  <h2>$180 million in New Markets Tax Credits <em>from the U.S. Treasury.</em></h2>
+  <p>From 2003 through 2007, Norris served as Chief Executive Officer, President, and General Counsel of the Portland Family of Funds — a $350 million public–private real estate development fund. He led the legal and drafting teams through the U.S. Treasury CDFI Fund's competitive New Markets Tax Credit application process, securing $180 million in allocation authority. Working alongside development partners, investors, and local agencies, he then structured and closed transactions exceeding $1.1 billion using those allocations and other layered tax credit structures.</p>
+
+  <p>In 2005, the Portland New Markets Fund — a $100 million fund he led — was named a semifinalist for the Harvard University Innovations in American Government Award, placing in the top fifty out of roughly 2,500 entries nationwide. In 2007, the Gerding Theater project he helped finance received the Urban Land Institute's Award for Excellence, The Americas — the ULI's annual recognition for the most distinguished urban development projects in North and South America — and received an Honorable Mention in the American Institute of Architects Committee on the Environment's Top Ten Green Projects for the same year.</p>
+
+  <p>Tax credit work continued through the following decade. At Urban Development and Finance in Los Angeles, Norris secured a further $22 million in New Markets Tax Credits from the Treasury for community-focused projects, and structured leveraged finance transactions combining NMTC with Low-Income Housing Tax Credits, Historic Tax Credits, and Opportunity Zones. At Pure Power Distribution and Zero Energy Contracting, he advised on and syndicated federal Renewable Energy Tax Credits — the Investment Tax Credit and Production Tax Credit — supporting solar, wind, and clean-energy projects for film and television studios, federal agencies, and private developers.</p>
+
+  <div class="image-slot">
+    <div class="slot-label">Image forthcoming</div>
+    <div class="slot-text">Urban redevelopment and tax credit project imagery — photography to be commissioned.</div>
+  </div>
+</section>
+
+<section class="content">
+  <span class="section-label">Tax resolution and estate planning</span>
+  <h2>Representing taxpayers <em>before the IRS and in U.S. Tax Court.</em></h2>
+  <p>Returning to a more focused legal practice in 2023, Norris served as Chief Executive Officer and Senior Tax Attorney at Axelon Tax Solutions, as Senior Tax Attorney at the Dayes Law Firm, and as Senior Tax and Estate Planning Attorney at the Durfee Law Group in Arizona. In those roles he represented taxpayers before the Internal Revenue Service in audits, appeals, and United States Tax Court proceedings — advising on tax controversy, compliance, and resolution matters across federal and state law — and also handled the pass-through-entity and estate-planning tax structuring work those firms require.</p>
+
+  <p>In parallel, through Medicaid Filing Connections, he has advised Texas families on Medicaid-qualified estate preservation — restructuring finances so families can qualify for Medicaid within required income and asset limits while preserving family wealth for the next generation.</p>
+</section>
+
+<section class="content">
+  <span class="section-label">Lozano Legal Advisors, today</span>
+  <h2>One Texas attorney. <em>Six practice areas.</em> <em>A real firm.</em></h2>
+  <p>In 2026, Norris founded Lozano Legal Advisors, PLLC to combine this body of commercial, tax credit, tax resolution, and estate planning experience under a single Texas firm — and, unusually, to operate that firm on AI-augmented infrastructure he designs and builds himself. The firm is structured to handle matters most Dallas residents and businesses actually face: a notice from the IRS, a tax credit transaction, a will, a trust, a lease, an LLC formation, a corporate partnership agreement. Work that deserves a licensed Texas attorney of record — and shouldn't require the fee structure of a large national firm to obtain one.</p>
+
+  <div class="pullquote">"The attorney practices law. AI handles the drafting workflow underneath. Every document prepared by this firm is drafted, reviewed, and taken under the professional responsibility of a licensed Texas attorney of 30+ years."</div>
+</section>
+
+<div class="credentials">
+  <div class="inner">
+    <div>
+      <div class="section-head">Admissions &amp; Memberships</div>
+
+      <div class="cred-group">
+        <div class="cred-label">Bar admissions</div>
+        <div class="cred-line">State Bar of Texas <span class="year">1982</span></div>
+        <div class="cred-line"><span class="bar-no">Bar No. 12647700</span></div>
+      </div>
+
+      <div class="cred-group">
+        <div class="cred-label">Courts</div>
+        <div class="cred-line">United States Tax Court</div>
+        <div class="cred-line">United States District Court,<br>Northern District of Texas</div>
+      </div>
+
+      <div class="cred-group">
+        <div class="cred-label">Professional memberships</div>
+        <div class="cred-line">American Bar Association — Tax Division</div>
+      </div>
+    </div>
+
+    <div>
+      <div class="section-head">Education</div>
+
+      <div class="cred-group">
+        <div class="cred-label">Juris Doctor</div>
+        <div class="cred-line">Southern Methodist University<br>School of Law — Dallas, Texas</div>
+      </div>
+
+      <div class="cred-group">
+        <div class="cred-label">Executive education</div>
+        <div class="cred-line">Artificial Intelligence for Business Executives<br>University of California, Berkeley</div>
+      </div>
+
+      <div class="cred-group">
+        <div class="cred-label">Graduate studies</div>
+        <div class="cred-line">Applied Information Management<br>University of Oregon</div>
+      </div>
+
+      <div class="cred-group">
+        <div class="cred-label">Undergraduate</div>
+        <div class="cred-line">B.A., Political Science and Music<br>The University of Texas at Dallas</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="awards">
+  <h2>Awards &amp; <em>recognition.</em></h2>
+
+  <div class="award-item">
+    <div class="year">2007</div>
+    <div class="body">
+      <strong>Urban Land Institute — Award for Excellence, The Americas</strong>
+      <p>For the Gerding Theater, Portland — the ULI's annual award for the most distinguished urban development projects in North and South America.</p>
+    </div>
+  </div>
+
+  <div class="award-item">
+    <div class="year">2007</div>
+    <div class="body">
+      <strong>American Institute of Architects Committee on the Environment — Top Ten Green Projects, Honorable Mention</strong>
+      <p>For the Gerding Theater, Portland — the AIA COTE's annual recognition for the most significant green building projects in the United States.</p>
+    </div>
+  </div>
+
+  <div class="award-item">
+    <div class="year">2005</div>
+    <div class="body">
+      <strong>Harvard University — Innovations in American Government Award, Semifinalist</strong>
+      <p>For the Portland New Markets Fund, a $100 million tax credit fund — named to the top fifty semifinalists from approximately 2,500 entries nationwide.</p>
+    </div>
+  </div>
+
+  <div class="award-item">
+    <div class="year">2004</div>
+    <div class="body">
+      <strong>Sustainable Industries Journal — 25 Green Building Leaders in the Northwest</strong>
+      <p>Recognized for leadership in green building and sustainable urban redevelopment finance in the Pacific Northwest.</p>
+    </div>
+  </div>
+</section>
+
+<div class="boards">
+  <div class="inner">
+    <h2>Board <em>service.</em></h2>
+    <div class="board-grid">
+      <div class="board-item">
+        <strong>Portland Family of Funds</strong>
+        <span>Director — 2003–2007</span>
+      </div>
+      <div class="board-item">
+        <strong>United Fund Advisors</strong>
+        <span>Director — 2005–2007</span>
+      </div>
+      <div class="board-item">
+        <strong>Pure Power Distribution</strong>
+        <span>Director — 2007–2016</span>
+      </div>
+      <div class="board-item">
+        <strong>ECOAMERICA</strong>
+        <span>Director — 2007–2017</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="content">
+  <span class="section-label">On AI, candidly</span>
+  <h2>The attorney practices law. <em>AI handles the drafting.</em></h2>
+  <p>Norris has formal training in artificial intelligence for business applications — Executive Education at the University of California, Berkeley — and his practice runs on AI-augmented drafting and research infrastructure that he designs and builds himself. He is the Attorney Developer of the firm's systems, not a subscriber to another company's legal-technology product.</p>
+
+  <p>This is a deliberate choice, and the positioning of the firm rests on it. At companies like LegalZoom and Rocket Lawyer, documents are generated by software based on a customer's answers to a questionnaire; attorney consultations are sold as a separate 30-minute product, and LegalZoom's own disclosure on every page of its site states that information provided to LegalZoom is not protected by attorney-client privilege. That is a meaningfully different model from this firm.</p>
+
+  <p>At Lozano Legal Advisors, <strong>every document is drafted, reviewed, and taken under the professional responsibility of a licensed Texas attorney.</strong> The attorney-client relationship and the privilege that attaches to it are established from the first conversation. AI accelerates the drafting workflow that sits beneath the attorney; it does not substitute for the attorney's judgment, and it is never the entity practicing law. That is also the reason a flat fee is possible for work that would otherwise require a traditional firm's hourly structure.</p>
+</section>
+
+<div class="band paper">
+  <div class="wrap">
+    <div class="eyebrow">Curriculum Vitae</div>
+    <h2>Download the <em>complete CV.</em></h2>
+    <p>A single-file PDF of Norris Lozano's full curriculum vitae — bar admissions, education, representative professional experience, awards, and board service — formatted for professional reference.</p>
+    <a href="/norris-lozano-cv.pdf" class="btn" download>Download CV (PDF)</a>
+  </div>
+</div>
+
+<div class="band">
+  <div class="wrap">
+    <div class="eyebrow">Engage the firm</div>
+    <h2>A Texas attorney you can actually <em>speak with.</em></h2>
+    <p>The $105 Transcript Analysis is the straightforward way for anyone with an IRS balance to find out where they stand. For other matters — an estate plan, a real estate closing, a tax credit transaction, a business formation — the right place to start is a direct conversation.</p>
+    <a href="/contact.html" class="btn">Contact the Firm</a>
+  </div>
+</div>
+
+<footer>
+  <div class="foot-inner">
+    <div class="foot-top">
+      <div class="foot-col">
+        <h3>Lozano Legal Advisors, PLLC</h3>
+        <div class="tagline">A Texas law firm for complex work without the complexity of a big firm.</div>
+        <p style="margin-top:18px;opacity:0.88;">9304 Forest Lane, Suite 206, PMB 553<br>Dallas, Texas 75243</p>
+      </div>
+      <div class="foot-col">
+        <h4>Practice Areas</h4>
+        <a href="/tax-resolution.html">Tax Resolution</a>
+        <a href="/tax-credits.html">Tax Credits</a>
+        <a href="/estate-planning.html">Estate Planning</a>
+        <a href="/real-estate.html">Real Estate</a>
+        <a href="/business-entities.html">Business Entities</a>
+        <a href="/corporate-partnership.html">Corporate &amp; Partnership</a>
+      </div>
+      <div class="foot-col">
+        <h4>Resources</h4>
+        <a href="/why-a-tax-attorney.html">Why a Tax Attorney</a>
+        <a href="/irs-notices.html">IRS Notice Library</a>
+        <a href="/about.html">About Norris Lozano</a>
+        <a href="/norris-lozano-cv.pdf" download>Download CV</a>
+      </div>
+      <div class="foot-col">
+        <h4>Contact</h4>
+        <a href="tel:+12145313014">(214) 531-3014</a>
+        <a class="email" href="mailto:norris@lozanolegaladvisors.com">norris@lozanolegaladvisors.com</a>
+        <a href="/contact.html">Schedule a consultation</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <div>© 2026 Lozano Legal Advisors, PLLC. All rights reserved.</div>
+      <nav>
+        <a href="/privacy.html">Privacy</a>
+        <a href="/contact.html">Contact</a>
+      </nav>
+    </div>
+    <div class="foot-disclaimer">
+      This website constitutes attorney advertising under the Texas Disciplinary Rules of Professional Conduct. The information on this site is provided for general informational purposes only and does not constitute legal advice. No attorney-client relationship is formed by use of this website. Prior results do not guarantee a similar outcome. Norris Lozano is licensed to practice law in the State of Texas (Bar No. 12647700) and admitted to practice before the United States Tax Court and the United States District Court for the Northern District of Texas.
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

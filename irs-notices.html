@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IRS Notices — Lozano Legal Advisors, PLLC</title>
+<meta name="description" content="Reference library of IRS notice and letter types: CP2000, CP14, CP503, LT11, Letter 1058, Letter 3219, Letter 1153, Letter 566, and the rest. What each notice means, what deadlines apply, and what options exist.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Source+Sans+3:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --green: #1A4731;
+    --green-deep: #0F2E1E;
+    --cream: #EAE6E1;
+    --cream-deep: #D8D3CA;
+    --paper: #F7F5F0;
+    --ink: #1A1A1A;
+    --ink-soft: #4A4A4A;
+    --ink-mute: #6E6E6E;
+    --rule: #D8D3CA;
+    --amber: #F5D382;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Source Sans 3', -apple-system, sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 1.6;
+    color: var(--ink);
+    background: var(--paper);
+    -webkit-font-smoothing: antialiased;
+  }
+  .serif { font-family: 'Cormorant Garamond', Georgia, serif; }
+  .eyebrow {
+    font-size: 12px; font-weight: 500; letter-spacing: 0.18em;
+    text-transform: uppercase; color: var(--green);
+  }
+  nav.top {
+    background: var(--green); color: var(--cream);
+    padding: 18px 0; border-bottom: 3px solid var(--cream);
+    position: sticky; top: 0; z-index: 100;
+  }
+  nav.top .wrap {
+    max-width: 1280px; margin: 0 auto; padding: 0 40px;
+    display: flex; align-items: center; justify-content: space-between; gap: 32px;
+  }
+  nav.top .mark {
+    font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 500;
+    color: var(--cream); text-decoration: none; white-space: nowrap;
+  }
+  nav.top ul { list-style: none; display: flex; gap: 28px; align-items: center; }
+  nav.top ul a {
+    color: var(--cream); text-decoration: none; font-size: 14px;
+    padding: 6px 0; border-bottom: 1px solid transparent; transition: border-color 0.2s;
+  }
+  nav.top ul a:hover { border-bottom-color: var(--cream); }
+  nav.top ul a.active { border-bottom-color: var(--cream); }
+  nav.top .cta {
+    border: 1px solid var(--cream); padding: 10px 20px; border-radius: 24px;
+    font-size: 13px; letter-spacing: 0.03em; transition: background 0.2s, color 0.2s;
+  }
+  nav.top .cta:hover { background: var(--cream); color: var(--green); border-bottom-color: var(--cream); }
+
+  .page-hero {
+    max-width: 1280px; margin: 0 auto; padding: 80px 40px 60px;
+  }
+  .page-hero .eyebrow { margin-bottom: 24px; }
+  .page-hero h1 {
+    font-family: 'Cormorant Garamond', serif; font-weight: 400;
+    font-size: clamp(48px, 7vw, 88px); line-height: 1.02;
+    letter-spacing: -0.02em; color: var(--ink); margin-bottom: 28px;
+  }
+  .page-hero h1 em { font-style: italic; color: var(--green); }
+  .page-hero .lede {
+    font-size: 21px; line-height: 1.55; color: var(--ink-soft);
+    max-width: 740px; font-weight: 300;
+  }
+
+  section.content {
+    max-width: 1000px; margin: 0 auto; padding: 40px 40px 80px;
+  }
+  section.content.wide { max-width: 1280px; }
+  section.content h2 {
+    font-family: 'Cormorant Garamond', serif; font-weight: 400;
+    font-size: clamp(32px, 4vw, 48px); line-height: 1.08;
+    letter-spacing: -0.01em; margin-bottom: 28px; color: var(--ink);
+  }
+  section.content h2 em { font-style: italic; color: var(--green); }
+  section.content h3 {
+    font-family: 'Cormorant Garamond', serif; font-weight: 500;
+    font-size: 26px; line-height: 1.15; margin: 36px 0 14px; color: var(--ink);
+  }
+  section.content p {
+    font-size: 17px; line-height: 1.7; color: var(--ink-soft);
+    margin-bottom: 18px; max-width: 720px;
+  }
+  section.content p strong { color: var(--ink); font-weight: 500; }
+  section.content p em { font-style: italic; }
+  section.content ul { margin: 18px 0 24px; padding-left: 0; list-style: none; max-width: 720px; }
+  section.content ul li {
+    font-size: 17px; line-height: 1.65; color: var(--ink-soft);
+    padding-left: 28px; position: relative; margin-bottom: 12px;
+  }
+  section.content ul li::before {
+    content: '—'; position: absolute; left: 0; top: 0; color: var(--green); font-weight: 500;
+  }
+  section.content ul li strong { color: var(--ink); font-weight: 500; }
+
+  .rule-h { border: 0; border-top: 1px solid var(--rule); margin: 48px 0; max-width: 720px; }
+
+  .pullquote {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: 28px; line-height: 1.3; color: var(--ink); font-weight: 400;
+    margin: 32px 0 32px; padding: 24px 28px; border-left: 3px solid var(--green);
+    max-width: 720px; background: var(--cream);
+  }
+
+  .band {
+    background: var(--green); color: var(--cream); padding: 96px 40px;
+  }
+  .band .wrap {
+    max-width: 900px; margin: 0 auto; text-align: center;
+  }
+  .band .eyebrow { color: rgba(234,230,225,0.6); margin-bottom: 24px; }
+  .band h2 {
+    font-family: 'Cormorant Garamond', serif; font-size: clamp(40px, 5.5vw, 64px);
+    line-height: 1.08; font-weight: 400; color: var(--cream); margin-bottom: 24px;
+  }
+  .band h2 em { font-style: italic; color: var(--amber); }
+  .band p {
+    font-size: 19px; line-height: 1.6; color: rgba(234,230,225,0.92);
+    max-width: 720px; margin: 0 auto 16px; font-weight: 300;
+  }
+  .band .btn {
+    display: inline-block; background: var(--cream); color: var(--green);
+    padding: 16px 32px; border-radius: 28px; font-size: 15px;
+    font-weight: 500; letter-spacing: 0.03em; text-decoration: none;
+    transition: background 0.2s; margin-top: 20px;
+  }
+  .band .btn:hover { background: #fff; }
+  .band.paper { background: var(--paper); color: var(--ink); padding: 80px 40px; }
+  .band.paper h2 { color: var(--ink); }
+  .band.paper h2 em { color: var(--green); }
+  .band.paper p { color: var(--ink-soft); }
+  .band.paper .eyebrow { color: var(--green); }
+  .band.paper .btn { background: var(--green); color: var(--cream); }
+  .band.paper .btn:hover { background: var(--green-deep); }
+
+  .two-col {
+    max-width: 1280px; margin: 0 auto; padding: 80px 40px;
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+  }
+  .two-col .col {
+    padding: 36px 32px; background: #fff; border: 1px solid var(--rule);
+  }
+  .two-col .col.dark {
+    background: var(--green); color: var(--cream); border-color: var(--green);
+  }
+  .two-col .col .label {
+    font-family: 'Cormorant Garamond', serif; font-size: 16px;
+    font-style: italic; color: var(--ink-mute); margin-bottom: 14px;
+  }
+  .two-col .col.dark .label { color: rgba(234,230,225,0.65); }
+  .two-col .col h3 {
+    font-family: 'Cormorant Garamond', serif; font-size: 28px;
+    font-weight: 500; line-height: 1.15; margin-bottom: 18px; color: var(--ink);
+  }
+  .two-col .col.dark h3 { color: var(--cream); }
+  .two-col .col p {
+    font-size: 16px; line-height: 1.6; color: var(--ink-soft);
+  }
+  .two-col .col.dark p { color: rgba(234,230,225,0.92); }
+
+  .faq { max-width: 820px; margin: 0 auto; padding: 60px 40px 80px; }
+  .faq h2 { font-family: 'Cormorant Garamond', serif; font-weight: 400;
+    font-size: clamp(32px, 4vw, 48px); line-height: 1.08;
+    margin-bottom: 40px; color: var(--ink); }
+  .faq h2 em { font-style: italic; color: var(--green); }
+  .faq-item { padding: 28px 0; border-bottom: 1px solid var(--rule); }
+  .faq-item:first-of-type { border-top: 1px solid var(--rule); }
+  .faq-item h3 {
+    font-family: 'Cormorant Garamond', serif; font-size: 22px;
+    font-weight: 500; line-height: 1.3; margin-bottom: 14px; color: var(--ink);
+  }
+  .faq-item p { font-size: 16px; line-height: 1.65; color: var(--ink-soft); }
+
+  .repmatters {
+    background: var(--cream); padding: 80px 40px;
+    text-align: center;
+  }
+  .repmatters .inner { max-width: 820px; margin: 0 auto; }
+  .repmatters .eyebrow { color: var(--green); margin-bottom: 20px; }
+  .repmatters h2 {
+    font-family: 'Cormorant Garamond', serif; font-weight: 400;
+    font-size: 40px; line-height: 1.1; margin-bottom: 24px;
+  }
+  .repmatters h2 em { font-style: italic; color: var(--green); }
+  .repmatters p {
+    font-size: 17px; line-height: 1.6; color: var(--ink-soft); max-width: 640px;
+    margin: 0 auto 16px;
+  }
+  .repmatters .note {
+    margin-top: 24px; padding: 20px 24px; background: var(--paper);
+    border: 1px dashed var(--green); font-size: 14px; color: var(--ink-mute);
+    font-style: italic;
+  }
+
+  footer {
+    background: var(--green); color: var(--cream); padding: 80px 40px 36px;
+  }
+  .foot-inner { max-width: 1280px; margin: 0 auto; }
+  .foot-top {
+    display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 48px; margin-bottom: 60px; padding-bottom: 48px;
+    border-bottom: 1px solid rgba(234,230,225,0.25);
+  }
+  .foot-top h3 {
+    font-family: 'Cormorant Garamond', serif; font-size: 28px;
+    font-weight: 500; letter-spacing: -0.01em; line-height: 1.1; margin-bottom: 10px;
+  }
+  .foot-top .tagline {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: 17px; opacity: 0.85; margin-top: 6px;
+  }
+  .foot-col h4 {
+    font-family: 'Cormorant Garamond', serif; font-size: 20px;
+    font-weight: 500; margin-bottom: 14px;
+  }
+  .foot-col p, .foot-col a {
+    font-size: 14px; line-height: 1.65; opacity: 0.88; color: var(--cream);
+    text-decoration: none; display: block;
+  }
+  .foot-col a:hover { opacity: 1; text-decoration: underline; }
+  .foot-col .email { font-size: 13px; }
+  .foot-bottom {
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 12px; opacity: 0.65; letter-spacing: 0.04em; flex-wrap: wrap; gap: 12px;
+  }
+  .foot-bottom nav a { color: var(--cream); text-decoration: none; margin-left: 24px; }
+  .foot-bottom nav a:hover { text-decoration: underline; }
+  .foot-disclaimer {
+    margin-top: 40px; padding-top: 32px; border-top: 1px solid rgba(234,230,225,0.15);
+    font-size: 11px; opacity: 0.5; line-height: 1.65; max-width: 960px;
+  }
+
+  @media (max-width: 860px) {
+    nav.top ul { display: none; }
+    .page-hero { padding: 50px 24px 40px; }
+    .page-hero h1 { font-size: 44px; }
+    .page-hero .lede { font-size: 18px; }
+    section.content { padding: 24px 24px 60px; }
+    section.content h2 { font-size: 30px; }
+    .band { padding: 64px 24px; }
+    .two-col { padding: 48px 24px; gap: 24px; }
+    .foot-top { grid-template-columns: 1fr; gap: 32px; }
+    .foot-bottom { flex-direction: column; }
+    .foot-bottom nav a { margin: 0 12px; }
+  }
+</style>
+</head>
+<body><nav class="top">
+  <div class="wrap">
+    <a href="/" class="mark">Lozano Legal Advisors, PLLC</a>
+    <ul>
+      <li><a href="/tax-resolution.html">Tax Resolution</a></li>
+      <li><a href="/estate-planning.html">Estate Planning</a></li>
+      <li><a href="/real-estate.html">Real Estate</a></li>
+      <li><a href="/business-entities.html">Business Entities</a></li>
+      <li><a href="/corporate-partnership.html">Corporate</a></li>
+      <li><a href="/tax-credits.html">Tax Credits</a></li>
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/contact.html" class="cta">$105 Transcript Analysis</a></li>
+    </ul>
+  </div>
+</nav>
+<section class="page-hero">
+  <div class="eyebrow">Reference Library</div>
+  <h1>The IRS sent<br>a letter. <em>Now what?</em></h1>
+  <p class="lede">IRS correspondence is coded. Each notice and letter number signals something specific about what the IRS is doing, what deadlines apply, and what options the taxpayer still has. This is a reference for the most common notices taxpayers receive.</p>
+</section>
+
+<section class="content">
+  <h2>How to read this page.</h2>
+  <p>Each notice below lists the CP (computer-paragraph) or Letter number the IRS uses, a short description of what the notice actually means, and the most important deadline associated with it. This is reference material &mdash; useful for understanding what you received, not a substitute for advice on what to do about it. The $105 Transcript Analysis includes a preliminary review of any active notice against the full transcript picture.</p>
+
+  <h3>Collection notices</h3>
+
+  <p><strong>CP14 — Balance Due.</strong> The first notice a taxpayer receives when they have a balance due on a return. Usually 30 days to respond. Not an enforcement notice; a demand.</p>
+
+  <p><strong>CP501, CP503, CP504 — Reminder series.</strong> Successive demand letters after a CP14. CP504 is the last notice before the IRS begins lien filing or levy preparation. Each escalates; none of them should be ignored.</p>
+
+  <p><strong>LT11 / Letter 1058 — Final Notice of Intent to Levy.</strong> The notice that triggers the 30-day Collection Due Process hearing window. Miss this window and CDP rights are forfeited. One of the most consequential letters in the IRS collection sequence.</p>
+
+  <p><strong>LT16 — Please Call Us About Your Account.</strong> Soft-contact letter that often precedes enforcement. Worth responding to before it escalates.</p>
+
+  <p><strong>CP90 / CP297 — Notice of Levy.</strong> Levy notice issued to a third party (employer, bank) directing the levy. By the time this arrives, the CDP window has typically already passed.</p>
+
+  <p><strong>CP91 / CP298 — Notice of Levy on Social Security.</strong> Levy against Social Security benefits. Specific statutory limits on amounts that can be taken, but the levy itself is in place.</p>
+
+  <p><strong>Letter 3172 — Notice of Federal Tax Lien Filing.</strong> Triggers a separate 30-day CDP hearing window tied to the lien filing. Different from the levy CDP window.</p>
+
+  <h3>Examination notices</h3>
+
+  <p><strong>CP2000 — Notice of Proposed Adjustment.</strong> Generated by the IRS automated underreporter program when reported income does not match third-party information returns (W-2s, 1099s). Not a final assessment; a proposal the taxpayer can agree to, partially agree to, or contest. 30-day response window.</p>
+
+  <p><strong>Letter 566 / Letter 525 — Audit notification.</strong> Initiates an examination. Specifies items under review and requests documentation. This is the point at which audit strategy matters most &mdash; the administrative record being built here will determine what happens at Appeals and, if it goes further, at Tax Court.</p>
+
+  <p><strong>Letter 950 — 30-Day Letter.</strong> Issued at the close of an examination that resulted in proposed adjustments the taxpayer disagrees with. 30 days to file a formal written protest to IRS Appeals.</p>
+
+  <p><strong>Letter 3219 / CP3219A — Statutory Notice of Deficiency ("90-Day Letter").</strong> The single most time-sensitive notice the IRS issues. 90 days from the date on the notice to file a petition with the United States Tax Court (150 days if addressed to a person outside the United States). Miss the deadline and Tax Court jurisdiction is permanently foreclosed; the deficiency becomes assessed and the only recourse is to pay and sue for refund in district court. There are no extensions.</p>
+
+  <h3>Appeals and enforcement</h3>
+
+  <p><strong>Letter 4837 — Appeals Acknowledgment.</strong> Confirms a protest has been received and assigned. The first step in the Appeals process.</p>
+
+  <p><strong>Letter 1153 — Trust Fund Recovery Penalty Proposed Assessment.</strong> Begins the process of personally assessing unpaid employment trust fund taxes against "responsible persons." 60-day response window. TFRP defense turns heavily on what is argued and documented at this stage.</p>
+
+  <p><strong>Letter 2205 — Examination interview appointment.</strong> Scheduling letter for an in-person IRS examination interview. Counsel is typically advised before this interview.</p>
+
+  <p><strong>Letter 915 — Examination Report.</strong> Transmits the examiner's findings. Taxpayer has 30 days to respond or it proceeds to the 30-day letter and then Appeals.</p>
+
+  <h3>Identity and compliance</h3>
+
+  <p><strong>CP2005 / CP2006 — Inquiry closed.</strong> The IRS has accepted the taxpayer's response and closed the inquiry without further action.</p>
+
+  <p><strong>Letter 4883C / 5071C / 5447C — Identity verification.</strong> Sent when the IRS needs to verify the taxpayer's identity before processing a return or issuing a refund. These letters are sometimes mimicked by scammers; verification should always go through the official IRS phone number or in-person process listed in the letter.</p>
+</section>
+
+<div class="band paper">
+  <div class="wrap">
+    <div class="eyebrow">Received any of these?</div>
+    <h2>Send us the <em>notice</em>.</h2>
+    <p>Any of the notices above can be reviewed as part of the $105 Transcript Analysis. The Transcript Analysis examines the notice in context of the full IRS account picture and returns a written analysis of what the notice means, what deadlines apply, and what resolution paths exist.</p>
+    <a href="/contact.html" class="btn">Request Transcript Analysis</a>
+  </div>
+</div>
+
+<section class="faq">
+  <h2>Frequently asked <em>questions</em>.</h2>
+  <div class="faq-item">
+    <h3>I got a letter that doesn't match any of these. What now?</h3>
+    <p>The IRS issues many more notice types than listed here &mdash; the categories above cover the most commonly received. The first page of any IRS letter has the notice or letter number in the upper-right corner. Send a copy (or description) via the contact form and a preliminary review is included in the Transcript Analysis.</p>
+  </div>
+  <div class="faq-item">
+    <h3>The letter looks like it might be a scam. How can I tell?</h3>
+    <p>Genuine IRS correspondence almost always begins by mail, includes a specific notice or letter number, and directs you to IRS.gov or an official IRS phone number (never a third-party number). The IRS does not demand immediate payment by gift card, wire transfer, or cryptocurrency. Aggressive phone calls claiming to be the IRS threatening immediate arrest are almost always scams. When in doubt, verify through IRS.gov directly.</p>
+  </div>
+  <div class="faq-item">
+    <h3>I missed a deadline on one of these letters. Is my case over?</h3>
+    <p>Depends which deadline. Missing a 30-day protest window forecloses Appeals for that examination but leaves other paths open. Missing a 30-day CDP window forecloses the CDP hearing but leaves Equivalent Hearing and subsequent options. Missing a 90-day Statutory Notice of Deficiency window is the hardest miss &mdash; Tax Court jurisdiction is gone and options narrow considerably, but pre-assessment and post-assessment paths still exist. A Transcript Analysis identifies which deadlines apply to the current posture.</p>
+  </div>
+</section>
+<footer>
+  <div class="foot-inner">
+    <div class="foot-top">
+      <div>
+        <h3>Lozano Legal Advisors, PLLC</h3>
+        <div class="tagline">A Texas law firm for complex work without the complexity of a big firm.</div>
+      </div>
+      <div class="foot-col">
+        <h4>Practice</h4>
+        <a href="/tax-resolution.html">Tax Resolution</a>
+        <a href="/tax-credits.html">Tax Credits</a>
+        <a href="/estate-planning.html">Estate Planning</a>
+        <a href="/real-estate.html">Real Estate</a>
+        <a href="/business-entities.html">Business Entities</a>
+        <a href="/corporate-partnership.html">Corporate &amp; Partnership</a>
+      </div>
+      <div class="foot-col">
+        <h4>Location</h4>
+        <p>9304 Forest Lane<br>Suite 206, PMB 553<br>Dallas, Texas 75243</p>
+      </div>
+      <div class="foot-col">
+        <h4>Contact</h4>
+        <a href="mailto:norris@lozanolegaladvisors.com" class="email">norris@lozanolegaladvisors.com</a>
+        <a href="tel:+12145313014">(214) 531-3014</a>
+        <a href="/contact.html">Request consultation</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <div>© 2026 Lozano Legal Advisors, PLLC · d/b/a Lozano Tax Resolution</div>
+      <nav>
+        <a href="/privacy.html">Privacy</a>
+        <a href="/why-a-tax-attorney.html">Why a Tax Attorney</a>
+        <a href="/irs-notices.html">IRS Notices</a>
+      </nav>
+    </div>
+    <div class="foot-disclaimer">
+      Lozano Legal Advisors, PLLC is a Texas professional limited liability company. Norris Lozano is licensed by the Supreme Court of Texas and admitted to practice before the United States Tax Court. This website is designed for general information only. The information presented at this site should not be construed to be formal legal advice nor the formation of an attorney-client relationship. Prior results do not guarantee a similar outcome. Not certified by the Texas Board of Legal Specialization unless expressly stated otherwise. Principal office: 9304 Forest Lane, Suite 206, PMB 553, Dallas, Texas 75243.
+    </div>
+  </div>
+</footer></body></html>
