@@ -54,6 +54,8 @@
     transition: background 0.2s, color 0.2s;
   }
   nav.top .cta:hover { background: var(--cream); color: var(--green); border-bottom-color: var(--cream); }
+  nav.top ul li.stacked { display: flex; flex-direction: column; gap: 3px; align-items: flex-start; }
+  nav.top ul li.stacked a { padding: 2px 0; white-space: nowrap; line-height: 1.15; }
 
   .page-hero {
     max-width: 1280px; margin: 0 auto; padding: 90px 40px 40px;
@@ -305,8 +307,10 @@
       <li><a href="/estate-planning.html">Estate Planning</a></li>
       <li><a href="/real-estate.html">Real Estate</a></li>
       <li><a href="/business-entities.html">Business Entities</a></li>
-      <li><a href="/corporate-partnership.html">Corporate</a></li>
-      <li><a href="/tax-credits.html">Tax Credits</a></li>
+      <li class="stacked">
+        <a href="/corporate-partnership.html">Corporate</a>
+        <a href="/tax-credits.html">Tax Credits</a>
+      </li>
       <li><a href="/about.html" class="active">About</a></li>
       <li><a href="/contact.html" class="cta">$105 Transcript Analysis</a></li>
     </ul>
