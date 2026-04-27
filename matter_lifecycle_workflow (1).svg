@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 420" width="100%" style="max-width:680px;font-family:-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;background:#ffffff;" role="img" aria-labelledby="title desc">
+  <title id="title">Matter Lifecycle Workflow — Lozano Legal Advisors PLLC</title>
+  <desc id="desc">Swim lane diagram showing how a tax controversy matter flows through four stages (intake, onboard, active, closure) across three actors (client, firm tools, external systems).</desc>
+
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="#5F5E5A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <!-- Title and subtitle -->
+  <text x="340" y="22" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="500" fill="#1F3A5F">Matter lifecycle — tax controversy workflow</text>
+  <text x="340" y="42" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#5F5E5A">From inquiry through closure across firm systems</text>
+
+  <!-- Stage header row -->
+  <rect x="150" y="60" width="115" height="36" rx="6" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.75"/>
+  <text x="207" y="78" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="500" fill="#04342C">1. Intake</text>
+
+  <rect x="275" y="60" width="115" height="36" rx="6" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.75"/>
+  <text x="332" y="78" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="500" fill="#04342C">2. Onboard</text>
+
+  <rect x="400" y="60" width="115" height="36" rx="6" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.75"/>
+  <text x="457" y="78" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="500" fill="#04342C">3. Active</text>
+
+  <rect x="525" y="60" width="115" height="36" rx="6" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.75"/>
+  <text x="582" y="78" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="500" fill="#04342C">4. Closure</text>
+
+  <!-- Stage progression arrows -->
+  <line x1="266" y1="78" x2="273" y2="78" stroke="#5F5E5A" stroke-width="1" marker-end="url(#arrow)"/>
+  <line x1="391" y1="78" x2="398" y2="78" stroke="#5F5E5A" stroke-width="1" marker-end="url(#arrow)"/>
+  <line x1="516" y1="78" x2="523" y2="78" stroke="#5F5E5A" stroke-width="1" marker-end="url(#arrow)"/>
+
+  <!-- Lane 1: Client -->
+  <rect x="40" y="105" width="100" height="75" rx="6" fill="#FAFAF7" stroke="#D3D1C7" stroke-width="0.75"/>
+  <text x="90" y="143" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="500" fill="#3D3D3A">Client</text>
+
+  <rect x="150" y="105" width="115" height="75" rx="6" fill="#FAFAF7" stroke="#D3D1C7" stroke-width="0.75"/>
+  <text x="207" y="143" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#3D3D3A">Inquiry sent</text>
+
+  <rect x="275" y="105" width="115" height="75" rx="6" fill="#FAFAF7" stroke="#D3D1C7" stroke-width="0.75"/>
+  <text x="332" y="135" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#3D3D3A">Signs EL</text>
+  <text x="332" y="153" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#3D3D3A">Signs Form 2848</text>
+  <text x="332" y="167" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#3D3D3A">(KBA)</text>
+
+  <rect x="400" y="105" width="115" height="75" rx="6" fill="#FAFAF7" stroke="#D3D1C7" stroke-width="0.75"/>
+  <text x="457" y="135" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#3D3D3A">Provides docs</text>
+  <text x="457" y="153" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#3D3D3A">via portal</text>
+
+  <rect x="525" y="105" width="115" height="75" rx="6" fill="#FAFAF7" stroke="#D3D1C7" stroke-width="0.75"/>
+  <text x="582" y="135" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#3D3D3A">Receives refund</text>
+  <text x="582" y="153" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#3D3D3A">or final invoice</text>
+
+  <!-- Lane 2: Firm Tools -->
+  <rect x="40" y="190" width="100" height="75" rx="6" fill="#FAFAF7" stroke="#D3D1C7" stroke-width="0.75"/>
+  <text x="90" y="220" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="500" fill="#3D3D3A">Firm tools</text>
+  <text x="90" y="240" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#5F5E5A">Clio + M365</text>
+
+  <rect x="150" y="190" width="115" height="75" rx="6" fill="#FAFAF7" stroke="#D3D1C7" stroke-width="0.75"/>
+  <text x="207" y="218" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#3D3D3A">Conflict check</text>
+  <text x="207" y="236" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#3D3D3A">Engagement</text>
+  <text x="207" y="252" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#3D3D3A">letter drafted</text>
+
+  <rect x="275" y="190" width="115" height="75" rx="6" fill="#FAFAF7" stroke="#D3D1C7" stroke-width="0.75"/>
+  <text x="332" y="218" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#3D3D3A">Matter opened</text>
+  <text x="332" y="236" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#3D3D3A">Retainer to</text>
+  <text x="332" y="252" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#3D3D3A">IOLTA ledger</text>
+
+  <rect x="400" y="190" width="115" height="75" rx="6" fill="#FAFAF7" stroke="#D3D1C7" stroke-width="0.75"/>
+  <text x="457" y="218" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#3D3D3A">Active rep</text>
+  <text x="457" y="236" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#3D3D3A">Time + billing</text>
+  <text x="457" y="252" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#3D3D3A">Trust earned</text>
+
+  <rect x="525" y="190" width="115" height="75" rx="6" fill="#FAFAF7" stroke="#D3D1C7" stroke-width="0.75"/>
+  <text x="582" y="218" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#3D3D3A">Final invoice</text>
+  <text x="582" y="236" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#3D3D3A">Trust reconcile</text>
+  <text x="582" y="252" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#3D3D3A">Closure letter</text>
+
+  <!-- Lane 3: External -->
+  <rect x="40" y="275" width="100" height="75" rx="6" fill="#FAFAF7" stroke="#D3D1C7" stroke-width="0.75"/>
+  <text x="90" y="305" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="500" fill="#3D3D3A">External</text>
+  <text x="90" y="325" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#5F5E5A">IRS + BoA</text>
+
+  <rect x="150" y="275" width="115" height="75" rx="6" fill="#FAFAF7" stroke="#D3D1C7" stroke-width="0.75"/>
+  <text x="207" y="313" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#888780">—</text>
+
+  <rect x="275" y="275" width="115" height="75" rx="6" fill="#FAFAF7" stroke="#D3D1C7" stroke-width="0.75"/>
+  <text x="332" y="303" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#3D3D3A">POA filed</text>
+  <text x="332" y="321" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#3D3D3A">with IRS</text>
+  <text x="332" y="337" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#3D3D3A">Client deposit</text>
+
+  <rect x="400" y="275" width="115" height="75" rx="6" fill="#FAFAF7" stroke="#D3D1C7" stroke-width="0.75"/>
+  <text x="457" y="303" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#3D3D3A">IRS responses</text>
+  <text x="457" y="321" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#3D3D3A">Court filings</text>
+  <text x="457" y="337" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#3D3D3A">Hearings</text>
+
+  <rect x="525" y="275" width="115" height="75" rx="6" fill="#FAFAF7" stroke="#D3D1C7" stroke-width="0.75"/>
+  <text x="582" y="303" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#3D3D3A">Final ack</text>
+  <text x="582" y="321" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#3D3D3A">Trust account</text>
+  <text x="582" y="337" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#3D3D3A">zeroed</text>
+
+  <!-- Footer notes -->
+  <text x="340" y="380" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#5F5E5A">After closure: file retention 5+ years per TDRPC 1.15 · stored in SharePoint and Clio</text>
+  <text x="340" y="398" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#5F5E5A">Inside compliance perimeter throughout · all transitions logged · audit trail in Clio + M365</text>
+</svg>
