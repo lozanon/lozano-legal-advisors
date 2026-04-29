@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,6 +21,7 @@
     --ink-mute: #6E6E6E;
     --rule: #D8D3CA;
     --amber: #F5D382;
+    --gold: #D9B568;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   html { scroll-behavior: smooth; }
@@ -210,6 +212,47 @@
     font-style: italic;
   }
 
+  /* Decision-tree chart band */
+  .lla-tax-chart {
+    background: var(--green);
+    padding: 5rem 1.5rem 6rem;
+  }
+  .lla-tax-chart-inner {
+    max-width: 920px;
+    margin: 0 auto;
+  }
+  .lla-tax-chart-eyebrow {
+    font-size: 12px; font-weight: 500; letter-spacing: 0.22em;
+    text-transform: uppercase; color: var(--gold);
+    text-align: center; margin-bottom: 22px;
+  }
+  .lla-tax-chart-heading {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: clamp(34px, 4.4vw, 48px);
+    font-weight: 500;
+    color: var(--cream);
+    text-align: center;
+    margin: 0 0 18px 0;
+    line-height: 1.08;
+    letter-spacing: -0.01em;
+  }
+  .lla-tax-chart-heading em { font-style: italic; color: var(--gold); }
+  .lla-tax-chart-lead {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 18px;
+    color: rgba(234,230,225,0.92);
+    text-align: center;
+    max-width: 660px;
+    margin: 0 auto 3rem;
+    line-height: 1.6;
+    font-weight: 400;
+  }
+  .lla-tax-chart svg {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
   footer {
     background: var(--green); color: var(--cream); padding: 80px 40px 36px;
   }
@@ -257,6 +300,7 @@
     section.content h2 { font-size: 30px; }
     .band { padding: 64px 24px; }
     .two-col { padding: 48px 24px; gap: 24px; }
+    .lla-tax-chart { padding: 3.5rem 1rem 4.5rem; }
     .foot-top { grid-template-columns: 1fr; gap: 32px; }
     .foot-bottom { flex-direction: column; }
     .foot-bottom nav a { margin: 0 12px; }
@@ -320,6 +364,92 @@
     <a href="/contact.html" class="btn">Request Transcript Analysis</a>
   </div>
 </div>
+
+<section class="lla-tax-chart" aria-labelledby="lla-tax-chart-heading">
+  <div class="lla-tax-chart-inner">
+    <div class="lla-tax-chart-eyebrow">After the analysis</div>
+    <h2 id="lla-tax-chart-heading" class="lla-tax-chart-heading">Three paths typically <em>emerge</em>.</h2>
+    <p class="lla-tax-chart-lead">The diagram below shows how Lozano Legal Advisors evaluates a collection case against the IRS&rsquo;s own framework &mdash; and which resolution path the facts call for.</p>
+
+    <svg width="100%" viewBox="0 0 800 870" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="chart-title chart-desc" xmlns="http://www.w3.org/2000/svg">
+      <title id="chart-title">Three Paths Through an IRS Collection Case</title>
+      <desc id="chart-desc">Decision tree showing how Lozano Legal Advisors evaluates an IRS collection case against three resolution paths: Offer in Compromise, Installment Agreement, and Currently Not Collectible.</desc>
+
+      <defs>
+        <marker id="arrow-gold" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="10" markerHeight="10" orient="auto">
+          <path d="M 0 0 L 10 5 L 0 10 z" fill="#D9B568"/>
+        </marker>
+      </defs>
+
+      <rect width="800" height="870" fill="#1F5C3D"/>
+
+      <text x="400" y="44" text-anchor="middle" font-family="'Cormorant Garamond','EB Garamond',Georgia,serif" font-size="24" font-weight="600" fill="#EAE6E1" letter-spacing="0.5">Three paths through an IRS collection case</text>
+      <line x1="300" y1="62" x2="500" y2="62" stroke="#D9B568" stroke-width="2"/>
+
+      <rect x="80" y="82" width="640" height="74" rx="2" fill="#EAE6E1" stroke="#D9B568" stroke-width="5"/>
+      <text x="400" y="113" text-anchor="middle" font-family="'Cormorant Garamond','EB Garamond',Georgia,serif" font-size="14" font-weight="700" fill="#0A1F11" letter-spacing="2.2">CLIENT CANNOT PAY THE IRS IN FULL</text>
+      <text x="400" y="134" text-anchor="middle" font-family="'Cormorant Garamond','EB Garamond',Georgia,serif" font-size="12" fill="#133D27" font-style="italic">Returns are filed and current</text>
+
+      <path d="M 400 156 L 400 180 L 220 180 L 220 200" fill="none" stroke="#D9B568" stroke-width="2" marker-end="url(#arrow-gold)"/>
+
+      <polygon points="220,205 400,265 220,325 40,265" fill="#EAE6E1" stroke="#D9B568" stroke-width="5"/>
+      <text x="220" y="250" text-anchor="middle" font-family="'Cormorant Garamond','EB Garamond',Georgia,serif" font-size="13" font-weight="600" fill="#0A1F11">
+        <tspan x="220" dy="0">Liability exceeds what</tspan>
+        <tspan x="220" dy="15">can be collected before</tspan>
+        <tspan x="220" dy="15">the IRS deadline?</tspan>
+      </text>
+
+      <line x1="400" y1="265" x2="445" y2="265" stroke="#D9B568" stroke-width="2" marker-end="url(#arrow-gold)"/>
+      <text x="422" y="256" text-anchor="middle" font-family="ui-sans-serif,system-ui,sans-serif" font-size="11" font-weight="600" fill="#D9B568" letter-spacing="2">YES</text>
+
+      <rect x="450" y="222" width="280" height="86" rx="2" fill="#EAE6E1" stroke="#D9B568" stroke-width="5"/>
+      <text x="590" y="248" text-anchor="middle" font-family="'Cormorant Garamond','EB Garamond',Georgia,serif" font-size="14" font-weight="700" fill="#0A1F11" letter-spacing="2.2">OFFER IN COMPROMISE</text>
+      <text x="590" y="270" text-anchor="middle" font-family="'Cormorant Garamond','EB Garamond',Georgia,serif" font-size="12" fill="#133D27">Settle the liability for less than owed</text>
+      <text x="590" y="290" text-anchor="middle" font-family="'Cormorant Garamond','EB Garamond',Georgia,serif" font-size="11" fill="#0A1F11" font-style="italic">Doubt as to Collectibility</text>
+
+      <line x1="220" y1="325" x2="220" y2="385" stroke="#D9B568" stroke-width="2" marker-end="url(#arrow-gold)"/>
+      <text x="240" y="358" font-family="ui-sans-serif,system-ui,sans-serif" font-size="11" font-weight="600" fill="#D9B568" letter-spacing="2">NO</text>
+
+      <polygon points="220,395 400,455 220,515 40,455" fill="#EAE6E1" stroke="#D9B568" stroke-width="5"/>
+      <text x="220" y="440" text-anchor="middle" font-family="'Cormorant Garamond','EB Garamond',Georgia,serif" font-size="13" font-weight="600" fill="#0A1F11">
+        <tspan x="220" dy="0">Can be paid in monthly</tspan>
+        <tspan x="220" dy="15">installments before the</tspan>
+        <tspan x="220" dy="15">deadline?</tspan>
+      </text>
+
+      <line x1="400" y1="455" x2="445" y2="455" stroke="#D9B568" stroke-width="2" marker-end="url(#arrow-gold)"/>
+      <text x="422" y="446" text-anchor="middle" font-family="ui-sans-serif,system-ui,sans-serif" font-size="11" font-weight="600" fill="#D9B568" letter-spacing="2">YES</text>
+
+      <rect x="450" y="412" width="280" height="86" rx="2" fill="#EAE6E1" stroke="#D9B568" stroke-width="5"/>
+      <text x="590" y="438" text-anchor="middle" font-family="'Cormorant Garamond','EB Garamond',Georgia,serif" font-size="14" font-weight="700" fill="#0A1F11" letter-spacing="2.2">INSTALLMENT AGREEMENT</text>
+      <text x="590" y="460" text-anchor="middle" font-family="'Cormorant Garamond','EB Garamond',Georgia,serif" font-size="12" fill="#133D27">Structured monthly payments</text>
+      <text x="590" y="480" text-anchor="middle" font-family="'Cormorant Garamond','EB Garamond',Georgia,serif" font-size="11" fill="#0A1F11" font-style="italic">Streamlined &middot; Regular &middot; Partial-Pay</text>
+
+      <line x1="220" y1="515" x2="220" y2="575" stroke="#D9B568" stroke-width="2" marker-end="url(#arrow-gold)"/>
+      <text x="240" y="548" font-family="ui-sans-serif,system-ui,sans-serif" font-size="11" font-weight="600" fill="#D9B568" letter-spacing="2">NO</text>
+
+      <polygon points="220,585 400,645 220,705 40,645" fill="#EAE6E1" stroke="#D9B568" stroke-width="5"/>
+      <text x="220" y="638" text-anchor="middle" font-family="'Cormorant Garamond','EB Garamond',Georgia,serif" font-size="13" font-weight="600" fill="#0A1F11">
+        <tspan x="220" dy="0">Would paying create</tspan>
+        <tspan x="220" dy="15">economic hardship?</tspan>
+      </text>
+
+      <line x1="400" y1="645" x2="445" y2="645" stroke="#D9B568" stroke-width="2" marker-end="url(#arrow-gold)"/>
+      <text x="422" y="636" text-anchor="middle" font-family="ui-sans-serif,system-ui,sans-serif" font-size="11" font-weight="600" fill="#D9B568" letter-spacing="2">YES</text>
+
+      <rect x="450" y="602" width="280" height="86" rx="2" fill="#EAE6E1" stroke="#D9B568" stroke-width="5"/>
+      <text x="590" y="628" text-anchor="middle" font-family="'Cormorant Garamond','EB Garamond',Georgia,serif" font-size="14" font-weight="700" fill="#0A1F11" letter-spacing="2.2">CURRENTLY NOT COLLECTIBLE</text>
+      <text x="590" y="650" text-anchor="middle" font-family="'Cormorant Garamond','EB Garamond',Georgia,serif" font-size="12" fill="#133D27">Collection paused for hardship</text>
+      <text x="590" y="670" text-anchor="middle" font-family="'Cormorant Garamond','EB Garamond',Georgia,serif" font-size="11" fill="#0A1F11" font-style="italic">IRS Status 53</text>
+
+      <line x1="80" y1="745" x2="720" y2="745" stroke="#D9B568" stroke-width="2"/>
+      <text x="400" y="772" text-anchor="middle" font-family="ui-sans-serif,system-ui,sans-serif" font-size="11" font-weight="600" fill="#D9B568" letter-spacing="2.5">ALSO AVAILABLE WHERE FACTS SUPPORT</text>
+      <text x="400" y="796" text-anchor="middle" font-family="'Cormorant Garamond','EB Garamond',Georgia,serif" font-size="12" fill="#EAE6E1" font-style="italic">OIC Doubt as to Liability  &middot;  OIC Effective Tax Administration  &middot;  Innocent Spouse Relief</text>
+      <text x="400" y="816" text-anchor="middle" font-family="'Cormorant Garamond','EB Garamond',Georgia,serif" font-size="12" fill="#EAE6E1" font-style="italic">CDP Appeal  &middot;  Audit Reconsideration</text>
+      <text x="400" y="848" text-anchor="middle" font-family="ui-sans-serif,system-ui,sans-serif" font-size="10.5" fill="#D9B568" font-style="italic">The IRS has a 10-year window from assessment to collect (CSED). Strategy depends on where you are in that window.</text>
+    </svg>
+  </div>
+</section>
 
 <section class="content">
   <h2>Resolution paths, explained <em>without the sales pitch</em>.</h2>
