@@ -53,6 +53,18 @@
   nav.top .mark {
     font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 500;
     color: var(--cream); text-decoration: none; white-space: nowrap;
+    position: relative; display: inline-block;
+    margin-top: 40px;
+  }
+  nav.top .mark .plumb {
+    position: absolute;
+    left: 95px;
+    bottom: 100%;
+    margin-bottom: -10px;
+    width: 16px;
+    height: 56px;
+    pointer-events: none;
+    overflow: visible;
   }
   nav.top ul { list-style: none; display: flex; gap: 28px; align-items: center; }
   nav.top ul a {
@@ -311,7 +323,7 @@
 </head>
 <body><nav class="top">
   <div class="wrap">
-    <a href="/" class="mark">Lozano Legal Advisors, PLLC</a>
+    <a href="/" class="mark"><svg class="plumb" viewBox="0 0 64 240" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><line x1="32" y1="0" x2="32" y2="180" stroke="currentColor" stroke-width="4" stroke-linecap="round"/><path d="M 25 180 L 39 180 L 39 192 L 53 204 L 53 213 L 32 240 L 11 213 L 11 204 L 25 192 Z" fill="#D9B568" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/></svg>Lozano Legal Advisors, PLLC</a>
     <ul>
       <li><a href="/tax-resolution.html" class="active">Tax Resolution</a></li>
       <li><a href="/estate-planning.html">Estate Planning</a></li>
