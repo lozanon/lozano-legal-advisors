@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180" role="img" aria-labelledby="title desc">
+  <title id="title">Lozano Legal Advisors plumb bob mark</title>
+  <desc id="desc">A gold surveyor's plumb bob hanging from a cream line on a forest-green background, the firm's iOS home screen icon.</desc>
+  <rect x="0" y="0" width="180" height="180" rx="32" ry="32" fill="#1F5C3D"/>
+  <line x1="90" y1="34" x2="90" y2="80" stroke="#F5EFE0" stroke-width="3" stroke-linecap="round"/>
+  <path d="M 82.5 80 L 97.5 80 L 97.5 90 L 110 100 L 110 108 L 90 146 L 70 108 L 70 100 L 82.5 90 Z" fill="#D9B568" stroke="#F5EFE0" stroke-width="2.5" stroke-linejoin="round"/>
+</svg>
