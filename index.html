@@ -75,7 +75,19 @@
     border: 1px solid var(--cream); padding: 10px 20px; border-radius: 24px;
     font-size: 13px; letter-spacing: 0.03em; transition: background 0.2s, color 0.2s; white-space: nowrap;
   }
-  nav.top .cta:hover { background: var(--cream); color: var(--green); border-bottom-color: var(--cream); }
+  nav.top .cta:hover { background: var(--cream); color: var(--green); border-bottom-color: var(--cream); }nav.top .phone {
+    color: var(--cream); text-decoration: none; font-size: 14px;
+    font-weight: 500; letter-spacing: 0.02em; white-space: nowrap;
+    padding: 6px 0; transition: opacity 0.2s;
+  }
+  nav.top .phone:hover { opacity: 0.85; }
+  nav.top .phone-mobile { display: none; }
+  nav.top .hamburger {
+    display: none; background: none; border: 0; cursor: pointer;
+    padding: 8px; color: var(--cream);
+  }
+  nav.top .hamburger svg { width: 24px; height: 24px; display: block; }
+  nav.top ul.mobile-open { display: flex !important; }
   nav.top ul li.stacked { display: flex; flex-direction: column; gap: 0; align-items: flex-start; }
   nav.top ul li.stacked a { padding: 0; white-space: nowrap; line-height: 1.35; }
 
