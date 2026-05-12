@@ -46,7 +46,7 @@
   }
   nav.top .wrap {
     max-width: 1280px; margin: 0 auto; padding: 0 40px;
-    display: flex; align-items: center; justify-content: space-between; gap: 32px;
+    display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; row-gap: 12px;
   }
   nav.top .mark {
     font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 500;
@@ -64,7 +64,7 @@
     pointer-events: none;
     overflow: visible;
   }
-  nav.top ul { list-style: none; display: flex; gap: 28px; align-items: center; }
+  nav.top ul { list-style: none; display: flex; gap: 20px; align-items: center; flex-wrap: wrap; }
   nav.top ul a {
     color: var(--cream); text-decoration: none; font-size: 14px;
     padding: 6px 0; border-bottom: 1px solid transparent; transition: border-color 0.2s;
@@ -314,21 +314,26 @@
       <li><a href="/about.html">About</a></li>
       <li><a href="/contact.html" class="cta">$105 Transcript Analysis</a></li>
     </ul>
+  </div>
+</nav>
+
+<section class="credibility-strip" style="max-width:1280px;margin:0 auto;padding:0 40px;">
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));border-bottom:1px solid var(--rule);">
     <div style="padding:28px 20px;border-right:1px solid var(--rule);text-align:center;">
       <div style="font-size:11px;letter-spacing:0.15em;text-transform:uppercase;color:var(--ink-mute);margin-bottom:10px;font-weight:500;">Court</div>
-      <div class="serif" style="font-size:24px;font-weight:500;line-height:1.1;">U.S. Tax Court<div style="font-family:'Source Sans 3',sans-serif;font-size:12px;font-weight:400;color:var(--ink-mute);margin-top:4px;">Admitted</div></div>
+      <div class="serif" style="font-size:24px;font-weight:500;line-height:1.1;color:var(--ink);">U.S. Tax Court<div style="font-family:'Source Sans 3',sans-serif;font-size:12px;font-weight:400;color:var(--ink-mute);margin-top:4px;">Admitted</div></div>
     </div>
     <div style="padding:28px 20px;border-right:1px solid var(--rule);text-align:center;">
       <div style="font-size:11px;letter-spacing:0.15em;text-transform:uppercase;color:var(--ink-mute);margin-bottom:10px;font-weight:500;">Practice</div>
-      <div class="serif" style="font-size:24px;font-weight:500;line-height:1.1;">30+ Years<div style="font-family:'Source Sans 3',sans-serif;font-size:12px;font-weight:400;color:var(--ink-mute);margin-top:4px;">State Bar of Texas</div></div>
+      <div class="serif" style="font-size:24px;font-weight:500;line-height:1.1;color:var(--ink);">30+ Years<div style="font-family:'Source Sans 3',sans-serif;font-size:12px;font-weight:400;color:var(--ink-mute);margin-top:4px;">State Bar of Texas</div></div>
     </div>
     <div style="padding:28px 20px;border-right:1px solid var(--rule);text-align:center;">
       <div style="font-size:11px;letter-spacing:0.15em;text-transform:uppercase;color:var(--ink-mute);margin-bottom:10px;font-weight:500;">Partnership</div>
-      <div class="serif" style="font-size:24px;font-weight:500;line-height:1.1;">18 Years<div style="font-family:'Source Sans 3',sans-serif;font-size:12px;font-weight:400;color:var(--ink-mute);margin-top:4px;">Dallas commercial partnership</div></div>
+      <div class="serif" style="font-size:24px;font-weight:500;line-height:1.1;color:var(--ink);">18 Years<div style="font-family:'Source Sans 3',sans-serif;font-size:12px;font-weight:400;color:var(--ink-mute);margin-top:4px;">Dallas commercial partnership</div></div>
     </div>
     <div style="padding:28px 20px;text-align:center;">
       <div style="font-size:11px;letter-spacing:0.15em;text-transform:uppercase;color:var(--ink-mute);margin-bottom:10px;font-weight:500;">Experience</div>
-      <div class="serif" style="font-size:24px;font-weight:500;line-height:1.1;">$1.1B+<div style="font-family:'Source Sans 3',sans-serif;font-size:12px;font-weight:400;color:var(--ink-mute);margin-top:4px;">Transactions managed</div></div>
+      <div class="serif" style="font-size:24px;font-weight:500;line-height:1.1;color:var(--ink);">$1.1B+<div style="font-family:'Source Sans 3',sans-serif;font-size:12px;font-weight:400;color:var(--ink-mute);margin-top:4px;">Transactions managed</div></div>
     </div>
   </div>
 </section>
