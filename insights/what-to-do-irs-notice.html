@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What to do when you get an IRS notice in the mail — Lozano Legal Advisors PLLC</title>
+<meta name="description" content="What to do when you receive an IRS notice — CP2000, CP504, LT11, Letter 3219, or any other IRS letter. A practical guide by a Texas tax attorney with 30+ years in practice. Lozano Legal Advisors PLLC, Dallas.">
+<link rel="icon" type="image/svg+xml" href="/lozano-favicon.svg">
+<link rel="apple-touch-icon" href="/lozano-apple-touch-icon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Source+Sans+3:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --green: #1F5C3D; --green-deep: #133D27;
+    --cream: #EAE6E1; --cream-deep: #D8D3CA;
+    --paper: #F7F5F0; --ink: #1A1A1A;
+    --ink-soft: #4A4A4A; --ink-mute: #6E6E6E;
+    --rule: #D8D3CA; --amber: #F5D382;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Source Sans 3', -apple-system, sans-serif;
+    font-weight: 400; font-size: 17px; line-height: 1.6;
+    color: var(--ink); background: var(--paper);
+    -webkit-font-smoothing: antialiased;
+  }
+  .eyebrow {
+    font-size: 12px; font-weight: 500; letter-spacing: 0.18em;
+    text-transform: uppercase; color: var(--green);
+  }
+  nav.top {
+    background: var(--green); color: var(--cream);
+    padding: 10px 0; border-bottom: 3px solid var(--cream);
+    position: sticky; top: 0; z-index: 100;
+  }
+  nav.top .wrap {
+    max-width: 1320px; margin: 0 auto; padding: 0 40px;
+    display: flex; align-items: center; justify-content: space-between; gap: 20px;
+  }
+  nav.top .mark {
+    font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 500;
+    color: var(--cream); text-decoration: none; white-space: nowrap;
+    position: relative; display: inline-block;
+    margin-top: 12px;
+  }
+  nav.top .mark .plumb {
+    position: absolute;
+    left: 96px;
+    bottom: 100%;
+    margin-bottom: -4px;
+    width: 11px;
+    height: 28px;
+    pointer-events: none;
+    overflow: visible;
+  }
+  nav.top ul { list-style: none; display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
+  nav.top ul a {
+    color: var(--cream); text-decoration: none; font-size: 13px;
+    padding: 6px 0; border-bottom: 1px solid transparent; transition: border-color 0.2s; line-height: 1.2;
+  }
+  nav.top ul a:hover { border-bottom-color: var(--cream); }
+  nav.top ul a.active { border-bottom-color: var(--cream); }
+  nav.top .cta {
+    border: 1px solid var(--cream); padding: 10px 18px; border-radius: 24px;
+    font-size: 13px; letter-spacing: 0.03em; white-space: nowrap;
+    transition: background 0.2s, color 0.2s;
+  }
+  nav.top .cta:hover { background: var(--cream); color: var(--green); border-bottom-color: var(--cream); }
+  nav.top ul li.stacked { display: flex; flex-direction: column; gap: 0; align-items: flex-start; }
+  nav.top ul li.stacked a { padding: 0; white-space: nowrap; line-height: 1.35; }
+
+  .page-hero {
+    max-width: 1280px; margin: 0 auto; padding: 90px 40px 40px;
+    display: grid; grid-template-columns: 1.3fr 1fr; gap: 60px; align-items: center;
+  }
+  .page-hero .text .eyebrow { margin-bottom: 24px; }
+  .page-hero h1 {
+    font-family: 'Cormorant Garamond', serif; font-weight: 400;
+    font-size: clamp(44px, 6vw, 72px); line-height: 1.04;
+    letter-spacing: -0.02em; color: var(--ink); margin-bottom: 22px;
+  }
+  .page-hero h1 em { font-style: italic; color: var(--green); }
+  .page-hero .title {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: 22px; color: var(--green); margin-bottom: 28px;
+  }
+  .page-hero .lede {
+    font-size: 19px; line-height: 1.55; color: var(--ink-soft); font-weight: 300;
+  }
+
+  .portrait-frame {
+    aspect-ratio: 4 / 5; background: var(--cream); border: 1px solid var(--rule);
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    padding: 40px; text-align: center; position: relative;
+  }
+  .portrait-frame::before {
+    content: ''; position: absolute; top: 18px; left: 18px; right: 18px; bottom: 18px;
+    border: 1px solid var(--cream-deep); pointer-events: none;
+  }
+  .portrait-frame .caption-label {
+    font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--green); margin-bottom: 14px; font-weight: 500;
+  }
+  .portrait-frame .caption-text {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: 17px; color: var(--ink-mute); line-height: 1.4;
+  }
+
+  .image-slot {
+    width: 100%; aspect-ratio: 16 / 9; background: var(--cream);
+    border: 1px solid var(--rule); margin: 40px 0;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    padding: 32px; text-align: center; position: relative;
+  }
+  .image-slot::before {
+    content: ''; position: absolute; top: 12px; left: 12px; right: 12px; bottom: 12px;
+    border: 1px solid var(--cream-deep); pointer-events: none;
+  }
+  .image-slot .slot-label {
+    font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--green); margin-bottom: 10px; font-weight: 500;
+  }
+  .image-slot .slot-text {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: 16px; color: var(--ink-mute);
+  }
+
+  section.content {
+    max-width: 960px; margin: 0 auto; padding: 40px 40px 60px;
+  }
+  section.content h2 {
+    font-family: 'Cormorant Garamond', serif; font-weight: 400;
+    font-size: clamp(30px, 3.6vw, 44px); line-height: 1.1;
+    letter-spacing: -0.01em; margin-bottom: 24px; color: var(--ink);
+  }
+  section.content h2 em { font-style: italic; color: var(--green); }
+  section.content p {
+    font-size: 17px; line-height: 1.75; color: var(--ink-soft);
+    margin-bottom: 18px; max-width: 760px;
+  }
+  section.content p strong { color: var(--ink); font-weight: 500; }
+  section.content .section-label {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: 14px; color: var(--green); letter-spacing: 0.04em;
+    text-transform: uppercase; font-weight: 500; margin-bottom: 10px;
+    display: block;
+  }
+
+  .pullquote {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: clamp(24px, 2.6vw, 30px); line-height: 1.3;
+    color: var(--ink); font-weight: 400;
+    margin: 40px auto; padding: 32px 36px; border-left: 3px solid var(--green);
+    max-width: 780px; background: var(--cream);
+  }
+
+  .credentials {
+    background: #fff; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule);
+    padding: 80px 40px;
+  }
+  .credentials .inner {
+    max-width: 1080px; margin: 0 auto;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 64px;
+  }
+  .credentials .section-head {
+    font-family: 'Cormorant Garamond', serif; font-weight: 500;
+    font-size: 13px; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--green); margin-bottom: 24px; padding-bottom: 12px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .credentials .cred-group { margin-bottom: 28px; }
+  .credentials .cred-group:last-child { margin-bottom: 0; }
+  .credentials .cred-label {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: 14px; color: var(--ink-mute); margin-bottom: 6px;
+  }
+  .credentials .cred-line {
+    font-size: 16px; line-height: 1.55; color: var(--ink); margin-bottom: 4px;
+  }
+  .credentials .cred-line .year {
+    color: var(--ink-mute); font-size: 14px; margin-left: 6px;
+  }
+  .credentials .cred-line .bar-no {
+    color: var(--ink-mute); font-size: 14px;
+  }
+
+  .awards {
+    max-width: 1080px; margin: 0 auto; padding: 80px 40px;
+  }
+  .awards h2 {
+    font-family: 'Cormorant Garamond', serif; font-weight: 400;
+    font-size: clamp(32px, 4vw, 44px); line-height: 1.08;
+    margin-bottom: 40px; color: var(--ink);
+  }
+  .awards h2 em { font-style: italic; color: var(--green); }
+  .award-item {
+    display: grid; grid-template-columns: 1fr 3fr; gap: 32px;
+    padding: 24px 0; border-top: 1px solid var(--rule);
+  }
+  .award-item:last-of-type { border-bottom: 1px solid var(--rule); }
+  .award-item .year {
+    font-family: 'Cormorant Garamond', serif; font-size: 22px;
+    color: var(--green); font-weight: 500;
+  }
+  .award-item .body strong {
+    display: block; color: var(--ink); font-weight: 500;
+    font-size: 17px; margin-bottom: 4px;
+  }
+  .award-item .body p {
+    font-size: 15px; color: var(--ink-soft); line-height: 1.55; margin: 0;
+  }
+
+  .boards { background: var(--cream); padding: 80px 40px; }
+  .boards .inner { max-width: 1080px; margin: 0 auto; }
+  .boards h2 {
+    font-family: 'Cormorant Garamond', serif; font-weight: 400;
+    font-size: clamp(32px, 4vw, 44px); line-height: 1.08;
+    margin-bottom: 40px; color: var(--ink);
+  }
+  .boards h2 em { font-style: italic; color: var(--green); }
+  .board-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 28px;
+  }
+  .board-item { padding: 20px 0; border-top: 1px solid var(--cream-deep); }
+  .board-item strong {
+    display: block; font-family: 'Cormorant Garamond', serif;
+    font-size: 18px; font-weight: 500; color: var(--ink); margin-bottom: 4px;
+  }
+  .board-item span { font-size: 14px; color: var(--ink-mute); }
+
+  .band { background: var(--green); color: var(--cream); padding: 56px 40px; }
+  .band .wrap { max-width: 900px; margin: 0 auto; text-align: center; }
+  .band .eyebrow { color: rgba(234,230,225,0.6); margin-bottom: 24px; }
+  .band h2 {
+    font-family: 'Cormorant Garamond', serif; font-size: clamp(40px, 5.5vw, 64px);
+    line-height: 1.08; font-weight: 400; color: var(--cream); margin-bottom: 24px;
+  }
+  .band h2 em { font-style: italic; color: var(--amber); }
+  .band p {
+    font-size: 19px; line-height: 1.6; color: var(--cream);
+    max-width: 720px; margin: 0 auto 16px; font-weight: 300;
+  }
+  .band .btn {
+    display: inline-block; background: var(--cream); color: var(--green);
+    padding: 16px 32px; border-radius: 28px; font-size: 15px;
+    font-weight: 500; letter-spacing: 0.03em; text-decoration: none;
+    transition: background 0.2s; margin-top: 20px;
+  }
+  .band .btn:hover { background: #fff; }
+  .band.paper { background: var(--paper); color: var(--ink); padding: 48px 40px; }
+  .band.paper h2 { color: var(--ink); }
+  .band.paper h2 em { color: var(--green); }
+  .band.paper p { color: var(--ink-soft); }
+  .band.paper .eyebrow { color: var(--green); }
+  .band.paper .btn { background: var(--green); color: var(--cream); }
+  .band.paper .btn:hover { background: var(--green-deep); }
+
+  footer { background: var(--green); color: var(--cream); padding: 80px 40px 36px; }
+  .foot-inner { max-width: 1280px; margin: 0 auto; }
+  .foot-top {
+    display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 48px; margin-bottom: 60px; padding-bottom: 48px;
+    border-bottom: 1px solid rgba(234,230,225,0.25);
+  }
+  .foot-top h3 {
+    font-family: 'Cormorant Garamond', serif; font-size: 28px;
+    font-weight: 500; letter-spacing: -0.01em; line-height: 1.1; margin-bottom: 10px;
+    position: relative; display: inline-block; margin-top: 24px;
+  }
+  .foot-top h3 .plumb {
+    position: absolute;
+    left: 122px;
+    bottom: 100%;
+    margin-bottom: -8px;
+    width: 14px;
+    height: 52px;
+    pointer-events: none;
+    overflow: visible;
+    color: var(--cream);
+  }
+  .foot-top .tagline {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: 17px; opacity: 0.85; margin-top: 6px;
+  }
+  .foot-col h4 {
+    font-family: 'Cormorant Garamond', serif; font-size: 20px;
+    font-weight: 500; margin-bottom: 14px;
+  }
+  .foot-col p, .foot-col a {
+    font-size: 14px; line-height: 1.65; opacity: 0.88; color: var(--cream);
+    text-decoration: none; display: block;
+  }
+  .foot-col a:hover { opacity: 1; text-decoration: underline; }
+  .foot-col .email { font-size: 13px; }
+  .foot-bottom {
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 12px; opacity: 0.65; letter-spacing: 0.04em; flex-wrap: wrap; gap: 12px;
+  }
+  .foot-bottom nav a { color: var(--cream); text-decoration: none; margin-left: 24px; }
+  .foot-bottom nav a:hover { text-decoration: underline; }
+  .foot-disclaimer {
+    margin-top: 18px; padding-top: 32px; border-top: 1px solid rgba(234,230,225,0.15);
+    font-size: 11px; opacity: 0.5; line-height: 1.65; max-width: 960px;
+  }
+
+  @media (max-width: 960px) {
+    nav.top ul { display: none; }
+    .page-hero { grid-template-columns: 1fr; padding: 50px 24px 30px; gap: 40px; }
+    .page-hero h1 { font-size: 40px; }
+    section.content { padding: 24px 24px 40px; }
+    section.content h2 { font-size: 28px; }
+    .credentials .inner { grid-template-columns: 1fr; gap: 40px; }
+    .credentials { padding: 56px 24px; }
+    .awards { padding: 56px 24px; }
+    .award-item { grid-template-columns: 1fr; gap: 8px; }
+    .boards { padding: 56px 24px; }
+    .band { padding: 64px 24px; }
+    .foot-top { grid-template-columns: 1fr; gap: 32px; }
+    .foot-bottom { flex-direction: column; }
+    .foot-bottom nav a { margin: 0 12px; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="top">
+  <div class="wrap">
+    <a href="/" class="mark"><svg class="plumb" viewBox="0 0 64 180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><line x1="32" y1="4" x2="32" y2="110" stroke="currentColor" stroke-width="5" stroke-linecap="round"/><path d="M 26 110 L 38 110 L 38 122 L 48 140 L 48 152 L 32 174 L 16 152 L 16 140 L 26 122 Z" fill="#D9B568" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/></svg>Lozano Legal Advisors PLLC</a>
+    <ul>
+      <li><a href="/tax-resolution.html">Tax Resolution</a></li>
+      <li><a href="/estate-planning.html">Estate Planning</a></li>
+      <li><a href="/real-estate.html">Real Estate</a></li>
+      <li><a href="/business-entities.html">Business Entities</a></li>
+      <li><a href="/corporate-partnership.html" style="line-height:1.1;display:inline-block;">Corporate<br>Partnership</a></li>
+      <li><a href="/tax-credits.html">Tax Credits</a></li>
+      <li><a href="/about.html" class="active">About</a></li>
+      <li><a href="/contact.html" class="cta">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<figure style="margin:0;max-width:1280px;margin-left:auto;margin-right:auto;padding:40px 40px 0;">
+  <img src="/insights/figures/irs-letter-hero.jpg" alt="An unopened IRS envelope rests on a dark wooden desk beside reading glasses. Window light from the upper left." style="display:block;width:100%;height:auto;" />
+</figure>
+
+<section class="page-hero" style="grid-template-columns: 1fr; max-width: 880px; padding-top: 32px;">
+  <div class="text">
+    <div class="eyebrow">Insights · Tax Resolution</div>
+    <h1>What to do when you get an<br><em>IRS notice in the mail.</em></h1>
+    <div class="title">A practical guide for Texas taxpayers.</div>
+    <p class="lede">The letter is in your hand. The IRS logo is on the corner. You've already read it twice. What happens in the next two weeks usually matters more than what happened in the years that produced the notice.</p>
+  </div>
+</section>
+
+<section class="content">
+  <p>Most taxpayers who receive an IRS notice fall into one of two errors. The first is panic &mdash; calling the phone number on the notice, paying the assessed amount, or writing back an explanation before reviewing what the IRS actually has on file. The second is silence &mdash; setting the letter aside, hoping that the matter will resolve itself, and discovering some months later that a deadline has run and a procedural option has closed.</p>
+  <p>Neither is the right response. This guide walks through what an IRS notice actually means, what the deadlines on it are doing, what representation changes about the case, and what most taxpayers in trouble get wrong &mdash; primarily by hiring the wrong kind of help.</p>
+</section>
+
+<section class="content">
+  <span class="section-label">Step one</span>
+  <h2>First, identify <em>what kind of notice you have.</em></h2>
+  <p>Most IRS notices fall into one of three categories. The label on the upper-right corner of the letter &mdash; something like CP501, LT11, or Letter 3219 &mdash; tells you which.</p>
+  <p><strong>Collection notices.</strong> The IRS believes you owe money and is moving through the steps required to collect it. The sequence usually runs CP14, then CP501, then CP503, then CP504, then LT11 or Letter 1058, escalating from a polite balance-due notice to a Final Notice of Intent to Levy with thirty days to request a Collection Due Process hearing.</p>
+  <p><strong>Examination notices.</strong> The IRS is questioning an item on a return &mdash; usually a specific income, deduction, or credit &mdash; and proposing a change. CP2000 letters are by far the most common: a third-party report (a 1099, a W-2, a brokerage statement) didn't match what was on your return, and the IRS has done the math its way. Letter 525 and Letter 3219 (or CP3219A) are more serious. The latter is the Statutory Notice of Deficiency, the "90-day letter," and the deadline on it is jurisdictional.</p>
+  <p><strong>Identity and compliance notices.</strong> Letters 4883C, 5071C, and 5447C ask the taxpayer to verify identity before the IRS will process a return. Notices CP2005 and CP2006 confirm that an earlier dispute has resolved.</p>
+  <p>The category determines what is at stake. A CP14 collection notice and a Letter 3219 deficiency notice both contain a dollar figure and a deadline, but they sit in completely different procedural postures and require completely different responses.</p>
+</section>
+
+<section class="content">
+  <span class="section-label">Collection sequence</span>
+  <h2>The collection notices run on <em>a calendar of their own.</em></h2>
+  <p>If the notice you received is a collection notice, it sits in a sequence that runs on a calendar the IRS controls. The agency gives the taxpayer approximately twenty-one days to respond to each notice. After internal processing time, the next notice issues. In normal operations, that means approximately five weeks between notices, with the CP504-to-LT11 step running slightly longer.</p>
+  <p>Some cases compress this timeline &mdash; particularly when there is prior collection history with the IRS or when the underlying assessment was made through the audit process. But the typical taxpayer who receives a CP14 has approximately four to five months before the LT11 / Letter 1058 lands and the 30-day CDP window begins.</p>
+</section>
+
+<figure style="margin:56px 0;">
+  <svg viewBox="0 0 700 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="fig2-title" style="display:block;width:100%;max-width:720px;height:auto;margin:0 auto;">
+    <title id="fig2-title">Escalating IRS Collection Chain — the six steps from CP14 to levy</title>
+    <rect width="700" height="360" fill="#F7F5F0"/>
+    <text x="350" y="40" text-anchor="middle" font-family="'Source Sans 3',sans-serif" font-size="11" font-weight="500" letter-spacing="2.5" fill="#1F5C3D">FIGURE 1 · ESCALATING IRS COLLECTION CHAIN</text>
+    <text x="350" y="80" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-size="30" font-weight="500" fill="#1A1A1A">Escalating IRS Collection Chain.</text>
+    <text x="350" y="106" text-anchor="middle" font-family="'Source Sans 3',sans-serif" font-size="13" font-style="italic" fill="#6E6E6E">Six steps from balance-due notice to levy. Roughly five weeks between each.</text>
+    <line x1="320" y1="124" x2="380" y2="124" stroke="#D9B568" stroke-width="2"/>
+
+    <!-- The chain, centered, with timing labels above the arrows -->
+    <g transform="translate(35,170)">
+      <!-- CP14 -->
+      <rect x="0" y="0" width="76" height="36" fill="#1F5C3D" rx="3"/>
+      <text x="38" y="22" text-anchor="middle" font-family="'Source Sans 3',sans-serif" font-size="13" font-weight="500" fill="#EAE6E1">CP14</text>
+      <!-- Arrow + timing label -->
+      <text x="92" y="-8" text-anchor="middle" font-family="'Source Sans 3',sans-serif" font-size="11" font-style="italic" fill="#6E6E6E">~5 wks</text>
+      <text x="92" y="22" font-family="'Source Sans 3',sans-serif" font-size="16" fill="#6E6E6E">›</text>
+      <!-- CP501 -->
+      <rect x="106" y="0" width="76" height="36" fill="#1F5C3D" rx="3"/>
+      <text x="144" y="22" text-anchor="middle" font-family="'Source Sans 3',sans-serif" font-size="13" font-weight="500" fill="#EAE6E1">CP501</text>
+      <text x="198" y="-8" text-anchor="middle" font-family="'Source Sans 3',sans-serif" font-size="11" font-style="italic" fill="#6E6E6E">~5 wks</text>
+      <text x="198" y="22" font-family="'Source Sans 3',sans-serif" font-size="16" fill="#6E6E6E">›</text>
+      <!-- CP503 -->
+      <rect x="212" y="0" width="76" height="36" fill="#1F5C3D" rx="3"/>
+      <text x="250" y="22" text-anchor="middle" font-family="'Source Sans 3',sans-serif" font-size="13" font-weight="500" fill="#EAE6E1">CP503</text>
+      <text x="304" y="-8" text-anchor="middle" font-family="'Source Sans 3',sans-serif" font-size="11" font-style="italic" fill="#6E6E6E">~5 wks</text>
+      <text x="304" y="22" font-family="'Source Sans 3',sans-serif" font-size="16" fill="#6E6E6E">›</text>
+      <!-- CP504 -->
+      <rect x="318" y="0" width="76" height="36" fill="#1F5C3D" rx="3"/>
+      <text x="356" y="22" text-anchor="middle" font-family="'Source Sans 3',sans-serif" font-size="13" font-weight="500" fill="#EAE6E1">CP504</text>
+      <text x="410" y="-8" text-anchor="middle" font-family="'Source Sans 3',sans-serif" font-size="11" font-style="italic" fill="#6E6E6E">~5-6 wks</text>
+      <text x="410" y="22" font-family="'Source Sans 3',sans-serif" font-size="16" fill="#6E6E6E">›</text>
+      <!-- LT11 -->
+      <rect x="424" y="0" width="100" height="36" fill="#1F5C3D" rx="3"/>
+      <text x="474" y="22" text-anchor="middle" font-family="'Source Sans 3',sans-serif" font-size="13" font-weight="500" fill="#EAE6E1">LT11/L.1058</text>
+      <text x="540" y="-8" text-anchor="middle" font-family="'Source Sans 3',sans-serif" font-size="11" font-style="italic" fill="#D9B568">30 days</text>
+      <text x="540" y="22" font-family="'Source Sans 3',sans-serif" font-size="16" font-weight="600" fill="#D9B568">›</text>
+      <!-- LEVY -->
+      <rect x="556" y="0" width="76" height="36" fill="#D9B568" rx="3"/>
+      <text x="594" y="22" text-anchor="middle" font-family="'Source Sans 3',sans-serif" font-size="13" font-weight="600" letter-spacing="1" fill="#1A1A1A">LEVY</text>
+    </g>
+
+    <!-- Total span annotation -->
+    <text x="350" y="252" text-anchor="middle" font-family="'Source Sans 3',sans-serif" font-size="13" fill="#4A4A4A">Total CP14 → LT11: <tspan font-weight="600">approximately 4 to 5 months</tspan> in normal IRS operations.</text>
+    <text x="350" y="276" text-anchor="middle" font-family="'Source Sans 3',sans-serif" font-size="13" fill="#4A4A4A">After LT11, the 30-day CDP window is jurisdictional and tight.</text>
+
+    <!-- Caveat -->
+    <line x1="120" y1="302" x2="580" y2="302" stroke="#D8D3CA" stroke-width="1"/>
+    <text x="350" y="326" text-anchor="middle" font-family="'Source Sans 3',sans-serif" font-size="12" font-style="italic" fill="#6E6E6E">Some cases skip steps. Prior collection history can compress the timeline significantly.</text>
+  </svg>
+  <figcaption style="font-family:'Source Sans 3',sans-serif;font-size:13px;font-style:italic;color:#6E6E6E;text-align:center;margin-top:14px;">The IRS gives 21 days to respond between notices, plus internal processing time. The CP504 to LT11 step varies most.</figcaption>
+</figure>
+
+<section class="content">
+  <span class="section-label">Step two</span>
+  <h2>The deadlines matter <em>more than the facts.</em></h2>
+  <p>The IRS works on a calendar, not on the merits.</p>
+  <p>This is the most consequential thing for a taxpayer to understand, and the one most consistently misunderstood. The merits of your case &mdash; whether the IRS calculated the liability correctly, whether the third-party 1099 was wrong, whether the deduction you claimed was legitimate &mdash; those merits do not pause when a deadline passes. The deadline runs whether or not you are correct on the underlying facts.</p>
+  <p>Three deadlines are not waivable.</p>
+  <p><strong>The 90-day letter.</strong> From the date printed on a Statutory Notice of Deficiency (Letter 3219 or CP3219A), the taxpayer has 90 days to file a petition in the United States Tax Court. If the 90 days pass without a petition, the proposed assessment becomes final, the IRS assesses the liability, and the only forum left for contesting it is paying the assessment first and suing for refund in a District Court or in the Court of Federal Claims. The Tax Court is the only pre-payment forum, and 90 days is the only window.</p>
+  <p><strong>Collection Due Process.</strong> Thirty days from the date of an LT11 or Letter 1058 to request a CDP hearing. After 30 days, the taxpayer can still request an Equivalent Hearing &mdash; but the appeal rights are weaker, the levy may already have issued, and the right to petition the Tax Court from an Equivalent Hearing decision is lost.</p>
+  <p><strong>Lesser collection deadlines run continuously.</strong> The CP504 gives 30 days before the IRS can levy state tax refunds. The CP503 gives roughly two weeks before escalation. Even routine collection notices have escalation timers that, once missed, narrow the procedural options remaining.</p>
+  <p>The first thing a competent tax attorney does on a new case is calendar every deadline that touches the file. Often that calendaring discloses options the taxpayer didn't know they still had &mdash; or constraints they didn't know they were under.</p>
+</section>
+
+<figure style="margin:56px 0;">
+  <svg viewBox="0 0 700 380" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="fig2-title" style="display:block;width:100%;max-width:720px;height:auto;margin:0 auto;">
+    <title id="fig2-title">IRS deadlines, to scale</title>
+    <rect width="700" height="380" fill="#F7F5F0"/>
+    <text x="350" y="40" text-anchor="middle" font-family="'Source Sans 3',sans-serif" font-size="11" font-weight="500" letter-spacing="2.5" fill="#1F5C3D">FIGURE 2 · NON-WAIVABLE DEADLINES</text>
+    <text x="350" y="80" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-size="30" font-weight="500" fill="#1A1A1A">Deadlines, to scale.</text>
+    <line x1="320" y1="100" x2="380" y2="100" stroke="#D9B568" stroke-width="2"/>
+
+    <!-- Time axis -->
+    <line x1="60" y1="142" x2="600" y2="142" stroke="#D8D3CA" stroke-width="1"/>
+    <line x1="60" y1="138" x2="60" y2="146" stroke="#6E6E6E"/>
+    <line x1="240" y1="138" x2="240" y2="146" stroke="#6E6E6E"/>
+    <line x1="420" y1="138" x2="420" y2="146" stroke="#6E6E6E"/>
+    <line x1="600" y1="138" x2="600" y2="146" stroke="#6E6E6E"/>
+    <text x="60" y="130" text-anchor="middle" font-family="'Source Sans 3',sans-serif" font-size="11" fill="#6E6E6E">Day 0</text>
+    <text x="240" y="130" text-anchor="middle" font-family="'Source Sans 3',sans-serif" font-size="11" fill="#6E6E6E">30</text>
+    <text x="420" y="130" text-anchor="middle" font-family="'Source Sans 3',sans-serif" font-size="11" fill="#6E6E6E">60</text>
+    <text x="600" y="130" text-anchor="middle" font-family="'Source Sans 3',sans-serif" font-size="11" fill="#6E6E6E">90 days</text>
+
+    <!-- Bar 1: 90-day -->
+    <text x="60" y="180" font-family="'Source Sans 3',sans-serif" font-size="11" font-weight="600" letter-spacing="1.5" fill="#1F5C3D">90-DAY LETTER (Letter 3219 / CP3219A)</text>
+    <rect x="60" y="190" width="540" height="24" fill="#1F5C3D"/>
+    <text x="610" y="207" font-family="'Source Sans 3',sans-serif" font-size="14" font-weight="600" fill="#1A1A1A">90</text>
+    <text x="60" y="234" font-family="'Source Sans 3',sans-serif" font-size="12" font-style="italic" fill="#4A4A4A">Window to petition the United States Tax Court. Jurisdictional — cannot be extended.</text>
+
+    <!-- Bar 2: CDP -->
+    <text x="60" y="268" font-family="'Source Sans 3',sans-serif" font-size="11" font-weight="600" letter-spacing="1.5" fill="#1F5C3D">CDP HEARING (LT11 / Letter 1058)</text>
+    <rect x="60" y="278" width="180" height="24" fill="#1F5C3D"/>
+    <text x="250" y="295" font-family="'Source Sans 3',sans-serif" font-size="14" font-weight="600" fill="#1A1A1A">30</text>
+    <text x="60" y="322" font-family="'Source Sans 3',sans-serif" font-size="12" font-style="italic" fill="#4A4A4A">Window to request Collection Due Process hearing. Equivalent Hearing rights remain after — but weaker.</text>
+
+    <!-- Bar 3: CP504 -->
+    <text x="60" y="354" font-family="'Source Sans 3',sans-serif" font-size="11" font-weight="600" letter-spacing="1.5" fill="#D9B568">CP504 · STATE REFUND LEVY</text>
+    <rect x="60" y="362" width="180" height="14" fill="#D9B568"/>
+    <text x="250" y="373" font-family="'Source Sans 3',sans-serif" font-size="12" fill="#1A1A1A">30 days before state refund offset</text>
+  </svg>
+  <figcaption style="font-family:'Source Sans 3',sans-serif;font-size:13px;font-style:italic;color:#6E6E6E;text-align:center;margin-top:14px;">The 90-day Tax Court window is the most generous deadline a taxpayer is likely to encounter. After it passes, options narrow sharply.</figcaption>
+</figure>
+
+<section class="content">
+  <span class="section-label">Step three</span>
+  <h2>What representation <em>actually changes.</em></h2>
+  <p>When a licensed practitioner files a Form 2848 Power of Attorney with the IRS, the mechanics of the case change immediately.</p>
+  <p>The IRS is required to route communications through counsel of record. The revenue officer who was leaving voicemails on the taxpayer's cell phone must now contact the attorney. Collection actions that were moving on the IRS's standard timeline slow &mdash; not because the debt has vanished, but because the agency's procedures require additional administrative steps when a representative is involved, and because the attorney can request additional time, file protective objections, raise procedural defenses, and route disputes through the proper channels rather than the standard automated escalation.</p>
+  <p>Two clarifications matter here.</p>
+  <p>First, "slows" is the right verb. The representation does not stop collection. The IRS is a federal agency operating under statutory authority, and a taxpayer's debt does not disappear because counsel has appeared. What changes is the velocity and the venue &mdash; the case slows and moves into channels where a competent advocate can be heard.</p>
+  <p>Second, only certain practitioners can hold a Form 2848. Treasury Circular 230 limits Form 2848 authority to attorneys, certified public accountants, and enrolled agents. The "tax resolution specialist," the "senior tax analyst," the "case manager" &mdash; these are titles used by national tax-relief firms in their marketing. They are not credentials recognized by the IRS for representation purposes. If the person managing your case cannot personally sign a Form 2848, they cannot represent you before the IRS.</p>
+</section>
+
+<section class="content">
+  <span class="section-label">The national tax-relief model</span>
+  <h2>Why the firms advertising on television <em>aren't the answer.</em></h2>
+  <p>The advertising is hard to miss. The pitch is "free consultation," and the consultation is, in fact, free.</p>
+  <p>The consultation is also a sales call.</p>
+  <p>The person on the phone is an intake representative, generally working from a script and a commission structure. They do not hold a CAF number with the IRS. They do not have a PTIN. They do not have access to the Practitioner Priority Service line. They have not pulled your IRS transcripts. They cannot see your IRS file. What they can do is take down a story, quote a fee, and route you to a contract.</p>
+  <p>The actual representation work, when it happens, is done by a licensed practitioner inside the firm. But that practitioner is not the person who quoted the fee, often is not the person assigned to follow your case day-to-day, and in many cases is handling a caseload measured in the hundreds. This is not a fraud &mdash; these are licensed firms that do, in fact, employ licensed practitioners. It is a volume model. The volume model is the wrong fit for any taxpayer whose case requires senior judgment, who has criminal exposure to evaluate, whose case might end up in U.S. Tax Court, or who simply wants to know that the attorney handling the matter is the same person signing the filings.</p>
+</section>
+
+<section class="content">
+  <span class="section-label">Attorney vs. EA vs. CPA</span>
+  <h2>Why a tax attorney <em>specifically.</em></h2>
+  <p>Attorneys, certified public accountants, and enrolled agents are all authorized to represent taxpayers in administrative matters before the IRS. For many cases &mdash; straightforward installment agreements, basic penalty abatements, returns-only audits &mdash; any of those three is sufficient.</p>
+  <p>Three capabilities are exclusive to a licensed attorney.</p>
+  <p><strong>Tax Court litigation.</strong> Only an attorney admitted to the United States Tax Court can file a petition contesting a Statutory Notice of Deficiency. If a case has any chance of ending in Tax Court &mdash; and Statutory Notices, Appeals disputes, and certain refund cases all carry that possibility &mdash; the attorney needs to be involved before the procedural posture forces the decision.</p>
+  <p><strong>Attorney-client privilege.</strong> Every communication between a client and a licensed attorney on tax strategy is privileged. The narrower federally-recognized CPA-client privilege does exist, but it is more easily defeated, does not extend to all the matters an attorney privilege covers, and does not apply at all in criminal matters. Privilege matters most when criminal exposure is in the picture, but it matters in any case where strategy discussions, calculation alternatives, and litigation positioning are being worked out.</p>
+  <p><strong>Criminal-exposure analysis.</strong> Most tax cases are civil. Some are not. The line between a large civil case and a referral to the Criminal Investigation Division is one that an experienced tax attorney watches for from the first transcript review. An EA or CPA may not recognize the markers in time; some have an institutional incentive not to look for them at all.</p>
+  <p>The right professional depends on the case. For many, an Enrolled Agent or a CPA is appropriate. For cases involving litigation potential, privilege, or criminal exposure &mdash; and for taxpayers who simply want the licensed attorney signing the filings to be the same person handling the matter &mdash; a tax attorney is the correct choice from day one.</p>
+</section>
+
+<figure style="margin:56px 0;">
+  <svg viewBox="0 0 700 380" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="fig3-title" style="display:block;width:100%;max-width:720px;height:auto;margin:0 auto;">
+    <title id="fig3-title">Attorney, CPA, and Enrolled Agent capabilities before the IRS</title>
+    <rect width="700" height="380" fill="#F7F5F0"/>
+    <text x="350" y="40" text-anchor="middle" font-family="'Source Sans 3',sans-serif" font-size="11" font-weight="500" letter-spacing="2.5" fill="#1F5C3D">FIGURE 3 · WHO CAN DO WHAT</text>
+    <text x="350" y="80" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-size="30" font-weight="500" fill="#1A1A1A">Practitioner authority.</text>
+    <line x1="320" y1="100" x2="380" y2="100" stroke="#D9B568" stroke-width="2"/>
+
+    <!-- Column headers -->
+    <text x="450" y="148" text-anchor="middle" font-family="'Source Sans 3',sans-serif" font-size="13" font-weight="600" letter-spacing="1.5" fill="#1A1A1A">ATTORNEY</text>
+    <text x="540" y="148" text-anchor="middle" font-family="'Source Sans 3',sans-serif" font-size="13" font-weight="600" letter-spacing="1.5" fill="#1A1A1A">CPA</text>
+    <text x="620" y="148" text-anchor="middle" font-family="'Source Sans 3',sans-serif" font-size="13" font-weight="600" letter-spacing="1.5" fill="#1A1A1A">EA</text>
+    <line x1="60" y1="162" x2="660" y2="162" stroke="#1A1A1A" stroke-width="1.5"/>
+
+    <!-- Row 1 -->
+    <text x="60" y="196" font-family="'Source Sans 3',sans-serif" font-size="15" fill="#1A1A1A">Administrative IRS representation</text>
+    <circle cx="450" cy="191" r="7" fill="#1F5C3D"/>
+    <circle cx="540" cy="191" r="7" fill="#1F5C3D"/>
+    <circle cx="620" cy="191" r="7" fill="#1F5C3D"/>
+    <line x1="60" y1="212" x2="660" y2="212" stroke="#D8D3CA" stroke-width="0.5"/>
+
+    <!-- Row 2 -->
+    <text x="60" y="240" font-family="'Source Sans 3',sans-serif" font-size="15" fill="#1A1A1A">Hold a Form 2848 (Circular 230)</text>
+    <circle cx="450" cy="235" r="7" fill="#1F5C3D"/>
+    <circle cx="540" cy="235" r="7" fill="#1F5C3D"/>
+    <circle cx="620" cy="235" r="7" fill="#1F5C3D"/>
+    <line x1="60" y1="256" x2="660" y2="256" stroke="#D8D3CA" stroke-width="0.5"/>
+
+    <!-- Row 3 -->
+    <text x="60" y="284" font-family="'Source Sans 3',sans-serif" font-size="15" fill="#1A1A1A">U.S. Tax Court petition</text>
+    <circle cx="450" cy="279" r="7" fill="#1F5C3D"/>
+    <circle cx="540" cy="279" r="7" fill="none" stroke="#C8C0B0" stroke-width="1.5"/>
+    <circle cx="620" cy="279" r="7" fill="none" stroke="#C8C0B0" stroke-width="1.5"/>
+    <line x1="60" y1="300" x2="660" y2="300" stroke="#D8D3CA" stroke-width="0.5"/>
+
+    <!-- Row 4 -->
+    <text x="60" y="328" font-family="'Source Sans 3',sans-serif" font-size="15" fill="#1A1A1A">Full attorney-client privilege</text>
+    <circle cx="450" cy="323" r="7" fill="#1F5C3D"/>
+    <text x="540" y="327" text-anchor="middle" font-family="'Source Sans 3',sans-serif" font-size="11" font-style="italic" fill="#6E6E6E">partial</text>
+    <circle cx="620" cy="323" r="7" fill="none" stroke="#C8C0B0" stroke-width="1.5"/>
+    <line x1="60" y1="344" x2="660" y2="344" stroke="#D8D3CA" stroke-width="0.5"/>
+
+    <!-- Row 5 -->
+    <text x="60" y="372" font-family="'Source Sans 3',sans-serif" font-size="15" fill="#1A1A1A">Criminal-exposure analysis</text>
+    <circle cx="450" cy="367" r="7" fill="#1F5C3D"/>
+    <circle cx="540" cy="367" r="7" fill="none" stroke="#C8C0B0" stroke-width="1.5"/>
+    <circle cx="620" cy="367" r="7" fill="none" stroke="#C8C0B0" stroke-width="1.5"/>
+  </svg>
+  <figcaption style="font-family:'Source Sans 3',sans-serif;font-size:13px;font-style:italic;color:#6E6E6E;text-align:center;margin-top:14px;">For administrative IRS matters, any of the three credentials suffices. Three capabilities are exclusive to a licensed attorney.</figcaption>
+</figure>
+
+<section class="content">
+  <span class="section-label">Practical sequence</span>
+  <h2>What to do <em>this week.</em></h2>
+  <p>If you have just received an IRS notice and there is no active levy or wage garnishment in motion, this is the practical sequence.</p>
+  <p><strong>Today.</strong> Photograph or scan every page of the notice, including the envelope showing the postmark date. Keep the original. The postmark and the date printed on the letter together establish the start of any statutory deadline that may apply.</p>
+  <p><strong>This week.</strong> Gather any prior IRS notices on the same matter, copies of your last three years' filed returns, and the W-2 and 1099 records for the year in question. Do not call the phone number on the notice yet. Do not pay the assessed amount yet. Do not write a letter explaining what happened yet.</p>
+  <p>The reason for the "do not" list is simple: anything you say to the IRS becomes part of the record, and many notices contain calculation errors or assert liabilities the taxpayer does not actually owe. A response written before a transcript review is a response written without information. The IRS has the information. The taxpayer often does not.</p>
+  <p>The actual next step is a transcript pull. The IRS maintains an account transcript for every taxpayer and every year, and the transcript shows exactly what the IRS believes &mdash; every assessment, every penalty, every payment, every notice, and every deadline the agency has calendared against the taxpayer. <em>A notice tells you one thing the IRS is doing. A transcript tells you what the IRS really thinks.</em></p>
+</section>
+
+<section class="content">
+  <span class="section-label">Entry product</span>
+  <h2>The <em>$105 Transcript Analysis.</em></h2>
+  <p>Lozano Legal Advisors offers a flat-fee Transcript Analysis as the firm's entry product. The work is straightforward: a Form 2848 is filed, the transcripts are pulled, and a Texas tax attorney produces a written analysis of what the transcripts show &mdash; every year, every assessment, every penalty, every applicable deadline, with specific recommendations for the available paths forward.</p>
+  <p>The deliverable is a document. It is the client's to keep, to share with another professional for a second opinion, or to act on however the client chooses. Most analyses are delivered within two to three business days of engagement, depending on IRS system availability.</p>
+  <p>The fee is $105, credited toward representation if the firm is engaged for the full matter.</p>
+  <p>For active enforcement &mdash; an in-progress levy, an active wage garnishment, or a sub-30-day deadline on a Statutory Notice or CDP letter &mdash; the form-and-wait approach is not the right one. Call directly at (214) 531-3014.</p>
+  <p style="margin-top:32px;"><a href="/contact.html" class="btn">Request a Transcript Analysis</a></p>
+</section>
+
+<section class="content">
+  <span class="section-label">A note on this firm</span>
+  <h2>Who is signing <em>the filings.</em></h2>
+  <p>Lozano Legal Advisors PLLC is a single-attorney Dallas firm. Norris Lozano is a licensed Texas attorney with 30+ years in practice, admitted to the State Bar of Texas, the United States Tax Court, and the United States District Court for the Northern District of Texas. He spent eighteen years as a Downtown Dallas law partner representing the largest financial institutions in Texas, served as Chief Executive Officer and General Counsel of the Portland Family of Funds (which secured $180 million in New Markets Tax Credits from the U.S. Treasury and closed transactions exceeding $1.1 billion), and was a Harvard University Innovations in American Government Award semifinalist. His practice covers tax resolution and litigation, federal tax credit finance, estate planning, real estate, business entities, and corporate and partnership work.</p>
+  <p>The firm is built on AI-augmented infrastructure that Norris designs and operates himself. The document work and deadline tracking that slows other firms is handled by the system &mdash; and the attorney's time goes where attorney judgment is actually required: strategy, review, negotiation, and signature. When you call this number, the licensed Texas tax attorney is the person who answers.</p>
+</section>
+
+<footer>
+  <div class="foot-inner">
+    <div class="foot-top">
+      <div class="foot-col">
+        <h3><svg class="plumb" viewBox="0 0 64 180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><line x1="32" y1="4" x2="32" y2="110" stroke="currentColor" stroke-width="5" stroke-linecap="round"/><path d="M 26 110 L 38 110 L 38 122 L 48 140 L 48 152 L 32 174 L 16 152 L 16 140 L 26 122 Z" fill="#D9B568" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/></svg>Lozano Legal Advisors PLLC</h3>
+        <div class="tagline">A Texas law firm for complex work without the complexity of a big firm.</div>
+        <p style="margin-top:18px;opacity:0.88;">9304 Forest Lane, Suite 206, PMB 553<br>Dallas, Texas 75243</p>
+      </div>
+      <div class="foot-col">
+        <h4>Practice Areas</h4>
+        <a href="/tax-resolution.html">Tax Resolution</a>
+        <a href="/tax-credits.html">Tax Credits</a>
+        <a href="/estate-planning.html">Estate Planning</a>
+        <a href="/real-estate.html">Real Estate</a>
+        <a href="/business-entities.html">Business Entities</a>
+        <a href="/corporate-partnership.html">Corporate &amp; Partnership</a>
+      </div>
+      <div class="foot-col">
+        <h4>Resources</h4>
+        <a href="/why-a-tax-attorney.html">Why a Tax Attorney</a>
+        <a href="/irs-notices.html">IRS Notice Library</a>
+        <a href="/about.html">About Norris Lozano</a>
+        <a href="/norris-lozano-cv.pdf" download>Download CV</a>
+      </div>
+      <div class="foot-col">
+        <h4>Contact</h4>
+        <a href="tel:+12145313014">(214) 531-3014</a>
+        <a class="email" href="mailto:norris@lozanolegaladvisors.com">norris@lozanolegaladvisors.com</a>
+        <a href="/contact.html">Schedule a consultation</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <div>© 2026 Lozano Legal Advisors, PLLC</div>
+      <nav>
+        <a href="/privacy.html">Privacy</a>
+        <a href="/contact.html">Contact</a>
+      </nav>
+    </div>
+    <div class="foot-disclaimer">
+      This website constitutes attorney advertising under the Texas Disciplinary Rules of Professional Conduct. The information on this site is provided for general informational purposes only and does not constitute legal advice. No attorney-client relationship is formed by use of this website. Prior results do not guarantee a similar outcome. Norris Lozano is licensed to practice law in the State of Texas (Bar No. 12647700) and admitted to practice before the United States Tax Court and the United States District Court for the Northern District of Texas.
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
