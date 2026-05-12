@@ -32,33 +32,33 @@
   }
   nav.top {
     background: var(--green); color: var(--cream);
-    padding: 14px 0; border-bottom: 3px solid var(--cream);
+    padding: 10px 0; border-bottom: 3px solid var(--cream);
     position: sticky; top: 0; z-index: 100;
   }
   nav.top .wrap {
     max-width: 1320px; margin: 0 auto; padding: 0 40px;
-    display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; row-gap: 12px;
+    display: flex; align-items: center; justify-content: space-between; gap: 20px;
   }
   nav.top .mark {
     font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 500;
     color: var(--cream); text-decoration: none; white-space: nowrap;
     position: relative; display: inline-block;
-    margin-top: 18px;
+    margin-top: 12px;
   }
   nav.top .mark .plumb {
     position: absolute;
     left: 96px;
     bottom: 100%;
-    margin-bottom: -6px;
-    width: 13px;
-    height: 38px;
+    margin-bottom: -4px;
+    width: 11px;
+    height: 28px;
     pointer-events: none;
     overflow: visible;
   }
-  nav.top ul { list-style: none; display: flex; gap: 20px; align-items: center; flex-wrap: wrap; }
+  nav.top ul { list-style: none; display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
   nav.top ul a {
-    color: var(--cream); text-decoration: none; font-size: 14px;
-    padding: 6px 0; border-bottom: 1px solid transparent; transition: border-color 0.2s;
+    color: var(--cream); text-decoration: none; font-size: 13px;
+    padding: 6px 0; border-bottom: 1px solid transparent; transition: border-color 0.2s; line-height: 1.2;
   }
   nav.top ul a:hover { border-bottom-color: var(--cream); }
   nav.top ul a.active { border-bottom-color: var(--cream); }
@@ -230,7 +230,7 @@
   }
   .board-item span { font-size: 14px; color: var(--ink-mute); }
 
-  .band { background: var(--green); color: var(--cream); padding: 96px 40px; }
+  .band { background: var(--green); color: var(--cream); padding: 56px 40px; }
   .band .wrap { max-width: 900px; margin: 0 auto; text-align: center; }
   .band .eyebrow { color: rgba(234,230,225,0.6); margin-bottom: 24px; }
   .band h2 {
@@ -249,7 +249,7 @@
     transition: background 0.2s; margin-top: 20px;
   }
   .band .btn:hover { background: #fff; }
-  .band.paper { background: var(--paper); color: var(--ink); padding: 80px 40px; }
+  .band.paper { background: var(--paper); color: var(--ink); padding: 48px 40px; }
   .band.paper h2 { color: var(--ink); }
   .band.paper h2 em { color: var(--green); }
   .band.paper p { color: var(--ink-soft); }
@@ -333,7 +333,7 @@
       <li><a href="/estate-planning.html">Estate Planning</a></li>
       <li><a href="/real-estate.html">Real Estate</a></li>
       <li><a href="/business-entities.html">Business Entities</a></li>
-      <li><a href="/corporate-partnership.html">Corporate<br>Partnership</a></li>
+      <li><a href="/corporate-partnership.html" style="line-height:1.1;display:inline-block;">Corporate<br>Partnership</a></li>
       <li><a href="/tax-credits.html">Tax Credits</a></li>
       <li><a href="/about.html" class="active">About</a></li>
       <li><a href="/contact.html" class="cta">$105 Transcript Analysis</a></li>
