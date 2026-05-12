@@ -41,7 +41,7 @@
   }
   nav.top {
     background: var(--green); color: var(--cream);
-    padding: 18px 0; border-bottom: 3px solid var(--cream);
+    padding: 14px 0; border-bottom: 3px solid var(--cream);
     position: sticky; top: 0; z-index: 100;
   }
   nav.top .wrap {
@@ -52,15 +52,15 @@
     font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 500;
     color: var(--cream); text-decoration: none; white-space: nowrap;
     position: relative; display: inline-block;
-    margin-top: 40px;
+    margin-top: 18px;
   }
   nav.top .mark .plumb {
     position: absolute;
-    left: 88px;
+    left: 104px;
     bottom: 100%;
-    margin-bottom: -10px;
-    width: 16px;
-    height: 56px;
+    margin-bottom: -6px;
+    width: 13px;
+    height: 38px;
     pointer-events: none;
     overflow: visible;
   }
@@ -219,7 +219,7 @@
     margin: 0 auto 16px;
   }
   .repmatters .note {
-    margin-top: 24px; padding: 20px 24px; background: var(--paper);
+    margin-top: 18px; padding: 20px 24px; background: var(--paper);
     border: 1px dashed var(--green); font-size: 14px; color: var(--ink-mute);
     font-style: italic;
   }
@@ -270,7 +270,7 @@
   .foot-bottom nav a { color: var(--cream); text-decoration: none; margin-left: 24px; }
   .foot-bottom nav a:hover { text-decoration: underline; }
   .foot-disclaimer {
-    margin-top: 40px; padding-top: 32px; border-top: 1px solid rgba(234,230,225,0.15);
+    margin-top: 18px; padding-top: 32px; border-top: 1px solid rgba(234,230,225,0.15);
     font-size: 11px; opacity: 0.5; line-height: 1.65; max-width: 960px;
   }
 
@@ -291,7 +291,7 @@
 </head>
 <body><nav class="top">
   <div class="wrap">
-    <a href="/" class="mark"><svg class="plumb" viewBox="0 0 64 240" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><line x1="32" y1="0" x2="32" y2="180" stroke="currentColor" stroke-width="4" stroke-linecap="round"/><path d="M 27 180 L 37 180 L 37 192 L 45 206 L 45 218 L 32 240 L 19 218 L 19 206 L 27 192 Z" fill="#D9B568" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/></svg>Lozano Legal Advisors PLLC</a>
+    <a href="/" class="mark"><svg class="plumb" viewBox="0 0 64 180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><line x1="32" y1="4" x2="32" y2="110" stroke="currentColor" stroke-width="5" stroke-linecap="round"/><path d="M 26 110 L 38 110 L 38 122 L 48 140 L 48 152 L 32 174 L 16 152 L 16 140 L 26 122 Z" fill="#D9B568" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/></svg>Lozano Legal Advisors PLLC</a>
     <ul>
       <li><a href="/tax-resolution.html">Tax Resolution</a></li>
       <li><a href="/estate-planning.html">Estate Planning</a></li>
@@ -329,38 +329,61 @@
 <section class="content">
   <div style="max-width:640px;margin:0 auto;">
     <h2 style="text-align:center;">Request <em>consultation</em>.</h2>
-    <form style="display:grid;gap:18px;margin-top:32px;">
+    <form id="consultForm" style="display:grid;gap:18px;margin-top:32px;" onsubmit="return sendInquiry(event);">
       <div>
         <label style="display:block;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-mute);margin-bottom:6px;font-weight:500;">Name</label>
-        <input type="text" style="width:100%;padding:14px 16px;border:1px solid var(--rule);background:#fff;font-family:'Source Sans 3',sans-serif;font-size:16px;" placeholder="Full name">
+        <input id="f_name" name="name" type="text" required style="width:100%;padding:14px 16px;border:1px solid var(--rule);background:#fff;font-family:'Source Sans 3',sans-serif;font-size:16px;" placeholder="Full name">
       </div>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;">
         <div>
           <label style="display:block;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-mute);margin-bottom:6px;font-weight:500;">Email</label>
-          <input type="email" style="width:100%;padding:14px 16px;border:1px solid var(--rule);background:#fff;font-family:'Source Sans 3',sans-serif;font-size:16px;" placeholder="you@example.com">
+          <input id="f_email" name="email" type="email" required style="width:100%;padding:14px 16px;border:1px solid var(--rule);background:#fff;font-family:'Source Sans 3',sans-serif;font-size:16px;" placeholder="you@example.com">
         </div>
         <div>
           <label style="display:block;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-mute);margin-bottom:6px;font-weight:500;">Phone</label>
-          <input type="tel" style="width:100%;padding:14px 16px;border:1px solid var(--rule);background:#fff;font-family:'Source Sans 3',sans-serif;font-size:16px;" placeholder="(214) 555-0123">
+          <input id="f_phone" name="phone" type="tel" style="width:100%;padding:14px 16px;border:1px solid var(--rule);background:#fff;font-family:'Source Sans 3',sans-serif;font-size:16px;" placeholder="(214) 555-0123">
         </div>
       </div>
       <div>
         <label style="display:block;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-mute);margin-bottom:6px;font-weight:500;">Practice area</label>
-        <select style="width:100%;padding:14px 16px;border:1px solid var(--rule);background:#fff;font-family:'Source Sans 3',sans-serif;font-size:16px;">
+        <select id="f_area" name="area" style="width:100%;padding:14px 16px;border:1px solid var(--rule);background:#fff;font-family:'Source Sans 3',sans-serif;font-size:16px;">
           <option>Tax Resolution</option>
           <option>Estate Planning</option>
           <option>Real Estate</option>
           <option>Business Entities</option>
           <option>Corporate &amp; Partnership</option>
+          <option>Tax Credits</option>
           <option>Not sure yet</option>
         </select>
       </div>
       <div>
         <label style="display:block;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-mute);margin-bottom:6px;font-weight:500;">What&rsquo;s the situation?</label>
-        <textarea rows="5" style="width:100%;padding:14px 16px;border:1px solid var(--rule);background:#fff;font-family:'Source Sans 3',sans-serif;font-size:16px;resize:vertical;" placeholder="Brief description. For tax resolution, include any IRS notice type or number if applicable. For active enforcement, call directly instead."></textarea>
+        <textarea id="f_message" name="message" rows="5" required style="width:100%;padding:14px 16px;border:1px solid var(--rule);background:#fff;font-family:'Source Sans 3',sans-serif;font-size:16px;resize:vertical;" placeholder="Brief description. For tax resolution, include any IRS notice type or number if applicable. For active enforcement, call directly instead."></textarea>
       </div>
-      <button type="button" style="background:var(--green);color:var(--cream);border:none;padding:16px 32px;font-family:'Source Sans 3',sans-serif;font-size:15px;letter-spacing:0.03em;font-weight:500;cursor:pointer;border-radius:28px;margin-top:8px;">Send inquiry</button>
+      <button type="submit" style="background:var(--green);color:var(--cream);border:none;padding:16px 32px;font-family:'Source Sans 3',sans-serif;font-size:15px;letter-spacing:0.03em;font-weight:500;cursor:pointer;border-radius:28px;margin-top:8px;">Send inquiry</button>
     </form>
+    <script>
+      function sendInquiry(e) {
+        e.preventDefault();
+        var name = document.getElementById('f_name').value.trim();
+        var email = document.getElementById('f_email').value.trim();
+        var phone = document.getElementById('f_phone').value.trim();
+        var area = document.getElementById('f_area').value;
+        var msg = document.getElementById('f_message').value.trim();
+        var subject = 'Consultation request — ' + area + ' — ' + name;
+        var body =
+          'Name: ' + name + '\n' +
+          'Email: ' + email + '\n' +
+          'Phone: ' + phone + '\n' +
+          'Practice area: ' + area + '\n\n' +
+          'Situation:\n' + msg + '\n';
+        var href = 'mailto:norris@lozanolegaladvisors.com'
+          + '?subject=' + encodeURIComponent(subject)
+          + '&body=' + encodeURIComponent(body);
+        window.location.href = href;
+        return false;
+      }
+    </script>
     <p style="font-size:13px;color:var(--ink-mute);margin-top:20px;text-align:center;line-height:1.6;">Submission of this form does not establish an attorney-client relationship. Please do not include confidential or time-sensitive information. For active IRS enforcement, call (214) 531-3014 directly.</p>
   </div>
 </section>
@@ -377,7 +400,7 @@
   <div class="foot-inner">
     <div class="foot-top">
       <div>
-        <h3><svg class="plumb" viewBox="0 0 64 240" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><line x1="32" y1="0" x2="32" y2="180" stroke="currentColor" stroke-width="4" stroke-linecap="round"/><path d="M 27 180 L 37 180 L 37 192 L 45 206 L 45 218 L 32 240 L 19 218 L 19 206 L 27 192 Z" fill="#D9B568" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/></svg>Lozano Legal Advisors PLLC</h3>
+        <h3><svg class="plumb" viewBox="0 0 64 180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><line x1="32" y1="4" x2="32" y2="110" stroke="currentColor" stroke-width="5" stroke-linecap="round"/><path d="M 26 110 L 38 110 L 38 122 L 48 140 L 48 152 L 32 174 L 16 152 L 16 140 L 26 122 Z" fill="#D9B568" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/></svg>Lozano Legal Advisors PLLC</h3>
         <div class="tagline">A Texas law firm for complex work without the complexity of a big firm.</div>
       </div>
       <div class="foot-col">
@@ -401,7 +424,7 @@
       </div>
     </div>
     <div class="foot-bottom">
-      <div>© 2026 Lozano Legal Advisors PLLC</div> 
+      <div>© 2026 Lozano Legal Advisors, PLLC</div> 
       <nav>
         <a href="/privacy.html">Privacy</a>
         <a href="/why-a-tax-attorney.html">Why a Tax Attorney</a>
