@@ -312,11 +312,11 @@
 </section>
 
 <div class="two-col">
-  <div class="col dark">
-    <div class="label">Active enforcement</div>
-    <h3>Active levy or garnishment? Call.</h3>
+  <div class="col dark" id="urgencyCol">
+    <div class="label" id="urgLabel">Urgent matters</div>
+    <h3 id="urgHeadline">On a deadline? Call.</h3>
     <p style="font-family:'Cormorant Garamond',serif;font-size:38px;color:var(--amber);margin:20px 0;">(214) 531-3014</p>
-    <p>For clients facing an active levy, wage garnishment, or imminent IRS deadline, Lozano Tax Resolution commits to same-business-day response. Do not wait for a form submission &mdash; active enforcement moves faster than email.</p>
+    <p id="urgBody">For matters with an active deadline, imminent enforcement, or any situation where a same-day response would change the outcome, a direct call is the right path. For routine inquiries, use the form.</p>
   </div>
   <div class="col">
     <div class="label">All other matters</div>
@@ -436,4 +436,93 @@
       Lozano Legal Advisors PLLC is a Texas professional limited liability company. Norris Lozano is licensed by the Supreme Court of Texas and admitted to practice before the United States Tax Court and the United States District Court for the Northern District of Texas. This website is designed for general information only. The information presented at this site should not be construed to be formal legal advice nor the formation of an attorney-client relationship. Prior results do not guarantee a similar outcome. Not certified by the Texas Board of Legal Specialization unless expressly stated otherwise. Principal office: 9304 Forest Lane, Suite 206, PMB 553, Dallas, Texas 75243.
     </div>
   </div>
-</footer></body></html>
+</footer>
+
+<script>
+/* Contact page variant swap — reads ?from= URL parameter and rewrites
+   the .col.dark label, headline, and body to match the practice area
+   the visitor came from. Also preselects the form's Practice area dropdown.
+   No-op for direct visitors or unrecognized values. */
+(function() {
+  var variants = {
+    'tax-resolution': {
+      label: 'Active enforcement',
+      headline: 'Active levy or garnishment? Call.',
+      body: 'For clients facing an active levy, wage garnishment, or imminent IRS deadline, Lozano Tax Resolution commits to same-business-day response. Do not wait for a form submission \u2014 active enforcement moves faster than email.',
+      area: 'Tax Resolution'
+    },
+    'estate-planning': {
+      label: 'Time-critical',
+      headline: 'Recent diagnosis or family emergency? Call.',
+      body: 'For families facing a serious diagnosis, recent hospitalization, or imminent incapacity, estate planning cannot wait for a form submission. A direct call gets the conversation started today. For routine planning, use the form.',
+      area: 'Estate Planning'
+    },
+    'real-estate': {
+      label: 'Imminent closing',
+      headline: 'Closing this week or contract deadline? Call.',
+      body: 'For transactions with an imminent closing, an earnest money deadline, or a contract contingency expiring, a call moves faster than a form. For new transactions and ordinary timelines, use the form.',
+      area: 'Real Estate'
+    },
+    'business-entities': {
+      label: 'Active matter',
+      headline: 'Partner dispute or filing deadline? Call.',
+      body: 'For active partner disputes, dissolution decisions, or filing deadlines that cannot wait, a direct call is faster than a form. For new entity formations and ordinary planning, use the form.',
+      area: 'Business Entities'
+    },
+    'corporate-partnership': {
+      label: 'Active transaction',
+      headline: 'Transaction closing or active deal? Call.',
+      body: 'For active M&A transactions, partnership realignments, or deal timelines compressed by counterparties or counsel, a call moves faster than a form. For new engagements and ordinary timelines, use the form.',
+      area: 'Corporate & Partnership'
+    },
+    'tax-credits': {
+      label: 'Active deadline',
+      headline: 'Allocation deadline or active structuring? Call.',
+      body: 'For active NMTC allocations, structuring decisions with imminent deadlines, or deal closings that cannot wait, a call moves faster than a form. For new credit work and ordinary timelines, use the form.',
+      area: 'Tax Credits'
+    }
+  };
+
+  var params = new URLSearchParams(window.location.search);
+  var from = params.get('from');
+
+  /* Fallback: if no ?from= override, parse the practice area from the
+     referrer URL. Same-origin navigation (clicking Contact from a
+     practice page) sends the full referrer by default, so a visitor
+     coming from /tax-resolution.html sees tax-resolution urgency copy
+     without any link rewriting on the source pages. */
+  if (!from || !variants[from]) {
+    try {
+      var ref = document.referrer || '';
+      if (ref) {
+        var refUrl = new URL(ref);
+        if (refUrl.host === window.location.host) {
+          var refPath = refUrl.pathname.replace(/^\//,'').replace('.html','');
+          if (variants[refPath]) from = refPath;
+        }
+      }
+    } catch (e) { /* ignore — fall through to default copy */ }
+  }
+
+  if (!from || !variants[from]) return;
+
+  var v = variants[from];
+  var labelEl = document.getElementById('urgLabel');
+  var headEl = document.getElementById('urgHeadline');
+  var bodyEl = document.getElementById('urgBody');
+  var areaEl = document.getElementById('f_area');
+
+  if (labelEl) labelEl.textContent = v.label;
+  if (headEl) headEl.textContent = v.headline;
+  if (bodyEl) bodyEl.innerHTML = v.body;
+  if (areaEl) {
+    for (var i = 0; i < areaEl.options.length; i++) {
+      if (areaEl.options[i].text === v.area) {
+        areaEl.selectedIndex = i;
+        break;
+      }
+    }
+  }
+})();
+</script>
+</body></html>
