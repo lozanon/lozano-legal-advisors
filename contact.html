@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,6 +11,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Source+Sans+3:wght@300;400;500&display=swap" rel="stylesheet">
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 <style>
   :root {
     --green: #1F5C3D;
@@ -330,10 +332,21 @@
 <section class="content">
   <div style="max-width:640px;margin:0 auto;">
     <h2 style="text-align:center;">Request <em>consultation</em>.</h2>
-    <form id="consultForm" style="display:grid;gap:18px;margin-top:32px;" onsubmit="return sendInquiry(event);">
-      <div>
-        <label style="display:block;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-mute);margin-bottom:6px;font-weight:500;">Name</label>
-        <input id="f_name" name="name" type="text" required style="width:100%;padding:14px 16px;border:1px solid var(--rule);background:#fff;font-family:'Source Sans 3',sans-serif;font-size:16px;" placeholder="Full name">
+    <form id="consultForm" style="display:grid;gap:18px;margin-top:32px;" novalidate>
+      <!-- Honeypot: hidden from humans, bots fill it; submission silently succeeds server-side. -->
+      <div style="position:absolute;left:-9999px;top:-9999px;height:0;overflow:hidden;" aria-hidden="true">
+        <label>Website</label>
+        <input id="f_website" name="website" type="text" tabindex="-1" autocomplete="off">
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;">
+        <div>
+          <label style="display:block;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-mute);margin-bottom:6px;font-weight:500;">First name</label>
+          <input id="f_first" name="first_name" type="text" required style="width:100%;padding:14px 16px;border:1px solid var(--rule);background:#fff;font-family:'Source Sans 3',sans-serif;font-size:16px;" placeholder="First name">
+        </div>
+        <div>
+          <label style="display:block;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-mute);margin-bottom:6px;font-weight:500;">Last name</label>
+          <input id="f_last" name="last_name" type="text" required style="width:100%;padding:14px 16px;border:1px solid var(--rule);background:#fff;font-family:'Source Sans 3',sans-serif;font-size:16px;" placeholder="Last name">
+        </div>
       </div>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;">
         <div>
@@ -342,48 +355,127 @@
         </div>
         <div>
           <label style="display:block;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-mute);margin-bottom:6px;font-weight:500;">Phone</label>
-          <input id="f_phone" name="phone" type="tel" style="width:100%;padding:14px 16px;border:1px solid var(--rule);background:#fff;font-family:'Source Sans 3',sans-serif;font-size:16px;" placeholder="(214) 555-0123">
+          <input id="f_phone" name="phone" type="tel" required style="width:100%;padding:14px 16px;border:1px solid var(--rule);background:#fff;font-family:'Source Sans 3',sans-serif;font-size:16px;" placeholder="(214) 555-0123">
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;">
+        <div>
+          <label style="display:block;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-mute);margin-bottom:6px;font-weight:500;">Practice area</label>
+          <select id="f_area" name="practice_area" style="width:100%;padding:14px 16px;border:1px solid var(--rule);background:#fff;font-family:'Source Sans 3',sans-serif;font-size:16px;">
+            <option>Tax Resolution</option>
+            <option>Estate Planning</option>
+            <option>Real Estate</option>
+            <option>Business Entities</option>
+            <option>Corporate &amp; Partnership</option>
+            <option>Tax Credits</option>
+            <option>Not sure yet</option>
+          </select>
+        </div>
+        <div>
+          <label style="display:block;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-mute);margin-bottom:6px;font-weight:500;">Urgency</label>
+          <select id="f_urgency" name="urgency" style="width:100%;padding:14px 16px;border:1px solid var(--rule);background:#fff;font-family:'Source Sans 3',sans-serif;font-size:16px;">
+            <option>Active deadline or enforcement</option>
+            <option>Moving soon (within weeks)</option>
+            <option>Planning ahead (no deadline)</option>
+          </select>
         </div>
       </div>
       <div>
-        <label style="display:block;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-mute);margin-bottom:6px;font-weight:500;">Practice area</label>
-        <select id="f_area" name="area" style="width:100%;padding:14px 16px;border:1px solid var(--rule);background:#fff;font-family:'Source Sans 3',sans-serif;font-size:16px;">
-          <option>Tax Resolution</option>
-          <option>Estate Planning</option>
-          <option>Real Estate</option>
-          <option>Business Entities</option>
-          <option>Corporate &amp; Partnership</option>
-          <option>Tax Credits</option>
-          <option>Not sure yet</option>
-        </select>
-      </div>
-      <div>
         <label style="display:block;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-mute);margin-bottom:6px;font-weight:500;">What&rsquo;s the situation?</label>
-        <textarea id="f_message" name="message" rows="5" required style="width:100%;padding:14px 16px;border:1px solid var(--rule);background:#fff;font-family:'Source Sans 3',sans-serif;font-size:16px;resize:vertical;" placeholder="Brief description. For tax resolution, include any IRS notice type or number if applicable. For active enforcement, call directly instead."></textarea>
+        <textarea id="f_message" name="description" rows="5" required style="width:100%;padding:14px 16px;border:1px solid var(--rule);background:#fff;font-family:'Source Sans 3',sans-serif;font-size:16px;resize:vertical;" placeholder="Brief description. For tax resolution, include any IRS notice type or number if applicable. For active enforcement, call directly instead."></textarea>
       </div>
-      <button type="submit" style="background:var(--green);color:var(--cream);border:none;padding:16px 32px;font-family:'Source Sans 3',sans-serif;font-size:15px;letter-spacing:0.03em;font-weight:500;cursor:pointer;border-radius:28px;margin-top:8px;">Send inquiry</button>
+      <input id="f_pageurl" name="page_url" type="hidden" value="">
+      <!-- Cloudflare Turnstile widget. data-sitekey is PUBLIC and ships in HTML. -->
+      <div class="cf-turnstile" data-sitekey="0x4AAAAAADSihJDHHGgnvMd_" data-theme="light"></div>
+      <button id="f_submit" type="submit" style="background:var(--green);color:var(--cream);border:none;padding:16px 32px;font-family:'Source Sans 3',sans-serif;font-size:15px;letter-spacing:0.03em;font-weight:500;cursor:pointer;border-radius:28px;margin-top:8px;">Send inquiry</button>
+      <div id="f_status" role="status" aria-live="polite" style="display:none;font-size:15px;line-height:1.6;padding:16px 18px;border-radius:4px;"></div>
     </form>
     <script>
-      function sendInquiry(e) {
-        e.preventDefault();
-        var name = document.getElementById('f_name').value.trim();
-        var email = document.getElementById('f_email').value.trim();
-        var phone = document.getElementById('f_phone').value.trim();
-        var area = document.getElementById('f_area').value;
-        var msg = document.getElementById('f_message').value.trim();
-        var subject = 'Consultation request — ' + area + ' — ' + name;
-        var body =
-          'Name: ' + name + '\n' +
-          'Email: ' + email + '\n' +
-          'Phone: ' + phone + '\n' +
-          'Practice area: ' + area + '\n\n' +
-          'Situation:\n' + msg + '\n';
-        var href = 'mailto:norris@lozanolegaladvisors.com'
-          + '?subject=' + encodeURIComponent(subject)
-          + '&body=' + encodeURIComponent(body);
-        window.location.href = href;
-        return false;
-      }
+      (function () {
+        var form = document.getElementById('consultForm');
+        var btn = document.getElementById('f_submit');
+        var statusEl = document.getElementById('f_status');
+        var pageUrlEl = document.getElementById('f_pageurl');
+
+        // Record where the inquiry originated (referrer if same-site, else this page).
+        try {
+          pageUrlEl.value = document.referrer || window.location.href;
+        } catch (e) {
+          pageUrlEl.value = window.location.href;
+        }
+
+        function showStatus(message, ok) {
+          statusEl.style.display = 'block';
+          statusEl.textContent = message;
+          statusEl.style.background = ok ? '#E7F0EA' : '#FBEAEA';
+          statusEl.style.color = ok ? '#1F5C3D' : '#8A1F1F';
+          statusEl.style.border = ok ? '1px solid #1F5C3D' : '1px solid #8A1F1F';
+        }
+
+        form.addEventListener('submit', function (e) {
+          e.preventDefault();
+
+          var tokenEl = form.querySelector('[name="cf-turnstile-response"]');
+          var token = tokenEl ? tokenEl.value : '';
+          if (!token) {
+            showStatus('Please complete the verification check above, then send again.', false);
+            return;
+          }
+
+          var payload = {
+            first_name: document.getElementById('f_first').value.trim(),
+            last_name: document.getElementById('f_last').value.trim(),
+            email: document.getElementById('f_email').value.trim(),
+            phone: document.getElementById('f_phone').value.trim(),
+            practice_area: document.getElementById('f_area').value,
+            urgency: document.getElementById('f_urgency').value,
+            description: document.getElementById('f_message').value.trim(),
+            page_url: pageUrlEl.value,
+            website: document.getElementById('f_website').value,
+            'cf-turnstile-response': token
+          };
+
+          btn.disabled = true;
+          var originalLabel = btn.textContent;
+          btn.textContent = 'Sending…';
+          btn.style.opacity = '0.7';
+          statusEl.style.display = 'none';
+
+          fetch('/api/contact', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+          })
+            .then(function (res) {
+              return res.json().then(function (data) {
+                return { ok: res.ok, data: data };
+              });
+            })
+            .then(function (result) {
+              if (result.ok && result.data && result.data.ok) {
+                form.reset();
+                showStatus('Thank you. Your inquiry has been received \u2014 a real person will respond within one business day. For active IRS enforcement, call (214) 531-3014 directly.', true);
+                btn.style.display = 'none';
+              } else {
+                var msg = (result.data && result.data.error)
+                  ? result.data.error
+                  : 'Something went wrong sending your inquiry. Please call (214) 531-3014.';
+                showStatus(msg, false);
+                btn.disabled = false;
+                btn.textContent = originalLabel;
+                btn.style.opacity = '1';
+                if (window.turnstile) { try { window.turnstile.reset(); } catch (e2) {} }
+              }
+            })
+            .catch(function () {
+              showStatus('We could not reach the server. Please check your connection or call (214) 531-3014.', false);
+              btn.disabled = false;
+              btn.textContent = originalLabel;
+              btn.style.opacity = '1';
+              if (window.turnstile) { try { window.turnstile.reset(); } catch (e3) {} }
+            });
+        });
+      })();
     </script>
     <p style="font-size:13px;color:var(--ink-mute);margin-top:20px;text-align:center;line-height:1.6;">Submission of this form does not establish an attorney-client relationship. Please do not include confidential or time-sensitive information. For active IRS enforcement, call (214) 531-3014 directly.</p>
   </div>
