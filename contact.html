@@ -353,13 +353,14 @@
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;">
         <div>
           <label style="display:block;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-mute);margin-bottom:6px;font-weight:500;">Email</label>
-          <input id="f_email" name="email" type="email" required style="width:100%;padding:14px 16px;border:1px solid var(--rule);background:#fff;font-family:'Source Sans 3',sans-serif;font-size:16px;" placeholder="you@example.com">
+          <input id="f_email" name="email" type="email" style="width:100%;padding:14px 16px;border:1px solid var(--rule);background:#fff;font-family:'Source Sans 3',sans-serif;font-size:16px;" placeholder="you@example.com">
         </div>
         <div>
           <label style="display:block;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-mute);margin-bottom:6px;font-weight:500;">Phone</label>
-          <input id="f_phone" name="phone" type="tel" required style="width:100%;padding:14px 16px;border:1px solid var(--rule);background:#fff;font-family:'Source Sans 3',sans-serif;font-size:16px;" placeholder="(214) 555-0123">
+          <input id="f_phone" name="phone" type="tel" style="width:100%;padding:14px 16px;border:1px solid var(--rule);background:#fff;font-family:'Source Sans 3',sans-serif;font-size:16px;" placeholder="(214) 555-0123">
         </div>
       </div>
+      <p style="font-size:13px;color:var(--ink-mute);margin:-8px 0 0;line-height:1.5;">Provide at least one &mdash; email or phone. If you prefer a call back, a phone number alone is fine.</p>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;">
         <div>
           <label style="display:block;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-mute);margin-bottom:6px;font-weight:500;">Practice area</label>
@@ -385,8 +386,8 @@
         </div>
       </div>
       <div>
-        <label style="display:block;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-mute);margin-bottom:6px;font-weight:500;">What&rsquo;s the situation?</label>
-        <textarea id="f_message" name="description" rows="5" required style="width:100%;padding:14px 16px;border:1px solid var(--rule);background:#fff;font-family:'Source Sans 3',sans-serif;font-size:16px;resize:vertical;" placeholder="Brief description. For tax resolution, include any IRS notice type or number if applicable. For active enforcement, call directly instead."></textarea>
+        <label style="display:block;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-mute);margin-bottom:6px;font-weight:500;">What&rsquo;s the situation? <span style="text-transform:none;letter-spacing:0;font-weight:400;">(optional)</span></label>
+        <textarea id="f_message" name="description" rows="5" style="width:100%;padding:14px 16px;border:1px solid var(--rule);background:#fff;font-family:'Source Sans 3',sans-serif;font-size:16px;resize:vertical;" placeholder="Optional. A brief description helps us prepare &mdash; for tax resolution, include any IRS notice type or number if you have it. For active enforcement, call directly instead."></textarea>
       </div>
       <input id="f_pageurl" name="page_url" type="hidden" value="">
       <!-- Cloudflare Turnstile widget. data-sitekey is PUBLIC and ships in HTML. -->
@@ -423,6 +424,13 @@
           var token = tokenEl ? tokenEl.value : '';
           if (!token) {
             showStatus('Please complete the verification check above, then send again.', false);
+            return;
+          }
+
+          var emailVal = document.getElementById('f_email').value.trim();
+          var phoneVal = document.getElementById('f_phone').value.trim();
+          if (!emailVal && !phoneVal) {
+            showStatus('Please provide an email address or a phone number so we can reach you.', false);
             return;
           }
 
