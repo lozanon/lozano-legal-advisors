@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>“I’m not rich enough to need an estate plan” — Lozano Legal Advisors PLLC</title>
+<meta name="description" content="The most expensive myth in estate planning is that planning is only for the wealthy. A Texas estate planning attorney on what a plan actually protects, what Texas decides if you don’t, and where to start. Lozano Legal Advisors PLLC, serving the Dallas–Fort Worth metroplex.">
+<link rel="icon" type="image/svg+xml" href="/lozano-favicon.svg">
+<link rel="apple-touch-icon" href="/lozano-apple-touch-icon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Source+Sans+3:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --green: #1F5C3D; --green-deep: #133D27;
+    --cream: #EAE6E1; --cream-deep: #D8D3CA;
+    --paper: #F7F5F0; --ink: #1A1A1A;
+    --ink-soft: #4A4A4A; --ink-mute: #6E6E6E;
+    --rule: #D8D3CA; --amber: #F5D382;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Source Sans 3', -apple-system, sans-serif;
+    font-weight: 400; font-size: 17px; line-height: 1.6;
+    color: var(--ink); background: var(--paper);
+    -webkit-font-smoothing: antialiased;
+  }
+  .eyebrow {
+    font-size: 12px; font-weight: 500; letter-spacing: 0.18em;
+    text-transform: uppercase; color: var(--green);
+  }
+  nav.top {
+    background: var(--green); color: var(--cream);
+    padding: 10px 0; border-bottom: 3px solid var(--cream);
+    position: sticky; top: 0; z-index: 100;
+  }
+  nav.top .wrap {
+    max-width: 1320px; margin: 0 auto; padding: 0 40px;
+    display: flex; align-items: center; justify-content: space-between; gap: 20px;
+  }
+  nav.top .mark {
+    font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 500;
+    color: var(--cream); text-decoration: none; white-space: nowrap;
+    position: relative; display: inline-block;
+    margin-top: 12px;
+  }
+  nav.top .mark .plumb {
+    position: absolute;
+    left: 96px;
+    bottom: 100%;
+    margin-bottom: -4px;
+    width: 11px;
+    height: 28px;
+    pointer-events: none;
+    overflow: visible;
+  }
+  nav.top ul { list-style: none; display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
+  nav.top ul a {
+    color: var(--cream); text-decoration: none; font-size: 13px;
+    padding: 6px 0; border-bottom: 1px solid transparent; transition: border-color 0.2s; line-height: 1.2;
+  }
+  nav.top ul a:hover { border-bottom-color: var(--cream); }
+  nav.top ul a.active { border-bottom-color: var(--cream); }
+  nav.top .cta {
+    border: 1px solid var(--cream); padding: 10px 18px; border-radius: 24px;
+    font-size: 13px; letter-spacing: 0.03em; white-space: nowrap;
+    transition: background 0.2s, color 0.2s;
+  }
+  nav.top .cta:hover { background: var(--cream); color: var(--green); border-bottom-color: var(--cream); }
+  nav.top ul li.stacked { display: flex; flex-direction: column; gap: 0; align-items: flex-start; }
+  nav.top ul li.stacked a { padding: 0; white-space: nowrap; line-height: 1.35; }
+
+  .page-hero {
+    max-width: 1280px; margin: 0 auto; padding: 90px 40px 40px;
+    display: grid; grid-template-columns: 1.3fr 1fr; gap: 60px; align-items: center;
+  }
+  .page-hero .text .eyebrow { margin-bottom: 24px; }
+  .page-hero h1 {
+    font-family: 'Cormorant Garamond', serif; font-weight: 400;
+    font-size: clamp(44px, 6vw, 72px); line-height: 1.04;
+    letter-spacing: -0.02em; color: var(--ink); margin-bottom: 22px;
+  }
+  .page-hero h1 em { font-style: italic; color: var(--green); }
+  .page-hero .title {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: 22px; color: var(--green); margin-bottom: 28px;
+  }
+  .page-hero .lede {
+    font-size: 19px; line-height: 1.55; color: var(--ink-soft); font-weight: 300;
+  }
+
+  .portrait-frame {
+    aspect-ratio: 4 / 5; background: var(--cream); border: 1px solid var(--rule);
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    padding: 40px; text-align: center; position: relative;
+  }
+  .portrait-frame::before {
+    content: ''; position: absolute; top: 18px; left: 18px; right: 18px; bottom: 18px;
+    border: 1px solid var(--cream-deep); pointer-events: none;
+  }
+  .portrait-frame .caption-label {
+    font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--green); margin-bottom: 14px; font-weight: 500;
+  }
+  .portrait-frame .caption-text {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: 17px; color: var(--ink-mute); line-height: 1.4;
+  }
+
+  .image-slot {
+    width: 100%; aspect-ratio: 16 / 9; background: var(--cream);
+    border: 1px solid var(--rule); margin: 40px 0;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    padding: 32px; text-align: center; position: relative;
+  }
+  .image-slot::before {
+    content: ''; position: absolute; top: 12px; left: 12px; right: 12px; bottom: 12px;
+    border: 1px solid var(--cream-deep); pointer-events: none;
+  }
+  .image-slot .slot-label {
+    font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--green); margin-bottom: 10px; font-weight: 500;
+  }
+  .image-slot .slot-text {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: 16px; color: var(--ink-mute);
+  }
+
+  section.content {
+    max-width: 960px; margin: 0 auto; padding: 40px 40px 60px;
+  }
+  section.content h2 {
+    font-family: 'Cormorant Garamond', serif; font-weight: 400;
+    font-size: clamp(30px, 3.6vw, 44px); line-height: 1.1;
+    letter-spacing: -0.01em; margin-bottom: 24px; color: var(--ink);
+  }
+  section.content h2 em { font-style: italic; color: var(--green); }
+  section.content p {
+    font-size: 17px; line-height: 1.75; color: var(--ink-soft);
+    margin-bottom: 18px; max-width: 760px;
+  }
+  section.content p strong { color: var(--ink); font-weight: 500; }
+  section.content .section-label {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: 14px; color: var(--green); letter-spacing: 0.04em;
+    text-transform: uppercase; font-weight: 500; margin-bottom: 10px;
+    display: block;
+  }
+
+  .pullquote {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: clamp(24px, 2.6vw, 30px); line-height: 1.3;
+    color: var(--ink); font-weight: 400;
+    margin: 40px auto; padding: 32px 36px; border-left: 3px solid var(--green);
+    max-width: 780px; background: var(--cream);
+  }
+
+  .credentials {
+    background: #fff; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule);
+    padding: 80px 40px;
+  }
+  .credentials .inner {
+    max-width: 1080px; margin: 0 auto;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 64px;
+  }
+  .credentials .section-head {
+    font-family: 'Cormorant Garamond', serif; font-weight: 500;
+    font-size: 13px; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--green); margin-bottom: 24px; padding-bottom: 12px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .credentials .cred-group { margin-bottom: 28px; }
+  .credentials .cred-group:last-child { margin-bottom: 0; }
+  .credentials .cred-label {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: 14px; color: var(--ink-mute); margin-bottom: 6px;
+  }
+  .credentials .cred-line {
+    font-size: 16px; line-height: 1.55; color: var(--ink); margin-bottom: 4px;
+  }
+  .credentials .cred-line .year {
+    color: var(--ink-mute); font-size: 14px; margin-left: 6px;
+  }
+  .credentials .cred-line .bar-no {
+    color: var(--ink-mute); font-size: 14px;
+  }
+
+  .awards {
+    max-width: 1080px; margin: 0 auto; padding: 80px 40px;
+  }
+  .awards h2 {
+    font-family: 'Cormorant Garamond', serif; font-weight: 400;
+    font-size: clamp(32px, 4vw, 44px); line-height: 1.08;
+    margin-bottom: 40px; color: var(--ink);
+  }
+  .awards h2 em { font-style: italic; color: var(--green); }
+  .award-item {
+    display: grid; grid-template-columns: 1fr 3fr; gap: 32px;
+    padding: 24px 0; border-top: 1px solid var(--rule);
+  }
+  .award-item:last-of-type { border-bottom: 1px solid var(--rule); }
+  .award-item .year {
+    font-family: 'Cormorant Garamond', serif; font-size: 22px;
+    color: var(--green); font-weight: 500;
+  }
+  .award-item .body strong {
+    display: block; color: var(--ink); font-weight: 500;
+    font-size: 17px; margin-bottom: 4px;
+  }
+  .award-item .body p {
+    font-size: 15px; color: var(--ink-soft); line-height: 1.55; margin: 0;
+  }
+
+  .boards { background: var(--cream); padding: 80px 40px; }
+  .boards .inner { max-width: 1080px; margin: 0 auto; }
+  .boards h2 {
+    font-family: 'Cormorant Garamond', serif; font-weight: 400;
+    font-size: clamp(32px, 4vw, 44px); line-height: 1.08;
+    margin-bottom: 40px; color: var(--ink);
+  }
+  .boards h2 em { font-style: italic; color: var(--green); }
+  .board-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 28px;
+  }
+  .board-item { padding: 20px 0; border-top: 1px solid var(--cream-deep); }
+  .board-item strong {
+    display: block; font-family: 'Cormorant Garamond', serif;
+    font-size: 18px; font-weight: 500; color: var(--ink); margin-bottom: 4px;
+  }
+  .board-item span { font-size: 14px; color: var(--ink-mute); }
+
+  .band { background: var(--green); color: var(--cream); padding: 56px 40px; }
+  .band .wrap { max-width: 900px; margin: 0 auto; text-align: center; }
+  .band .eyebrow { color: rgba(234,230,225,0.6); margin-bottom: 24px; }
+  .band h2 {
+    font-family: 'Cormorant Garamond', serif; font-size: clamp(40px, 5.5vw, 64px);
+    line-height: 1.08; font-weight: 400; color: var(--cream); margin-bottom: 24px;
+  }
+  .band h2 em { font-style: italic; color: var(--amber); }
+  .band p {
+    font-size: 19px; line-height: 1.6; color: var(--cream);
+    max-width: 720px; margin: 0 auto 16px; font-weight: 300;
+  }
+  .band .btn {
+    display: inline-block; background: var(--cream); color: var(--green);
+    padding: 16px 32px; border-radius: 28px; font-size: 15px;
+    font-weight: 500; letter-spacing: 0.03em; text-decoration: none;
+    transition: background 0.2s; margin-top: 20px;
+  }
+  .band .btn:hover { background: #fff; }
+  .band.paper { background: var(--paper); color: var(--ink); padding: 48px 40px; }
+  .band.paper h2 { color: var(--ink); }
+  .band.paper h2 em { color: var(--green); }
+  .band.paper p { color: var(--ink-soft); }
+  .band.paper .eyebrow { color: var(--green); }
+  .band.paper .btn { background: var(--green); color: var(--cream); }
+  .band.paper .btn:hover { background: var(--green-deep); }
+
+  footer { background: var(--green); color: var(--cream); padding: 80px 40px 36px; }
+  .foot-inner { max-width: 1280px; margin: 0 auto; }
+  .foot-top {
+    display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 48px; margin-bottom: 60px; padding-bottom: 48px;
+    border-bottom: 1px solid rgba(234,230,225,0.25);
+  }
+  .foot-top h3 {
+    font-family: 'Cormorant Garamond', serif; font-size: 28px;
+    font-weight: 500; letter-spacing: -0.01em; line-height: 1.1; margin-bottom: 10px;
+    position: relative; display: inline-block; margin-top: 24px;
+  }
+  .foot-top h3 .plumb {
+    position: absolute;
+    left: 122px;
+    bottom: 100%;
+    margin-bottom: -8px;
+    width: 14px;
+    height: 52px;
+    pointer-events: none;
+    overflow: visible;
+    color: var(--cream);
+  }
+  .foot-top .tagline {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: 17px; opacity: 0.85; margin-top: 6px;
+  }
+  .foot-col h4 {
+    font-family: 'Cormorant Garamond', serif; font-size: 20px;
+    font-weight: 500; margin-bottom: 14px;
+  }
+  .foot-col p, .foot-col a {
+    font-size: 14px; line-height: 1.65; opacity: 0.88; color: var(--cream);
+    text-decoration: none; display: block;
+  }
+  .foot-col a:hover { opacity: 1; text-decoration: underline; }
+  .foot-col .email { font-size: 13px; }
+  .foot-bottom {
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 12px; opacity: 0.65; letter-spacing: 0.04em; flex-wrap: wrap; gap: 12px;
+  }
+  .foot-bottom nav a { color: var(--cream); text-decoration: none; margin-left: 24px; }
+  .foot-bottom nav a:hover { text-decoration: underline; }
+  .foot-disclaimer {
+    margin-top: 18px; padding-top: 32px; border-top: 1px solid rgba(234,230,225,0.15);
+    font-size: 11px; opacity: 0.5; line-height: 1.65; max-width: 960px;
+  }
+
+  
+  /* ── Nav v5: Practice Areas dropdown + mobile menu (6-11-2026) ── */
+  nav.top .nav-toggle {
+    display: none; background: none; border: 1px solid var(--cream);
+    border-radius: 6px; padding: 8px 9px; cursor: pointer;
+  }
+  nav.top .nav-toggle span {
+    display: block; width: 20px; height: 2px; background: var(--cream);
+    margin: 4px 0; transition: transform 0.2s, opacity 0.2s;
+  }
+  nav.top .nav-toggle.open span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+  nav.top .nav-toggle.open span:nth-child(2) { opacity: 0; }
+  nav.top .nav-toggle.open span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+  nav.top li.has-dropdown { position: relative; }
+  nav.top .dropdown-toggle {
+    background: none; border: none; cursor: pointer;
+    font-family: inherit; font-size: 13px; color: var(--cream);
+    padding: 6px 0; border-bottom: 1px solid transparent; line-height: 1.2;
+    display: inline-flex; align-items: center; gap: 6px;
+  }
+  nav.top .dropdown-toggle:hover,
+  nav.top .dropdown-toggle.active { border-bottom-color: var(--cream); }
+  nav.top .dropdown-toggle .caret {
+    width: 8px; height: 8px; border-right: 1.5px solid var(--cream);
+    border-bottom: 1.5px solid var(--cream); transform: rotate(45deg) translateY(-2px);
+    transition: transform 0.2s;
+  }
+  nav.top .dropdown {
+    list-style: none; display: none; margin: 0; padding: 8px 0;
+    background: var(--green-deep); border: 1px solid rgba(234,230,225,0.3);
+    min-width: 250px;
+  }
+  nav.top .dropdown li { display: block; }
+  nav.top .dropdown a {
+    display: block; padding: 9px 18px; font-size: 13px; border-bottom: none;
+  }
+  nav.top .dropdown a:hover { background: var(--green); border-bottom: none; }
+  nav.top .dropdown a.active { text-decoration: underline; border-bottom: none; }
+  @media (min-width: 961px) {
+    nav.top .dropdown {
+      position: absolute; top: 100%; left: 50%; transform: translateX(-50%);
+      z-index: 200; box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+    }
+    nav.top li.has-dropdown:hover > .dropdown,
+    nav.top li.has-dropdown:focus-within > .dropdown,
+    nav.top li.has-dropdown.open > .dropdown { display: block; }
+  }
+  @media (max-width: 960px) {
+    nav.top .nav-toggle { display: block; }
+    nav.top ul#navMenu {
+      display: none; position: absolute; top: 100%; left: 0; right: 0;
+      flex-direction: column; align-items: stretch; gap: 0;
+      background: var(--green); border-bottom: 3px solid var(--cream);
+      padding: 8px 24px 18px; margin: 0; z-index: 150;
+      max-height: calc(100vh - 64px); overflow-y: auto;
+    }
+    nav.top ul#navMenu.open { display: flex; }
+    nav.top ul#navMenu > li { width: 100%; }
+    nav.top ul#navMenu > li > a {
+      display: block; width: 100%; font-size: 16px; padding: 12px 0;
+      border-bottom: 1px solid rgba(234,230,225,0.15);
+    }
+    nav.top ul#navMenu a.cta {
+      border: none; border-radius: 0; padding: 12px 0; font-size: 16px;
+      letter-spacing: normal; border-bottom: 1px solid rgba(234,230,225,0.15);
+    }
+    nav.top ul#navMenu a.cta:hover { background: none; color: var(--cream); }
+    nav.top .dropdown-toggle {
+      display: flex; width: 100%; justify-content: space-between; align-items: center;
+      font-size: 16px; padding: 12px 0;
+      border-bottom: 1px solid rgba(234,230,225,0.15);
+    }
+    nav.top li.has-dropdown.open > .dropdown { display: block; }
+    nav.top li.has-dropdown.open .caret { transform: rotate(225deg); }
+    nav.top .dropdown {
+      border: none; background: var(--green-deep); margin: 0 -24px; padding: 4px 0; min-width: 0;
+    }
+    nav.top .dropdown a { padding: 12px 40px; font-size: 15px; }
+  }
+
+  @media (max-width: 960px) {
+        .page-hero { grid-template-columns: 1fr; padding: 50px 24px 30px; gap: 40px; }
+    .page-hero h1 { font-size: 40px; }
+    section.content { padding: 24px 24px 40px; }
+    section.content h2 { font-size: 28px; }
+    .credentials .inner { grid-template-columns: 1fr; gap: 40px; }
+    .credentials { padding: 56px 24px; }
+    .awards { padding: 56px 24px; }
+    .award-item { grid-template-columns: 1fr; gap: 8px; }
+    .boards { padding: 56px 24px; }
+    .band { padding: 64px 24px; }
+    .foot-top { grid-template-columns: 1fr; gap: 32px; }
+    .foot-bottom { flex-direction: column; }
+    .foot-bottom nav a { margin: 0 12px; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="top">
+  <div class="wrap">
+    <a href="/" class="mark"><svg class="plumb" viewBox="0 0 64 180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><line x1="32" y1="4" x2="32" y2="110" stroke="currentColor" stroke-width="5" stroke-linecap="round"/><path d="M 26 110 L 38 110 L 38 122 L 48 140 L 48 152 L 32 174 L 16 152 L 16 140 L 26 122 Z" fill="#D9B568" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/></svg>Lozano Legal Advisors PLLC</a>
+        <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="navMenu"><span></span><span></span><span></span></button>
+    <ul id="navMenu">
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/fractional-general-counsel.html">Fractional General Counsel</a></li>
+      <li class="has-dropdown">
+        <button class="dropdown-toggle" type="button" aria-expanded="false">Practice Areas <span class="caret"></span></button>
+        <ul class="dropdown">
+          <li><a href="/corporate-partnership.html">Corporate &amp; Partnership</a></li>
+          <li><a href="/business-entities.html">Business Formation</a></li>
+          <li><a href="/real-estate.html">Real Estate</a></li>
+          <li><a href="/estate-planning.html">Estate Planning</a></li>
+          <li><a href="/elder-law-medicaid-planning.html">Elder Law &amp; Medicaid Planning</a></li>
+          <li><a href="/tax-resolution.html">Tax Resolution</a></li>
+          <li><a href="/tax-credits.html">Tax Credits</a></li>
+        </ul>
+      </li>
+      <li><a href="/insights/" class="active">Insights</a></li>
+      <li><a href="/contact.html" class="cta">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+<script>
+(function () {
+  var t = document.querySelector('.nav-toggle');
+  var m = document.getElementById('navMenu');
+  if (t && m) {
+    t.addEventListener('click', function () {
+      var open = m.classList.toggle('open');
+      t.classList.toggle('open', open);
+      t.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+  }
+  var dts = document.querySelectorAll('.dropdown-toggle');
+  for (var i = 0; i < dts.length; i++) {
+    (function (b) {
+      b.addEventListener('click', function () {
+        var li = b.parentNode;
+        var open = li.classList.toggle('open');
+        b.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+    })(dts[i]);
+  }
+  document.addEventListener('click', function (e) {
+    var openLi = document.querySelector('li.has-dropdown.open');
+    if (openLi && !openLi.contains(e.target)) {
+      openLi.classList.remove('open');
+      var b = openLi.querySelector('.dropdown-toggle');
+      if (b) b.setAttribute('aria-expanded', 'false');
+    }
+  });
+})();
+</script>
+
+<section class="page-hero" style="grid-template-columns: 1fr; max-width: 880px;">
+  <div class="text">
+    <div class="eyebrow">Insights · Estate Planning</div>
+    <h1>&ldquo;I&rsquo;m not rich enough<br><em>to need an estate plan.&rdquo;</em></h1>
+    <div class="title">The most expensive estate-planning mistake in Texas isn&rsquo;t made by the wealthy &mdash; it&rsquo;s made by the people who assume planning is only for the wealthy, and so never make a plan at all.</div>
+    <p class="lede">&ldquo;I&rsquo;m not rich enough to need an estate plan.&rdquo; It is one of the most common things a Texas attorney hears &mdash; and one of the most costly. The belief sounds responsible. It is also backwards, because an estate plan was never really about the size of your estate.</p>
+  </div>
+</section>
+
+<section class="content">
+  <p>An estate plan is not a document for rich people. It is a set of instructions for the people who depend on you &mdash; instructions that take effect at exactly the moment you can no longer give them yourself. The question it answers is not &ldquo;who gets my money.&rdquo; It is &ldquo;who steps in, and what happens to the people I am responsible for.&rdquo;</p>
+  <p>Reframed that way, the net-worth test falls apart. A parent of two young children with a modest house and a retirement account has far more riding on these questions than a wealthy retiree with no dependents and no minor children. &ldquo;Rich enough&rdquo; was always the wrong measure.</p>
+</section>
+
+<section class="content">
+  <span class="section-label">What it protects</span>
+  <h2>What a plan <em>actually decides.</em></h2>
+  <p>Set money aside for a moment and look at what an estate plan actually governs. <strong>If you are in the hospital and cannot speak,</strong> who makes your medical decisions, and who is authorized to keep your household running &mdash; pay the mortgage, manage the accounts &mdash; while you recover? <strong>If you have minor children,</strong> who raises them if something happens to you and the other parent? <strong>When you are gone,</strong> who receives what you have built, and how much of it is consumed by court costs and delay before it reaches them?</p>
+  <p>None of those questions turns on your net worth. Every one of them has an answer whether or not you choose it. The only question is whether <em>you</em> supply the answer or someone else does.</p>
+</section>
+
+<section class="content">
+  <span class="section-label">The default plan</span>
+  <h2>What Texas decides <em>if you don&rsquo;t.</em></h2>
+  <p>If you do not put these decisions in writing, Texas has already written them for you &mdash; and the defaults rarely match what a family would have chosen.</p>
+  <p><strong>Die without a will,</strong> and the Texas intestacy statute, not you, determines who inherits and in what shares. For families with children from a prior marriage, the result can divide a home among a surviving spouse and stepchildren in ways almost no one intends. <strong>Name no guardian for your minor children,</strong> and a judge &mdash; not you &mdash; selects who raises them, choosing among whoever steps forward. <strong>Sign no durable power of attorney,</strong> and if you are incapacitated, your family may have to open a court guardianship proceeding simply to manage your own affairs: a public, ongoing, attorney-involved process that a single signed document would have avoided.</p>
+  <p>Doing nothing is not the absence of a plan. It is choosing the state&rsquo;s plan by default.</p>
+</section>
+
+<section class="content">
+  <span class="section-label">Who is exposed</span>
+  <h2>Who actually has <em>the most at stake.</em></h2>
+  <p>The families most exposed by the &ldquo;not rich enough&rdquo; myth are rarely the wealthy. The wealthy tend to have advisors, and they tend to assume they need a plan. It is the working family &mdash; one house, a retirement account or two, young children &mdash; that most often has nothing in place, precisely because they were told estate planning is for someone richer.</p>
+  <p>That family has the most riding on the guardianship decision, on the power of attorney, and on the beneficiary designations that quietly control where a 401(k) actually goes. A plan at that level is neither elaborate nor expensive. But its absence is the gap that does the most damage.</p>
+</section>
+
+<section class="content">
+  <span class="section-label">The real meaning</span>
+  <h2>What &ldquo;not rich enough&rdquo; <em>really means.</em></h2>
+  <p>Nine times out of ten, &ldquo;I&rsquo;m not rich enough to need a plan&rdquo; is not a statement about money at all. It means <em>no one has shown me what a plan actually protects.</em> Once a family sees that the plan protects their children, their medical wishes, and their family&rsquo;s time and privacy &mdash; at any net worth &mdash; the objection tends to disappear.</p>
+  <p>If you have been putting this off because you assumed estate planning was for someone wealthier, that assumption is, in effect, the plan you currently have. It is worth replacing with a real one.</p>
+</section>
+
+<section class="content">
+  <span class="section-label">What to do</span>
+  <h2>Where to <em>start.</em></h2>
+  <p>The foundation most Texas families need is modest: a properly drafted will with a self-proving affidavit, durable and medical powers of attorney, an advance directive, a named guardian for any minor children, and current beneficiary designations on every retirement account and life insurance policy. No large estate &mdash; and no large fee &mdash; is required to put it in place. What is required is the decision to stop deferring it.</p>
+  <p style="margin-top:32px;"><a href="/contact.html" class="btn">Schedule an Estate Planning Consultation</a></p>
+</section>
+
+<section class="content">
+  <span class="section-label">A note on this firm</span>
+  <h2>Who is signing <em>the documents.</em></h2>
+  <p>Lozano Legal Advisors PLLC is a Dallas&ndash;Fort Worth firm led by Norris Lozano, a licensed Texas attorney with 30+ years in practice, admitted to the State Bar of Texas, the United States Tax Court, and the United States District Court for the Northern District of Texas. He spent eighteen years as a Downtown Dallas law partner representing the largest financial institutions in Texas, and served as Chief Executive Officer and General Counsel of the Portland Family of Funds, which secured $180 million in New Markets Tax Credits from the U.S. Treasury and closed transactions exceeding $1.1 billion. His practice covers estate planning, elder law and Medicaid planning, real estate, business formation, corporate and partnership work, tax resolution, and federal tax credit finance.</p>
+  <p>The firm is built on AI-augmented infrastructure that Norris designs and operates himself. The document work and follow-through that slows other firms &mdash; including the funding and beneficiary-coordination steps that determine whether a plan actually works &mdash; is handled by that system, with the attorney reviewing and taking professional responsibility for the result. When you call the firm, the licensed Texas attorney is the person who answers. (214) 531-3014.</p>
+</section>
+
+
+<footer>
+  <div class="foot-inner">
+    <div class="foot-top">
+      <div class="foot-col">
+        <h3><svg class="plumb" viewBox="0 0 64 180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><line x1="32" y1="4" x2="32" y2="110" stroke="currentColor" stroke-width="5" stroke-linecap="round"/><path d="M 26 110 L 38 110 L 38 122 L 48 140 L 48 152 L 32 174 L 16 152 L 16 140 L 26 122 Z" fill="#D9B568" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/></svg>Lozano Legal Advisors PLLC</h3>
+        <div class="tagline">A Texas law firm for complex work without the complexity of a big firm.</div>
+        <p style="margin-top:18px;opacity:0.88;">9304 Forest Lane, Suite 206, PMB 553<br>Dallas, Texas 75243</p>
+      </div>
+      <div class="foot-col">
+        <h4>Practice Areas</h4>
+        <a href="/tax-resolution.html">Tax Resolution</a>
+        <a href="/tax-credits.html">Tax Credits</a>
+        <a href="/estate-planning.html">Estate Planning</a>
+        <a href="/elder-law-medicaid-planning.html">Elder Law &amp; Medicaid Planning</a>
+        <a href="/real-estate.html">Real Estate</a>
+        <a href="/business-entities.html">Business Formation</a>
+        <a href="/corporate-partnership.html">Corporate &amp; Partnership</a>
+      </div>
+      <div class="foot-col">
+        <h4>Resources</h4>
+        <a href="/why-a-tax-attorney.html">Why a Tax Attorney</a>
+        <a href="/irs-notices.html">IRS Notice Library</a>
+        <a href="/about.html">About Norris Lozano</a>
+        <a href="/norris-lozano-cv.pdf" download>Download CV</a>
+      </div>
+      <div class="foot-col">
+        <h4>Contact</h4>
+        <a href="tel:+12145313014">(214) 531-3014</a>
+        <a class="email" href="mailto:norris@lozanolegaladvisors.com">norris@lozanolegaladvisors.com</a>
+        <a href="/contact.html">Schedule a consultation</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <div>© 2026 Lozano Legal Advisors, PLLC</div>
+      <nav>
+        <a href="/privacy.html">Privacy</a>
+        <a href="/why-a-tax-attorney.html">Why a Tax Attorney</a>
+        <a href="/irs-notices.html">IRS Notices</a>
+      </nav>
+    </div>
+    <div class="foot-disclaimer">
+      This website constitutes attorney advertising under the Texas Disciplinary Rules of Professional Conduct. The information on this site is provided for general informational purposes only and does not constitute legal advice. No attorney-client relationship is formed by use of this website. Prior results do not guarantee a similar outcome. Norris Lozano is licensed to practice law in the State of Texas (Bar No. 12647700) and admitted to practice before the United States Tax Court and the United States District Court for the Northern District of Texas.
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
