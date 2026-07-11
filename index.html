@@ -287,6 +287,9 @@
   }
 
   
+  nav.top ul li.nav-break { flex-basis: 100%; height: 0; margin: 0; padding: 0; }
+  @media (max-width: 860px) { nav.top ul li.nav-break { display: none; } }
+
   /* ── Nav v5: Practice Areas dropdown + mobile menu (6-11-2026) ── */
   nav.top .nav-toggle {
     display: none; background: none; border: 1px solid var(--cream);
@@ -392,6 +395,7 @@
       <li><a href="/real-estate.html">Real Estate</a></li>
       <li><a href="/business-entities.html">Business Formation</a></li>
       <li><a href="/corporate-partnership.html" style="line-height:1.1;display:inline-block;">Corporate<br>Partnership</a></li>
+      <li class="nav-break" aria-hidden="true"></li>
       <li><a href="/fractional-general-counsel.html">Fractional GC</a></li>
       <li><a href="/team.html">The Team</a></li>
       <li><a href="/about.html">The Attorney</a></li>
