@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Team — Lozano Legal Advisors PLLC</title>
+<meta name="description" content="The team at Lozano Legal Advisors PLLC — Norris Lozano, Founding Attorney; Dr. Amy Arp, Founder and CEO of Medicaid Filing Connections; and Mark Joseph Morales, Legal Support Specialist. All legal services are provided by a licensed Texas attorney.">
+<link rel="icon" type="image/svg+xml" href="/lozano-favicon.svg">
+<link rel="apple-touch-icon" href="/lozano-apple-touch-icon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Source+Sans+3:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --green: #1F5C3D; --green-deep: #133D27;
+    --cream: #EAE6E1; --cream-deep: #D8D3CA;
+    --paper: #F7F5F0; --ink: #1A1A1A;
+    --ink-soft: #4A4A4A; --ink-mute: #6E6E6E;
+    --rule: #D8D3CA; --amber: #F5D382;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Source Sans 3', -apple-system, sans-serif;
+    font-weight: 400; font-size: 17px; line-height: 1.6;
+    color: var(--ink); background: var(--paper);
+    -webkit-font-smoothing: antialiased;
+  }
+  .eyebrow {
+    font-size: 12px; font-weight: 500; letter-spacing: 0.18em;
+    text-transform: uppercase; color: var(--green);
+  }
+  nav.top {
+    background: var(--green); color: var(--cream);
+    padding: 10px 0; border-bottom: 3px solid var(--cream);
+    position: sticky; top: 0; z-index: 100;
+  }
+  nav.top .wrap {
+    max-width: 1320px; margin: 0 auto; padding: 0 40px;
+    display: flex; align-items: center; justify-content: space-between; gap: 20px;
+  }
+  nav.top .mark {
+    font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 500;
+    color: var(--cream); text-decoration: none; white-space: nowrap;
+    position: relative; display: inline-block;
+    margin-top: 12px;
+  }
+  nav.top .mark .plumb {
+    position: absolute;
+    left: 96px;
+    bottom: 100%;
+    margin-bottom: -4px;
+    width: 11px;
+    height: 28px;
+    pointer-events: none;
+    overflow: visible;
+  }
+  nav.top ul { list-style: none; display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
+  nav.top ul a {
+    color: var(--cream); text-decoration: none; font-size: 13px;
+    padding: 6px 0; border-bottom: 1px solid transparent; transition: border-color 0.2s; line-height: 1.2;
+  }
+  nav.top ul a:hover { border-bottom-color: var(--cream); }
+  nav.top ul a.active { border-bottom-color: var(--cream); }
+  nav.top .cta {
+    border: 1px solid var(--cream); padding: 10px 18px; border-radius: 24px;
+    font-size: 13px; letter-spacing: 0.03em; white-space: nowrap;
+    transition: background 0.2s, color 0.2s;
+  }
+  nav.top .cta:hover { background: var(--cream); color: var(--green); border-bottom-color: var(--cream); }
+  nav.top ul li.stacked { display: flex; flex-direction: column; gap: 0; align-items: flex-start; }
+  nav.top ul li.stacked a { padding: 0; white-space: nowrap; line-height: 1.35; }
+
+  .page-intro {
+    max-width: 960px; margin: 0 auto; padding: 90px 40px 30px;
+  }
+  .page-intro h1 {
+    font-family: 'Cormorant Garamond', serif; font-weight: 400;
+    font-size: clamp(44px, 6vw, 72px); line-height: 1.04;
+    letter-spacing: -0.02em; color: var(--ink); margin: 24px 0 22px;
+  }
+  .page-intro h1 em { font-style: italic; color: var(--green); }
+  .page-intro .lede {
+    font-size: 19px; line-height: 1.55; color: var(--ink-soft); font-weight: 300;
+    max-width: 760px;
+  }
+  .page-intro .lede a { color: var(--green); }
+
+  .profile {
+    padding: 80px 40px;
+  }
+  .profile:nth-of-type(even) {
+    background: #fff; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule);
+  }
+  .profile .inner {
+    max-width: 1080px; margin: 0 auto;
+    display: grid; grid-template-columns: 1fr 1.6fr; gap: 64px; align-items: start;
+  }
+  .profile .portrait {
+    aspect-ratio: 4 / 5; background: var(--cream); border: 1px solid var(--rule);
+    position: relative; overflow: hidden;
+  }
+  .profile .portrait::before {
+    content: ''; position: absolute; top: 14px; left: 14px; right: 14px; bottom: 14px;
+    border: 1px solid var(--cream-deep); pointer-events: none; z-index: 1;
+  }
+  .profile .portrait img {
+    display: block; width: 100%; height: 100%; object-fit: cover;
+  }
+  .profile .text .eyebrow { margin-bottom: 14px; }
+  .profile h2 {
+    font-family: 'Cormorant Garamond', serif; font-weight: 400;
+    font-size: clamp(34px, 4.4vw, 52px); line-height: 1.06;
+    letter-spacing: -0.01em; color: var(--ink); margin-bottom: 6px;
+  }
+  .profile .role {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: 20px; color: var(--green); margin-bottom: 24px;
+  }
+  .profile p {
+    font-size: 17px; line-height: 1.75; color: var(--ink-soft);
+    margin-bottom: 16px; max-width: 640px;
+  }
+  .profile p strong { color: var(--ink); font-weight: 500; }
+  .profile .note {
+    font-size: 14px; line-height: 1.65; color: var(--ink-mute);
+    border-left: 3px solid var(--green); padding: 12px 16px;
+    background: var(--cream); margin-top: 8px; max-width: 640px;
+  }
+  .profile:nth-of-type(even) .note { background: var(--paper); }
+  .profile .more-link {
+    display: inline-block; margin-top: 8px;
+    color: var(--green); font-size: 15px; font-weight: 500;
+    text-decoration: none; border-bottom: 1px solid var(--green);
+    padding-bottom: 2px;
+  }
+  .profile .more-link:hover { color: var(--green-deep); border-bottom-color: var(--green-deep); }
+
+  .team-compliance {
+    max-width: 960px; margin: 0 auto; padding: 48px 40px 72px;
+  }
+  .team-compliance .inner {
+    border-top: 1px solid var(--rule); padding-top: 28px;
+    font-size: 13px; line-height: 1.7; color: var(--ink-mute);
+  }
+
+  .band { background: var(--green); color: var(--cream); padding: 56px 40px; }
+  .band .wrap { max-width: 900px; margin: 0 auto; text-align: center; }
+  .band .eyebrow { color: rgba(234,230,225,0.6); margin-bottom: 24px; }
+  .band h2 {
+    font-family: 'Cormorant Garamond', serif; font-size: clamp(40px, 5.5vw, 64px);
+    line-height: 1.08; font-weight: 400; color: var(--cream); margin-bottom: 24px;
+  }
+  .band h2 em { font-style: italic; color: var(--amber); }
+  .band p {
+    font-size: 19px; line-height: 1.6; color: var(--cream);
+    max-width: 720px; margin: 0 auto 16px; font-weight: 300;
+  }
+  .band .btn {
+    display: inline-block; background: var(--cream); color: var(--green);
+    padding: 16px 32px; border-radius: 28px; font-size: 15px;
+    font-weight: 500; letter-spacing: 0.03em; text-decoration: none;
+    transition: background 0.2s; margin-top: 20px;
+  }
+  .band .btn:hover { background: #fff; }
+
+  footer { background: var(--green); color: var(--cream); padding: 80px 40px 36px; }
+  .foot-inner { max-width: 1280px; margin: 0 auto; }
+  .foot-top {
+    display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 48px; margin-bottom: 60px; padding-bottom: 48px;
+    border-bottom: 1px solid rgba(234,230,225,0.25);
+  }
+  .foot-top h3 {
+    font-family: 'Cormorant Garamond', serif; font-size: 28px;
+    font-weight: 500; letter-spacing: -0.01em; line-height: 1.1; margin-bottom: 10px;
+    position: relative; display: inline-block; margin-top: 24px;
+  }
+  .foot-top h3 .plumb {
+    position: absolute;
+    left: 122px;
+    bottom: 100%;
+    margin-bottom: -8px;
+    width: 14px;
+    height: 52px;
+    pointer-events: none;
+    overflow: visible;
+    color: var(--cream);
+  }
+  .foot-top .tagline {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: 17px; opacity: 0.85; margin-top: 6px;
+  }
+  .foot-col h4 {
+    font-family: 'Cormorant Garamond', serif; font-size: 20px;
+    font-weight: 500; margin-bottom: 14px;
+  }
+  .foot-col p, .foot-col a {
+    font-size: 14px; line-height: 1.65; opacity: 0.88; color: var(--cream);
+    text-decoration: none; display: block;
+  }
+  .foot-col a:hover { opacity: 1; text-decoration: underline; }
+  .foot-col .email { font-size: 13px; }
+  .foot-bottom {
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 12px; opacity: 0.65; letter-spacing: 0.04em; flex-wrap: wrap; gap: 12px;
+  }
+  .foot-bottom nav a { color: var(--cream); text-decoration: none; margin-left: 24px; }
+  .foot-bottom nav a:hover { text-decoration: underline; }
+  .foot-disclaimer {
+    margin-top: 18px; padding-top: 32px; border-top: 1px solid rgba(234,230,225,0.15);
+    font-size: 11px; opacity: 0.5; line-height: 1.65; max-width: 960px;
+  }
+
+  @media (max-width: 960px) {
+    nav.top ul { display: none; }
+    .page-intro { padding: 50px 24px 20px; }
+    .page-intro h1 { font-size: 40px; }
+    .profile { padding: 56px 24px; }
+    .profile .inner { grid-template-columns: 1fr; gap: 36px; }
+    .profile .portrait { max-width: 420px; }
+    .team-compliance { padding: 36px 24px 56px; }
+    .band { padding: 64px 24px; }
+    .foot-top { grid-template-columns: 1fr; gap: 32px; }
+    .foot-bottom { flex-direction: column; }
+    .foot-bottom nav a { margin: 0 12px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV — copied verbatim from about.html. Note: no "Team" link exists in the
+     site nav yet; add one site-wide (suggested placement: next to About)
+     once this page is live. -->
+<nav class="top">
+  <div class="wrap">
+    <a href="/" class="mark"><svg class="plumb" viewBox="0 0 64 180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><line x1="32" y1="4" x2="32" y2="110" stroke="currentColor" stroke-width="5" stroke-linecap="round"/><path d="M 26 110 L 38 110 L 38 122 L 48 140 L 48 152 L 32 174 L 16 152 L 16 140 L 26 122 Z" fill="#D9B568" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/></svg>Lozano Legal Advisors PLLC</a>
+        <ul>
+      <li><a href="/fractional-general-counsel.html">Fractional GC</a></li>
+      <li><a href="/corporate-partnership.html" style="line-height:1.1;display:inline-block;">Corporate<br>Partnership</a></li>
+      <li><a href="/business-entities.html">Business Formation</a></li>
+      <li><a href="/real-estate.html">Real Estate</a></li>
+      <li><a href="/estate-planning.html">Estate Planning</a></li>
+      <li><a href="/elder-law-medicaid-planning.html" style="line-height:1.1;display:inline-block;">Elder Law &amp;<br>Medicaid Planning</a></li>
+      <li><a href="/tax-resolution.html">Tax Resolution</a></li>
+      <li><a href="/tax-credits.html">Tax Credits</a></li>
+      <li><a href="/contact.html" class="cta">Contact</a></li>
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/insights/">Insights</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="page-intro">
+  <div class="eyebrow">The Team</div>
+  <h1>Three people. <em>One attorney of record.</em></h1>
+  <p class="lede">Lozano Legal Advisors is built around a single licensed Texas attorney — and the firm's Elder Law &amp; Medicaid Planning work runs in collaboration with <a href="/elder-law-medicaid-planning.html">Medicaid Filing Connections</a>. Norris Lozano provides the legal advice and takes professional responsibility for every legal matter. The two colleagues below carry the practical and supporting work that surrounds it.</p>
+</section>
+
+<!-- ============================================================
+     PROFILE 1 — NORRIS LOZANO
+     Condensed from the About page; the full narrative lives at
+     /about.html and this profile links to it.
+     ============================================================ -->
+<section class="profile" id="norris-lozano">
+  <div class="inner">
+    <div class="portrait">
+      <img src="/norris-portrait-warm.jpg" alt="Norris Lozano, founding attorney of Lozano Legal Advisors PLLC" loading="lazy">
+    </div>
+    <div class="text">
+      <div class="eyebrow">Founding Attorney</div>
+      <h2>Norris Lozano</h2>
+      <div class="role">Founding Attorney — Lozano Legal Advisors PLLC, Dallas, Texas</div>
+      <p>A 30+ year Texas attorney whose practice moves across commercial finance, federal tax credit finance, tax resolution, and estate planning — and who builds the AI-augmented infrastructure his firm runs on himself.</p>
+      <p>Norris is admitted to the State Bar of Texas (Bar No. 12647700), the United States Tax Court, and the United States District Court for the Northern District of Texas. His career spans eighteen years as a Downtown Dallas law partner, $180 million in New Markets Tax Credit allocation secured from the U.S. Treasury as CEO of the $350 million Portland Family of Funds, more than $1.1 billion in tax credit transactions, and taxpayer representation before the IRS and in U.S. Tax Court. Through Medicaid Filing Connections, he has advised Texas families on Medicaid-qualified estate preservation.</p>
+      <a class="more-link" href="/about.html">Read the full profile</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PROFILE 2 — DR. AMY ARP
+     Bio wording reconstructed from the approved working draft.
+     Before publishing, verify against the signed-off text in
+     "Website-Team-Section-Bios.docx" and paste over any paragraph
+     that differs. TODO items must be confirmed.
+     ============================================================ -->
+<section class="profile" id="amy-arp">
+  <div class="inner">
+    <div class="portrait">
+      <picture>
+        <!-- filenames verified against repo 7-11-2026 -->
+        <source srcset="/amy-arp-headshot-800w.webp" type="image/webp">
+        <img src="/amy-arp-headshot-800w.jpg" alt="Dr. Amy Arp, Founder and CEO of Medicaid Filing Connections" loading="lazy">
+      </picture>
+    </div>
+    <div class="text">
+      <div class="eyebrow">Medicaid Filing Connections</div>
+      <h2>Dr. Amy Arp</h2>
+      <div class="role">Founder &amp; CEO — Medicaid Filing Connections</div>
+      <p>Amy Arp founded Medicaid Filing Connections to guide Texas families through one of the hardest transitions a family faces: a parent or spouse moving into long-term care, and the Medicaid qualification that has to be in place to pay for it.</p>
+      <p>Working alongside attorney Norris Lozano, Amy coordinates the practical side of that work — eligibility analysis, application preparation and filing with Texas Health and Human Services, facility coordination, and the family conversations that surround a nursing home placement — while the legal advice, drafting, and professional responsibility remain with the attorney.</p>
+      <p>A social worker by training, Amy holds a Master of Social Work and a doctorate from Trinity<!-- TODO: confirm full institution name and degree -->, and is the author of <em>Senior Transitions 101</em>.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PROFILE 3 — MARK JOSEPH MORALES
+     Bio wording reconstructed from the approved working draft.
+     Verify against "Website-Team-Section-Bios.docx" before
+     publishing. The not-a-licensed-attorney note is a compliance
+     requirement and must not be removed.
+     ============================================================ -->
+<section class="profile" id="mark-morales">
+  <div class="inner">
+    <div class="portrait">
+      <picture>
+        <!-- filenames verified against repo 7-11-2026 -->
+        <source srcset="/mark-morales-headshot-800w.webp" type="image/webp">
+        <img src="/mark-morales-headshot-800w.jpg" alt="Mark Joseph Morales, Legal Support Specialist" loading="lazy">
+      </picture>
+    </div>
+    <div class="text">
+      <div class="eyebrow">Legal Support</div>
+      <h2>Mark Joseph Morales</h2>
+      <div class="role">Legal Support Specialist</div>
+      <p>Mark Joseph Morales supports the firm's elder law and Medicaid planning matters under the direction of attorney Norris Lozano — legal research, document preparation, and case analysis that keep files moving from first intake through application and approval.</p>
+      <p>Mark holds a Juris Doctor<!-- TODO: confirm school and any additional credentials from the approved bio -->, a background that makes him unusually effective at the research and preparation work that sits beneath the attorney's practice.</p>
+      <p class="note">Mark is not a licensed attorney and does not provide legal advice; his work is performed under the supervision and professional responsibility of the firm's attorney.</p>
+    </div>
+  </div>
+</section>
+
+<div class="team-compliance">
+  <div class="inner">Amy Arp and Mark Joseph Morales are not licensed attorneys and do not provide legal advice or legal services. All legal services described on this site are provided by Norris Lozano, a licensed Texas attorney, who supervises and takes professional responsibility for all supporting work.</div>
+</div>
+
+<div class="band">
+  <div class="wrap">
+    <div class="eyebrow">Engage the firm</div>
+    <h2>A Texas attorney you can actually <em>speak with.</em></h2>
+    <p>For an elder law or Medicaid planning matter — or an estate plan, a tax question, a real estate closing, a business formation — the right place to start is a direct conversation.</p>
+    <a href="/contact.html" class="btn">Contact the Firm</a>
+  </div>
+</div>
+
+<footer>
+  <div class="foot-inner">
+    <div class="foot-top">
+      <div class="foot-col">
+        <h3><svg class="plumb" viewBox="0 0 64 180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><line x1="32" y1="4" x2="32" y2="110" stroke="currentColor" stroke-width="5" stroke-linecap="round"/><path d="M 26 110 L 38 110 L 38 122 L 48 140 L 48 152 L 32 174 L 16 152 L 16 140 L 26 122 Z" fill="#D9B568" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/></svg>Lozano Legal Advisors PLLC</h3>
+        <div class="tagline">A Texas law firm for complex work without the complexity of a big firm.</div>
+        <p style="margin-top:18px;opacity:0.88;">9304 Forest Lane, Suite 206, PMB 553<br>Dallas, Texas 75243</p>
+      </div>
+      <div class="foot-col">
+        <h4>Practice Areas</h4>
+        <a href="/tax-resolution.html">Tax Resolution</a>
+        <a href="/tax-credits.html">Tax Credits</a>
+        <a href="/estate-planning.html">Estate Planning</a>
+        <a href="/elder-law-medicaid-planning.html">Elder Law &amp; Medicaid Planning</a>
+        <a href="/real-estate.html">Real Estate</a>
+        <a href="/business-entities.html">Business Formation</a>
+        <a href="/corporate-partnership.html">Corporate &amp; Partnership</a>
+      </div>
+      <div class="foot-col">
+        <h4>Resources</h4>
+        <a href="/why-a-tax-attorney.html">Why a Tax Attorney</a>
+        <a href="/irs-notices.html">IRS Notice Library</a>
+        <a href="/about.html">About Norris Lozano</a>
+        <a href="/team.html">The Team</a>
+        <a href="/norris-lozano-cv.pdf" download>Download CV</a>
+      </div>
+      <div class="foot-col">
+        <h4>Contact</h4>
+        <a href="tel:+12145313014">(214) 531-3014</a>
+        <a class="email" href="mailto:norris@lozanolegaladvisors.com">norris@lozanolegaladvisors.com</a>
+        <a href="/contact.html">Schedule a consultation</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <div>© 2026 Lozano Legal Advisors, PLLC</div>
+      <nav>
+        <a href="/privacy.html">Privacy</a>
+        <a href="/contact.html">Contact</a>
+      </nav>
+    </div>
+    <div class="foot-disclaimer">
+      This website constitutes attorney advertising under the Texas Disciplinary Rules of Professional Conduct. The information on this site is provided for general informational purposes only and does not constitute legal advice. No attorney-client relationship is formed by use of this website. Prior results do not guarantee a similar outcome. Norris Lozano is licensed to practice law in the State of Texas (Bar No. 12647700) and admitted to practice before the United States Tax Court and the United States District Court for the Northern District of Texas.
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
