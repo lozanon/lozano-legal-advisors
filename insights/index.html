@@ -293,52 +293,10 @@
   }
 
   
-  /* ── Nav v5: Practice Areas dropdown + mobile menu (6-11-2026) ── */
-  nav.top .nav-toggle {
-    display: none; background: none; border: 1px solid var(--cream);
-    border-radius: 6px; padding: 8px 9px; cursor: pointer;
+  @media (max-width: 960px) {
+    nav.top ul { display: none; }
   }
-  nav.top .nav-toggle span {
-    display: block; width: 20px; height: 2px; background: var(--cream);
-    margin: 4px 0; transition: transform 0.2s, opacity 0.2s;
-  }
-  nav.top .nav-toggle.open span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
-  nav.top .nav-toggle.open span:nth-child(2) { opacity: 0; }
-  nav.top .nav-toggle.open span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
-  nav.top li.has-dropdown { position: relative; }
-  nav.top .dropdown-toggle {
-    background: none; border: none; cursor: pointer;
-    font-family: inherit; font-size: 13px; color: var(--cream);
-    padding: 6px 0; border-bottom: 1px solid transparent; line-height: 1.2;
-    display: inline-flex; align-items: center; gap: 6px;
-  }
-  nav.top .dropdown-toggle:hover,
-  nav.top .dropdown-toggle.active { border-bottom-color: var(--cream); }
-  nav.top .dropdown-toggle .caret {
-    width: 8px; height: 8px; border-right: 1.5px solid var(--cream);
-    border-bottom: 1.5px solid var(--cream); transform: rotate(45deg) translateY(-2px);
-    transition: transform 0.2s;
-  }
-  nav.top .dropdown {
-    list-style: none; display: none; margin: 0; padding: 8px 0;
-    background: var(--green-deep); border: 1px solid rgba(234,230,225,0.3);
-    min-width: 250px;
-  }
-  nav.top .dropdown li { display: block; }
-  nav.top .dropdown a {
-    display: block; padding: 9px 18px; font-size: 13px; border-bottom: none;
-  }
-  nav.top .dropdown a:hover { background: var(--green); border-bottom: none; }
-  nav.top .dropdown a.active { text-decoration: underline; border-bottom: none; }
-  @media (min-width: 861px) {
-    nav.top .dropdown {
-      position: absolute; top: 100%; left: 50%; transform: translateX(-50%);
-      z-index: 200; box-shadow: 0 8px 24px rgba(0,0,0,0.25);
-    }
-    nav.top li.has-dropdown:hover > .dropdown,
-    nav.top li.has-dropdown:focus-within > .dropdown,
-    nav.top li.has-dropdown.open > .dropdown { display: block; }
-  }
+
   @media (max-width: 860px) {
     nav.top .nav-toggle { display: block; }
     nav.top ul#navMenu {
@@ -443,58 +401,22 @@
 <nav class="top">
   <div class="wrap">
     <a href="/" class="mark"><svg class="plumb" viewBox="0 0 64 180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><line x1="32" y1="4" x2="32" y2="110" stroke="currentColor" stroke-width="5" stroke-linecap="round"/><path d="M 26 110 L 38 110 L 38 122 L 48 140 L 48 152 L 32 174 L 16 152 L 16 140 L 26 122 Z" fill="#D9B568" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/></svg>Lozano Legal Advisors PLLC</a>
-        <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="navMenu"><span></span><span></span><span></span></button>
-    <ul id="navMenu">
-      <li><a href="/about.html">About</a></li>
-      <li><a href="/fractional-general-counsel.html">Fractional General Counsel</a></li>
-      <li class="has-dropdown">
-        <button class="dropdown-toggle" type="button" aria-expanded="false">Practice Areas <span class="caret"></span></button>
-        <ul class="dropdown">
-          <li><a href="/corporate-partnership.html">Corporate &amp; Partnership</a></li>
-          <li><a href="/business-entities.html">Business Formation</a></li>
-          <li><a href="/real-estate.html">Real Estate</a></li>
-          <li><a href="/estate-planning.html">Estate Planning</a></li>
-          <li><a href="/elder-law-medicaid-planning.html">Elder Law &amp; Medicaid Planning</a></li>
-          <li><a href="/tax-resolution.html">Tax Resolution</a></li>
-          <li><a href="/tax-credits.html">Tax Credits</a></li>
-        </ul>
-      </li>
+        <ul>
+      <li><a href="/elder-law-medicaid-planning.html" style="line-height:1.1;display:inline-block;">Elder Law &amp;<br>Medicaid Planning</a></li>
+      <li><a href="/estate-planning.html">Estate Planning</a></li>
+      <li><a href="/tax-resolution.html">Tax Resolution</a></li>
+      <li><a href="/tax-credits.html">Tax Credits</a></li>
+      <li><a href="/real-estate.html">Real Estate</a></li>
+      <li><a href="/business-entities.html">Business Formation</a></li>
+      <li><a href="/corporate-partnership.html" style="line-height:1.1;display:inline-block;">Corporate<br>Partnership</a></li>
+      <li><a href="/fractional-general-counsel.html">Fractional GC</a></li>
+      <li><a href="/team.html">The Team</a></li>
       <li><a href="/insights/" class="active">Insights</a></li>
       <li><a href="/contact.html" class="cta">Contact</a></li>
     </ul>
   </div>
 </nav>
-<script>
-(function () {
-  var t = document.querySelector('.nav-toggle');
-  var m = document.getElementById('navMenu');
-  if (t && m) {
-    t.addEventListener('click', function () {
-      var open = m.classList.toggle('open');
-      t.classList.toggle('open', open);
-      t.setAttribute('aria-expanded', open ? 'true' : 'false');
-    });
-  }
-  var dts = document.querySelectorAll('.dropdown-toggle');
-  for (var i = 0; i < dts.length; i++) {
-    (function (b) {
-      b.addEventListener('click', function () {
-        var li = b.parentNode;
-        var open = li.classList.toggle('open');
-        b.setAttribute('aria-expanded', open ? 'true' : 'false');
-      });
-    })(dts[i]);
-  }
-  document.addEventListener('click', function (e) {
-    var openLi = document.querySelector('li.has-dropdown.open');
-    if (openLi && !openLi.contains(e.target)) {
-      openLi.classList.remove('open');
-      var b = openLi.querySelector('.dropdown-toggle');
-      if (b) b.setAttribute('aria-expanded', 'false');
-    }
-  });
-})();
-</script>
+
 
 <section class="page-hero">
   <div class="eyebrow">Insights</div>
@@ -596,41 +518,45 @@
 <footer>
   <div class="foot-inner">
     <div class="foot-top">
-      <div>
+      <div class="foot-col">
         <h3><svg class="plumb" viewBox="0 0 64 180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><line x1="32" y1="4" x2="32" y2="110" stroke="currentColor" stroke-width="5" stroke-linecap="round"/><path d="M 26 110 L 38 110 L 38 122 L 48 140 L 48 152 L 32 174 L 16 152 L 16 140 L 26 122 Z" fill="#D9B568" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/></svg>Lozano Legal Advisors PLLC</h3>
         <div class="tagline">A Texas law firm for complex work without the complexity of a big firm.</div>
+        <p style="margin-top:18px;opacity:0.88;">Dallas–Ft. Worth</p>
       </div>
       <div class="foot-col">
-        <h4>Practice</h4>
+        <h4>Practice Areas</h4>
+        <a href="/elder-law-medicaid-planning.html">Elder Law &amp; Medicaid Planning</a>
+        <a href="/estate-planning.html">Estate Planning</a>
         <a href="/tax-resolution.html">Tax Resolution</a>
         <a href="/tax-credits.html">Tax Credits</a>
-        <a href="/estate-planning.html">Estate Planning</a>
-        <a href="/elder-law-medicaid-planning.html">Elder Law &amp; Medicaid Planning</a>
         <a href="/real-estate.html">Real Estate</a>
         <a href="/business-entities.html">Business Formation</a>
         <a href="/corporate-partnership.html">Corporate &amp; Partnership</a>
       </div>
       <div class="foot-col">
-        <h4>Location</h4>
-        <p>9304 Forest Lane<br>Suite 206, PMB 553<br>Dallas, Texas 75243</p>
+        <h4>Resources</h4>
+        <a href="/why-a-tax-attorney.html">Why a Tax Attorney</a>
+        <a href="/irs-notices.html">IRS Notice Library</a>
+        <a href="/team.html">The Team</a>
+        <a href="/about.html">The Attorney</a>
+        <a href="/norris-lozano-cv.pdf" download>Download CV</a>
       </div>
       <div class="foot-col">
         <h4>Contact</h4>
-        <a href="mailto:norris@lozanolegaladvisors.com" class="email">norris@lozanolegaladvisors.com</a>
         <a href="tel:+12145313014">(214) 531-3014</a>
-        <a href="/contact.html">Request consultation</a>
+        <a class="email" href="mailto:norris@lozanolegaladvisors.com">norris@lozanolegaladvisors.com</a>
+        <a href="/contact.html">Schedule a consultation</a>
       </div>
     </div>
     <div class="foot-bottom">
       <div>© 2026 Lozano Legal Advisors, PLLC</div>
       <nav>
         <a href="/privacy.html">Privacy</a>
-        <a href="/why-a-tax-attorney.html">Why a Tax Attorney</a>
-        <a href="/irs-notices.html">IRS Notices</a>
+        <a href="/contact.html">Contact</a>
       </nav>
     </div>
     <div class="foot-disclaimer">
-      Lozano Legal Advisors PLLC is a Texas professional limited liability company. Norris Lozano is licensed by the Supreme Court of Texas and admitted to practice before the United States Tax Court and the United States District Court for the Northern District of Texas. This website is designed for general information only. The information presented at this site should not be construed to be formal legal advice nor the formation of an attorney-client relationship. Prior results do not guarantee a similar outcome. Not certified by the Texas Board of Legal Specialization unless expressly stated otherwise. Principal office: 9304 Forest Lane, Suite 206, PMB 553, Dallas, Texas 75243.
+      This website constitutes attorney advertising under the Texas Disciplinary Rules of Professional Conduct. The information on this site is provided for general informational purposes only and does not constitute legal advice. No attorney-client relationship is formed by use of this website. Prior results do not guarantee a similar outcome. Norris Lozano is licensed to practice law in the State of Texas (Bar No. 12647700) and admitted to practice before the United States Tax Court and the United States District Court for the Northern District of Texas.
     </div>
   </div>
 </footer>
