@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contact — Lozano Legal Advisors PLLC</title>
-<meta name="description" content="Request a consultation with Norris Lozano. Dallas Texas. (214) 531-3014. Response within one business day. Same-business-day response for active IRS levies or garnishments.">
+<meta name="description" content="Elder law and Medicaid planning for Texas families — long-term care, Medicaid qualification, protecting the home and the healthy spouse. Lozano Legal Advisors, Dallas–Ft. Worth. (214) 531-3014.">
 <link rel="icon" type="image/svg+xml" href="/lozano-favicon.svg">
 <link rel="apple-touch-icon" href="/lozano-apple-touch-icon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -277,52 +277,10 @@
   }
 
   
-  /* ── Nav v5: Practice Areas dropdown + mobile menu (6-11-2026) ── */
-  nav.top .nav-toggle {
-    display: none; background: none; border: 1px solid var(--cream);
-    border-radius: 6px; padding: 8px 9px; cursor: pointer;
+  @media (max-width: 960px) {
+    nav.top ul { display: none; }
   }
-  nav.top .nav-toggle span {
-    display: block; width: 20px; height: 2px; background: var(--cream);
-    margin: 4px 0; transition: transform 0.2s, opacity 0.2s;
-  }
-  nav.top .nav-toggle.open span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
-  nav.top .nav-toggle.open span:nth-child(2) { opacity: 0; }
-  nav.top .nav-toggle.open span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
-  nav.top li.has-dropdown { position: relative; }
-  nav.top .dropdown-toggle {
-    background: none; border: none; cursor: pointer;
-    font-family: inherit; font-size: 13px; color: var(--cream);
-    padding: 6px 0; border-bottom: 1px solid transparent; line-height: 1.2;
-    display: inline-flex; align-items: center; gap: 6px;
-  }
-  nav.top .dropdown-toggle:hover,
-  nav.top .dropdown-toggle.active { border-bottom-color: var(--cream); }
-  nav.top .dropdown-toggle .caret {
-    width: 8px; height: 8px; border-right: 1.5px solid var(--cream);
-    border-bottom: 1.5px solid var(--cream); transform: rotate(45deg) translateY(-2px);
-    transition: transform 0.2s;
-  }
-  nav.top .dropdown {
-    list-style: none; display: none; margin: 0; padding: 8px 0;
-    background: var(--green-deep); border: 1px solid rgba(234,230,225,0.3);
-    min-width: 250px;
-  }
-  nav.top .dropdown li { display: block; }
-  nav.top .dropdown a {
-    display: block; padding: 9px 18px; font-size: 13px; border-bottom: none;
-  }
-  nav.top .dropdown a:hover { background: var(--green); border-bottom: none; }
-  nav.top .dropdown a.active { text-decoration: underline; border-bottom: none; }
-  @media (min-width: 861px) {
-    nav.top .dropdown {
-      position: absolute; top: 100%; left: 50%; transform: translateX(-50%);
-      z-index: 200; box-shadow: 0 8px 24px rgba(0,0,0,0.25);
-    }
-    nav.top li.has-dropdown:hover > .dropdown,
-    nav.top li.has-dropdown:focus-within > .dropdown,
-    nav.top li.has-dropdown.open > .dropdown { display: block; }
-  }
+
   @media (max-width: 860px) {
     nav.top .nav-toggle { display: block; }
     nav.top ul#navMenu {
@@ -373,62 +331,27 @@
 <body><nav class="top">
   <div class="wrap">
     <a href="/" class="mark"><svg class="plumb" viewBox="0 0 64 180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><line x1="32" y1="4" x2="32" y2="110" stroke="currentColor" stroke-width="5" stroke-linecap="round"/><path d="M 26 110 L 38 110 L 38 122 L 48 140 L 48 152 L 32 174 L 16 152 L 16 140 L 26 122 Z" fill="#D9B568" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/></svg>Lozano Legal Advisors PLLC</a>
-        <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="navMenu"><span></span><span></span><span></span></button>
-    <ul id="navMenu">
-      <li><a href="/about.html">About</a></li>
-      <li><a href="/fractional-general-counsel.html">Fractional General Counsel</a></li>
-      <li class="has-dropdown">
-        <button class="dropdown-toggle" type="button" aria-expanded="false">Practice Areas <span class="caret"></span></button>
-        <ul class="dropdown">
-          <li><a href="/corporate-partnership.html">Corporate &amp; Partnership</a></li>
-          <li><a href="/business-entities.html">Business Formation</a></li>
-          <li><a href="/real-estate.html">Real Estate</a></li>
-          <li><a href="/estate-planning.html">Estate Planning</a></li>
-          <li><a href="/elder-law-medicaid-planning.html">Elder Law &amp; Medicaid Planning</a></li>
-          <li><a href="/tax-resolution.html">Tax Resolution</a></li>
-          <li><a href="/tax-credits.html">Tax Credits</a></li>
-        </ul>
-      </li>
+        <ul>
+      <li><a href="/elder-law-medicaid-planning.html" style="line-height:1.1;display:inline-block;">Elder Law &amp;<br>Medicaid Planning</a></li>
+      <li><a href="/estate-planning.html">Estate Planning</a></li>
+      <li><a href="/tax-resolution.html">Tax Resolution</a></li>
+      <li><a href="/tax-credits.html">Tax Credits</a></li>
+      <li><a href="/real-estate.html">Real Estate</a></li>
+      <li><a href="/business-entities.html">Business Formation</a></li>
+      <li><a href="/corporate-partnership.html" style="line-height:1.1;display:inline-block;">Corporate<br>Partnership</a></li>
+      <li><a href="/fractional-general-counsel.html">Fractional GC</a></li>
+      <li><a href="/team.html">The Team</a></li>
+      <li><a href="/about.html">The Attorney</a></li>
       <li><a href="/insights/">Insights</a></li>
       <li><a href="/contact.html" class="cta active">Contact</a></li>
     </ul>
   </div>
 </nav>
-<script>
-(function () {
-  var t = document.querySelector('.nav-toggle');
-  var m = document.getElementById('navMenu');
-  if (t && m) {
-    t.addEventListener('click', function () {
-      var open = m.classList.toggle('open');
-      t.classList.toggle('open', open);
-      t.setAttribute('aria-expanded', open ? 'true' : 'false');
-    });
-  }
-  var dts = document.querySelectorAll('.dropdown-toggle');
-  for (var i = 0; i < dts.length; i++) {
-    (function (b) {
-      b.addEventListener('click', function () {
-        var li = b.parentNode;
-        var open = li.classList.toggle('open');
-        b.setAttribute('aria-expanded', open ? 'true' : 'false');
-      });
-    })(dts[i]);
-  }
-  document.addEventListener('click', function (e) {
-    var openLi = document.querySelector('li.has-dropdown.open');
-    if (openLi && !openLi.contains(e.target)) {
-      openLi.classList.remove('open');
-      var b = openLi.querySelector('.dropdown-toggle');
-      if (b) b.setAttribute('aria-expanded', 'false');
-    }
-  });
-})();
-</script>
+
 <section class="page-hero">
   <div class="eyebrow">Contact</div>
   <h1>Start the<br><em>conversation.</em></h1>
-  <p class="lede">For a Transcript Analysis, full representation, or any of the seven practice areas. Response within one business day. Same-business-day response for active IRS enforcement.</p>
+  <p class="lede">Elder law is the legal practice devoted to the needs of older adults and their families — planning for long-term care, qualifying for public benefits like Medicaid, protecting the home and a lifetime of savings, providing for the healthy spouse who remains at home, and putting powers of attorney in place before capacity declines. At Lozano Legal Advisors, elder law and Medicaid planning is the firm’s lead practice: legal planning that helps Texas families pay for nursing home care without losing everything they built. It’s also the right place to start for an estate plan, a tax question, a real estate closing, or a business formation. Response within one business day.</p>
 </section>
 
 <div class="two-col">
@@ -436,12 +359,12 @@
     <div class="label" id="urgLabel">Urgent matters</div>
     <h3 id="urgHeadline">On a deadline? Call.</h3>
     <p style="font-family:'Cormorant Garamond',serif;font-size:38px;color:var(--amber);margin:20px 0;">(214) 531-3014</p>
-    <p id="urgBody">For matters with an active deadline, imminent enforcement, or any situation where a same-day response would change the outcome, a direct call is the right path. For routine inquiries, use the form.</p>
+    <p id="urgBody">A nursing home placement happening this week. A Medicaid application that can’t wait. Active IRS enforcement. For any matter where a same-day response would change the outcome, a direct call is the right path. For routine inquiries, use the form.</p>
   </div>
   <div class="col">
     <div class="label">All other matters</div>
     <h3>Complete the form.</h3>
-    <p>Response within one business day. For a Transcript Analysis, initial consultation, or any of the seven practice areas &mdash; use the form and a real person will respond.</p>
+    <p>Response within one business day. For a Medicaid planning conversation, an initial consultation, or any of the seven practice areas &mdash; use the form and a real person will respond.</p>
     <p style="margin-top:16px;"><strong>norris@lozanolegaladvisors.com</strong></p>
     <p><strong>(214) 531-3014</strong></p>
   </div>
@@ -481,14 +404,14 @@
         <div>
           <label style="display:block;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-mute);margin-bottom:6px;font-weight:500;">Practice area</label>
           <select id="f_area" name="practice_area" style="width:100%;padding:14px 16px;border:1px solid var(--rule);background:#fff;font-family:'Source Sans 3',sans-serif;font-size:16px;">
-            <option>Fractional General Counsel</option>
-            <option>Corporate &amp; Partnership</option>
-            <option>Business Formation</option>
-            <option>Real Estate</option>
+            <option>Nursing Home / Medicaid / Elder Law</option>
             <option>Estate Planning</option>
-            <option>Elder Law &amp; Medicaid Planning</option>
             <option>Tax Resolution</option>
             <option>Tax Credits</option>
+            <option>Real Estate</option>
+            <option>Business Formation</option>
+            <option>Corporate &amp; Partnership</option>
+            <option>Fractional General Counsel</option>
             <option>Not sure yet</option>
           </select>
         </div>
@@ -503,7 +426,7 @@
       </div>
       <div>
         <label style="display:block;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-mute);margin-bottom:6px;font-weight:500;">What&rsquo;s the situation? <span style="text-transform:none;letter-spacing:0;font-weight:400;">(optional)</span></label>
-        <textarea id="f_message" name="description" rows="5" style="width:100%;padding:14px 16px;border:1px solid var(--rule);background:#fff;font-family:'Source Sans 3',sans-serif;font-size:16px;resize:vertical;" placeholder="Optional. A brief description helps us prepare &mdash; for tax resolution, include any IRS notice type or number if you have it. For active enforcement, call directly instead."></textarea>
+        <textarea id="f_message" name="description" rows="5" style="width:100%;padding:14px 16px;border:1px solid var(--rule);background:#fff;font-family:'Source Sans 3',sans-serif;font-size:16px;resize:vertical;" placeholder="Optional. A brief description helps us prepare &mdash; for a long-term-care matter, the timeline matters most; for tax resolution, include any IRS notice number if you have it. For active enforcement, call directly instead."></textarea>
       </div>
       <input id="f_pageurl" name="page_url" type="hidden" value="">
       <!-- Cloudflare Turnstile widget. data-sitekey is PUBLIC and ships in HTML. -->
@@ -613,48 +536,51 @@
   <div class="wrap">
     <div class="eyebrow">Office</div>
     <h2>Dallas, Texas.</h2>
-    <p>9304 Forest Lane, Suite 206, PMB 553, Dallas, Texas 75243</p>
     <p>Consultations available in person by appointment and by video conference. Most matters are handled remotely, with in-person meetings scheduled where the nature of the engagement benefits from them.</p>
   </div>
 </div>
 <footer>
   <div class="foot-inner">
     <div class="foot-top">
-      <div>
+      <div class="foot-col">
         <h3><svg class="plumb" viewBox="0 0 64 180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><line x1="32" y1="4" x2="32" y2="110" stroke="currentColor" stroke-width="5" stroke-linecap="round"/><path d="M 26 110 L 38 110 L 38 122 L 48 140 L 48 152 L 32 174 L 16 152 L 16 140 L 26 122 Z" fill="#D9B568" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/></svg>Lozano Legal Advisors PLLC</h3>
         <div class="tagline">A Texas law firm for complex work without the complexity of a big firm.</div>
+        <p style="margin-top:18px;opacity:0.88;">Dallas–Ft. Worth</p>
       </div>
       <div class="foot-col">
-        <h4>Practice</h4>
+        <h4>Practice Areas</h4>
+        <a href="/elder-law-medicaid-planning.html">Elder Law &amp; Medicaid Planning</a>
+        <a href="/estate-planning.html">Estate Planning</a>
         <a href="/tax-resolution.html">Tax Resolution</a>
         <a href="/tax-credits.html">Tax Credits</a>
-        <a href="/estate-planning.html">Estate Planning</a>
-        <a href="/elder-law-medicaid-planning.html">Elder Law &amp; Medicaid Planning</a>
         <a href="/real-estate.html">Real Estate</a>
         <a href="/business-entities.html">Business Formation</a>
         <a href="/corporate-partnership.html">Corporate &amp; Partnership</a>
       </div>
       <div class="foot-col">
-        <h4>Location</h4>
-        <p>9304 Forest Lane<br>Suite 206, PMB 553<br>Dallas, Texas 75243</p>
+        <h4>Resources</h4>
+        <a href="/why-a-tax-attorney.html">Why a Tax Attorney</a>
+        <a href="/irs-notices.html">IRS Notice Library</a>
+        <a href="/team.html">The Team</a>
+        <a href="/about.html">The Attorney</a>
+        <a href="/norris-lozano-cv.pdf" download>Download CV</a>
       </div>
       <div class="foot-col">
         <h4>Contact</h4>
-        <a href="mailto:norris@lozanolegaladvisors.com" class="email">norris@lozanolegaladvisors.com</a>
         <a href="tel:+12145313014">(214) 531-3014</a>
-        <a href="/contact.html">Request consultation</a>
+        <a class="email" href="mailto:norris@lozanolegaladvisors.com">norris@lozanolegaladvisors.com</a>
+        <a href="/contact.html">Schedule a consultation</a>
       </div>
     </div>
     <div class="foot-bottom">
-      <div>© 2026 Lozano Legal Advisors, PLLC</div> 
+      <div>© 2026 Lozano Legal Advisors, PLLC</div>
       <nav>
         <a href="/privacy.html">Privacy</a>
-        <a href="/why-a-tax-attorney.html">Why a Tax Attorney</a>
-        <a href="/irs-notices.html">IRS Notices</a>
+        <a href="/contact.html">Contact</a>
       </nav>
     </div>
     <div class="foot-disclaimer">
-      Lozano Legal Advisors PLLC is a Texas professional limited liability company. Norris Lozano is licensed by the Supreme Court of Texas and admitted to practice before the United States Tax Court and the United States District Court for the Northern District of Texas. This website is designed for general information only. The information presented at this site should not be construed to be formal legal advice nor the formation of an attorney-client relationship. Prior results do not guarantee a similar outcome. Not certified by the Texas Board of Legal Specialization unless expressly stated otherwise. Principal office: 9304 Forest Lane, Suite 206, PMB 553, Dallas, Texas 75243.
+      This website constitutes attorney advertising under the Texas Disciplinary Rules of Professional Conduct. The information on this site is provided for general informational purposes only and does not constitute legal advice. No attorney-client relationship is formed by use of this website. Prior results do not guarantee a similar outcome. Norris Lozano is licensed to practice law in the State of Texas (Bar No. 12647700) and admitted to practice before the United States Tax Court and the United States District Court for the Northern District of Texas.
     </div>
   </div>
 </footer>
@@ -666,6 +592,12 @@
    No-op for direct visitors or unrecognized values. */
 (function() {
   var variants = {
+    'elder-law-medicaid-planning': {
+      label: 'Time-critical',
+      headline: 'Nursing home admission happening now? Call.',
+      body: 'When a parent or spouse is entering a nursing home this week \u2014 or a Medicaid deadline is approaching \u2014 a direct call is the right path. Planning options narrow with time. For questions and planning ahead, use the form.',
+      area: 'Nursing Home / Medicaid / Elder Law'
+    },
     'tax-resolution': {
       label: 'Active enforcement',
       headline: 'Active levy or garnishment? Call.',
