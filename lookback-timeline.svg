@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 380" role="img" aria-labelledby="lbTitle lbDesc" font-family="Georgia, 'Times New Roman', serif">
+  <title id="lbTitle">The five-year look-back timeline</title>
+  <desc id="lbDesc">Medicaid reviews every financial transfer made in the five years before the application date. Gifts inside that window trigger a penalty period; planning done earlier than five years out sits outside the review entirely.</desc>
+
+  <!-- background: paper -->
+  <rect width="960" height="380" fill="#F7F5F0"/>
+
+  <!-- headline -->
+  <text x="60" y="58" font-size="27" fill="#1A1A1A" letter-spacing="0.3">Why timing is the whole game: <tspan font-style="italic" fill="#1F5C3D">the five-year look-back</tspan></text>
+
+  <!-- baseline -->
+  <line x1="60" y1="210" x2="900" y2="210" stroke="#D8D3CA" stroke-width="2"/>
+
+  <!-- safe zone (outside look-back) -->
+  <rect x="60" y="150" width="300" height="60" fill="#EAE6E1"/>
+  <text x="72" y="140" font-size="12" fill="#1F5C3D" letter-spacing="2.2" font-family="Arial, sans-serif" font-weight="bold">OUTSIDE THE REVIEW</text>
+  <text x="72" y="181" font-size="15" fill="#4A4A4A">Transfers completed here are</text>
+  <text x="72" y="200" font-size="15" fill="#4A4A4A">not examined at all.</text>
+
+  <!-- look-back window -->
+  <rect x="360" y="150" width="420" height="60" fill="#1F5C3D"/>
+  <text x="376" y="140" font-size="12" fill="#1F5C3D" letter-spacing="2.2" font-family="Arial, sans-serif" font-weight="bold">THE 60-MONTH LOOK-BACK</text>
+  <text x="376" y="181" font-size="15" fill="#EAE6E1">Every transfer is reviewed. Gifts and below-market</text>
+  <text x="376" y="200" font-size="15" fill="#EAE6E1">sales here trigger a <tspan font-style="italic" fill="#F5D382">penalty period</tspan> of ineligibility.</text>
+
+  <!-- application marker -->
+  <line x1="780" y1="120" x2="780" y2="240" stroke="#1F5C3D" stroke-width="2"/>
+  <circle cx="780" cy="210" r="6" fill="#1F5C3D"/>
+  <text x="780" y="106" font-size="15" fill="#1A1A1A" text-anchor="middle" font-style="italic">Application filed</text>
+
+  <!-- year ticks -->
+  <g font-size="12" fill="#6E6E6E" text-anchor="middle" font-family="Arial, sans-serif">
+    <line x1="360" y1="210" x2="360" y2="222" stroke="#6E6E6E"/><text x="360" y="240">5 years before</text>
+    <line x1="465" y1="210" x2="465" y2="220" stroke="#B9B2A6"/><text x="465" y="240">4</text>
+    <line x1="570" y1="210" x2="570" y2="220" stroke="#B9B2A6"/><text x="570" y="240">3</text>
+    <line x1="675" y1="210" x2="675" y2="220" stroke="#B9B2A6"/><text x="675" y="240">2</text>
+    <line x1="780" y1="210" x2="780" y2="220" stroke="#B9B2A6"/><text x="780" y="240">Today</text>
+  </g>
+
+  <!-- penalty consequence -->
+  <line x1="780" y1="210" x2="900" y2="210" stroke="#1F5C3D" stroke-width="2" stroke-dasharray="2 5"/>
+  <text x="842" y="240" font-size="12" fill="#6E6E6E" text-anchor="middle" font-family="Arial, sans-serif">Penalty period,</text>
+  <text x="842" y="255" font-size="12" fill="#6E6E6E" text-anchor="middle" font-family="Arial, sans-serif">if gifts were made</text>
+
+  <!-- takeaway rule + line -->
+  <line x1="60" y1="300" x2="120" y2="300" stroke="#1F5C3D" stroke-width="2"/>
+  <text x="60" y="332" font-size="18" font-style="italic" fill="#1A1A1A">A family that starts the conversation early has far more options</text>
+  <text x="60" y="356" font-size="18" font-style="italic" fill="#1A1A1A">than a family that starts it in the admissions office.</text>
+</svg>
