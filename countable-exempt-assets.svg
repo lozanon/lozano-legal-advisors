@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 400" role="img" aria-labelledby="caTitle caDesc" font-family="Georgia, 'Times New Roman', serif">
+  <title id="caTitle">Countable versus exempt assets in Texas Medicaid</title>
+  <desc id="caDesc">Two columns: assets that count toward the two-thousand-dollar limit (cash and bank accounts, CDs, stocks and bonds, retirement accounts in many cases, additional vehicles, non-homestead real estate) versus exempt assets (the homestead up to an equity limit, one vehicle, personal belongings and household goods, prepaid burial arrangements, certain small life insurance). Planning lawfully converts the left column into the right.</desc>
+  <rect width="960" height="400" fill="#F7F5F0"/>
+  <text x="60" y="54" font-size="26" fill="#1A1A1A">What counts — and what <tspan font-style="italic" fill="#1F5C3D">doesn't.</tspan></text>
+
+  <rect x="60" y="86" width="400" height="40" fill="#1F5C3D"/>
+  <text x="260" y="111" font-size="15" fill="#EAE6E1" text-anchor="middle">Counts toward the $2,000 limit</text>
+  <rect x="60" y="126" width="400" height="188" fill="#FFFFFF" stroke="#D8D3CA"/>
+  <g font-size="14.5" fill="#4A4A4A">
+    <text x="84" y="153"><tspan fill="#1F5C3D">—</tspan>  Cash, checking, and savings accounts</text>
+    <text x="84" y="180"><tspan fill="#1F5C3D">—</tspan>  CDs, stocks, bonds, brokerage accounts</text>
+    <text x="84" y="207"><tspan fill="#1F5C3D">—</tspan>  Retirement accounts, in many situations</text>
+    <text x="84" y="234"><tspan fill="#1F5C3D">—</tspan>  Second and additional vehicles</text>
+    <text x="84" y="261"><tspan fill="#1F5C3D">—</tspan>  Real estate other than the homestead</text>
+    <text x="84" y="288"><tspan fill="#1F5C3D">—</tspan>  Most whole-life insurance above small limits</text>
+  </g>
+
+  <rect x="500" y="86" width="400" height="40" fill="#EAE6E1"/>
+  <text x="700" y="111" font-size="15" fill="#1F5C3D" text-anchor="middle">Exempt — does not count</text>
+  <rect x="500" y="126" width="400" height="188" fill="#FFFFFF" stroke="#D8D3CA"/>
+  <g font-size="14.5" fill="#4A4A4A">
+    <text x="524" y="153"><tspan fill="#1F5C3D">—</tspan>  The homestead, up to an equity limit</text>
+    <text x="524" y="180"><tspan fill="#1F5C3D">—</tspan>  One vehicle</text>
+    <text x="524" y="207"><tspan fill="#1F5C3D">—</tspan>  Personal belongings and household goods</text>
+    <text x="524" y="234"><tspan fill="#1F5C3D">—</tspan>  Prepaid burial and funeral arrangements</text>
+    <text x="524" y="261"><tspan fill="#1F5C3D">—</tspan>  Certain small life insurance policies</text>
+    <text x="524" y="288"><tspan fill="#1F5C3D">—</tspan>  Property essential to self-support</text>
+  </g>
+
+  <line x1="464" y1="200" x2="496" y2="200" stroke="#1F5C3D" stroke-width="2"/>
+  <path d="M 492 194 L 500 200 L 492 206 Z" fill="#1F5C3D"/>
+
+  <text x="60" y="356" font-size="15" font-style="italic" fill="#1A1A1A">Much of Medicaid planning is the lawful art of moving value from the left column to the right —</text>
+  <text x="60" y="378" font-size="15" font-style="italic" fill="#1A1A1A">in the right order, with the look-back rules accounted for first.</text>
+</svg>

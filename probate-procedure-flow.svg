@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 430" role="img" aria-labelledby="pfTitle pfDesc" font-family="Georgia, 'Times New Roman', serif">
+  <title id="pfTitle">Which Texas probate procedure fits</title>
+  <desc id="pfDesc">Decision flow: with a valid will and no need for full administration, muniment of title; with a will and administration needed, independent administration. Without a will, a small estate affidavit for limited assets, or a determination of heirship with administration.</desc>
+  <rect width="960" height="430" fill="#F7F5F0"/>
+  <text x="60" y="54" font-size="26" fill="#1A1A1A">Which probate procedure fits? <tspan font-style="italic" fill="#1F5C3D">Start with the will.</tspan></text>
+
+  <rect x="380" y="86" width="200" height="52" fill="#1F5C3D"/>
+  <text x="480" y="110" font-size="16" fill="#EAE6E1" text-anchor="middle">Is there a valid will?</text>
+  <text x="480" y="128" font-size="12" fill="#EAE6E1" text-anchor="middle" font-family="Arial, sans-serif" opacity="0.8">The first question in every estate</text>
+
+  <line x1="420" y1="138" x2="250" y2="188" stroke="#1F5C3D" stroke-width="1.6"/>
+  <text x="310" y="158" font-size="13" font-style="italic" fill="#1F5C3D">yes</text>
+  <line x1="540" y1="138" x2="710" y2="188" stroke="#1F5C3D" stroke-width="1.6"/>
+  <text x="640" y="158" font-size="13" font-style="italic" fill="#1F5C3D">no will</text>
+
+  <rect x="120" y="188" width="260" height="46" fill="#EAE6E1"/>
+  <text x="250" y="209" font-size="14" fill="#1A1A1A" text-anchor="middle">Debts to pay, assets to gather,</text>
+  <text x="250" y="226" font-size="14" fill="#1A1A1A" text-anchor="middle">or disputes to manage?</text>
+
+  <rect x="580" y="188" width="260" height="46" fill="#EAE6E1"/>
+  <text x="710" y="209" font-size="14" fill="#1A1A1A" text-anchor="middle">Limited countable assets,</text>
+  <text x="710" y="226" font-size="14" fill="#1A1A1A" text-anchor="middle">simple heir picture?</text>
+
+  <line x1="190" y1="234" x2="165" y2="292" stroke="#1F5C3D" stroke-width="1.6"/>
+  <text x="150" y="264" font-size="13" font-style="italic" fill="#1F5C3D">no</text>
+  <line x1="310" y1="234" x2="335" y2="292" stroke="#1F5C3D" stroke-width="1.6"/>
+  <text x="336" y="264" font-size="13" font-style="italic" fill="#1F5C3D">yes</text>
+  <line x1="650" y1="234" x2="625" y2="292" stroke="#1F5C3D" stroke-width="1.6"/>
+  <text x="610" y="264" font-size="13" font-style="italic" fill="#1F5C3D">yes</text>
+  <line x1="770" y1="234" x2="795" y2="292" stroke="#1F5C3D" stroke-width="1.6"/>
+  <text x="796" y="264" font-size="13" font-style="italic" fill="#1F5C3D">no</text>
+
+  <rect x="60" y="292" width="210" height="72" fill="#FFFFFF" stroke="#1F5C3D" stroke-width="1.4"/>
+  <text x="165" y="318" font-size="15" fill="#1F5C3D" text-anchor="middle">Muniment of title</text>
+  <text x="165" y="337" font-size="12" fill="#4A4A4A" text-anchor="middle" font-family="Arial, sans-serif">Will admitted as a link in title.</text>
+  <text x="165" y="352" font-size="12" fill="#4A4A4A" text-anchor="middle" font-family="Arial, sans-serif">No executor. Fast, inexpensive.</text>
+
+  <rect x="290" y="292" width="210" height="72" fill="#FFFFFF" stroke="#1F5C3D" stroke-width="1.4"/>
+  <text x="395" y="318" font-size="15" fill="#1F5C3D" text-anchor="middle">Independent administration</text>
+  <text x="395" y="337" font-size="12" fill="#4A4A4A" text-anchor="middle" font-family="Arial, sans-serif">Executor serves without ongoing</text>
+  <text x="395" y="352" font-size="12" fill="#4A4A4A" text-anchor="middle" font-family="Arial, sans-serif">court supervision. The workhorse.</text>
+
+  <rect x="520" y="292" width="210" height="72" fill="#FFFFFF" stroke="#1F5C3D" stroke-width="1.4"/>
+  <text x="625" y="318" font-size="15" fill="#1F5C3D" text-anchor="middle">Small estate affidavit</text>
+  <text x="625" y="337" font-size="12" fill="#4A4A4A" text-anchor="middle" font-family="Arial, sans-serif">Heirs collect by sworn affidavit.</text>
+  <text x="625" y="352" font-size="12" fill="#4A4A4A" text-anchor="middle" font-family="Arial, sans-serif">Technical homestead limits apply.</text>
+
+  <rect x="750" y="292" width="150" height="72" fill="#FFFFFF" stroke="#1F5C3D" stroke-width="1.4"/>
+  <text x="825" y="312" font-size="15" fill="#1F5C3D" text-anchor="middle">Heirship +</text>
+  <text x="825" y="330" font-size="15" fill="#1F5C3D" text-anchor="middle">administration</text>
+  <text x="825" y="349" font-size="12" fill="#4A4A4A" text-anchor="middle" font-family="Arial, sans-serif">Court fixes the heirs;</text>
+  <text x="825" y="362" font-size="12" fill="#4A4A4A" text-anchor="middle" font-family="Arial, sans-serif">estate is administered.</text>
+
+  <text x="60" y="408" font-size="14" font-style="italic" fill="#6E6E6E">Every path has conditions this chart can't capture — the choice of procedure is a legal judgment.</text>
+</svg>
